@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - PRATHAM Test Prep Exam Insights</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 42px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 18px;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        .card h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .card p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+        .nav {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .nav a {
+            color: #667eea;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 PRATHAM Test Prep - Exam Insights</h1>
+        <div class="subtitle">Powered by Neo4j Graph Database</div>
+
+        <div class="nav">
+            <a href="/">Home</a>
+        </div>
+
+        <div class="cards">
+            <a href="/exam-insights/students" class="card">
+                <div class="icon">📚</div>
+                <h2>Students</h2>
+                <p>View and manage all students in the system</p>
+            </a>
+
+            <a href="/exam-insights/exams" class="card">
+                <div class="icon">📝</div>
+                <h2>Exams</h2>
+                <p>Browse all exams and view questions</p>
+            </a>
+
+            <a href="/exam-insights/exam-report" class="card">
+                <div class="icon">📊</div>
+                <h2>Exam Reports</h2>
+                <p>Get detailed exam-wise student responses</p>
+            </a>
+
+            <a href="/exam-insights/student-summary" class="card">
+                <div class="icon">👤</div>
+                <h2>Student Summary</h2>
+                <p>View student performance across all exams</p>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>Integrated with PRATHAM Online LMS API</p>
+            <p>Using Neo4j Graph Database for data storage</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Questions - PRATHAM Test Prep</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .btn {
+            background: #667eea;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #764ba2;
+        }
+        .loading {
+            text-align: center;
+            color: #667eea;
+            font-size: 18px;
+            display: none;
+        }
+        .question-card {
+            background: #f9f9f9;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+        .question-text {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .options {
+            margin-left: 20px;
+        }
+        .option {
+            padding: 8px;
+            margin: 5px 0;
+        }
+        .marks {
+            color: #667eea;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        .error {
+            background: #ff4444;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+        .success {
+            background: #00C851;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            display: none;
+        }
+        .nav {
+            margin-bottom: 20px;
+        }
+        .nav a {
+            color: #667eea;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 600;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="pageTitle" data-exam-id="{{ exam_id }}">❓ Exam Questions - Exam ID: {{ exam_id }}</h1>
+        
+        <button class="btn" onclick="fetchQuestions()">Load Questions</button>
+        
+        <div class="loading" id="loading">Loading questions...</div>
+        <div class="error" id="error"></div>
+        <div class="success" id="success"></div>
+        
+        <div id="questionsContainer"></div>
+    </div>
+
+    <script>
+        // Safer way to get the ID without risking "lexical declaration" errors
+        const examId = document.getElementById('pageTitle').getAttribute('data-exam-id');
+
+        async function fetchQuestions() {
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const success = document.getElementById('success');
+            const container = document.getElementById('questionsContainer');
+            
+            loading.style.display = 'block';
+            error.style.display = 'none';
+            success.style.display = 'none';
+            container.innerHTML = '';
+            
+            try {
+                // Use the examId retrieved from the DOM
+                const response = await fetch(`/exam-insights/${examId}/questions`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': getCookie('csrftoken')
+                    }
+                });
+                
+                const data = await response.json();
+                loading.style.display = 'none';
+                
+                if (data.success) {
+                    success.textContent = `Successfully loaded ${data.count} questions!`;
+                    success.style.display = 'block';
+                    
+                    if (data.data && data.data.length > 0) {
+                        let html = '';
+                        data.data.forEach((question, index) => {
+                            html += `<div class="question-card">
+                                <div class="question-text">Q${index + 1}. ${question.question_text || 'N/A'}</div>`;
+                            
+                            if (question.options) {
+                                html += '<div class="options">';
+                                if (typeof question.options === 'object') {
+                                    Object.entries(question.options).forEach(([key, value]) => {
+                                        html += `<div class="option">• ${value}</div>`;
+                                    });
+                                }
+                                html += '</div>';
+                            }
+                            
+                            html += `<div class="marks">Marks: ${question.marks || 'N/A'}</div>
+                            </div>`;
+                        });
+                        container.innerHTML = html;
+                    }
+                } else {
+                    error.textContent = 'Error: ' + (data.error || 'Unknown error');
+                    error.style.display = 'block';
+                }
+            } catch (err) {
+                loading.style.display = 'none';
+                console.error('Fetch error:', err);
+                error.textContent = 'Network error: ' + err.message;
+                error.style.display = 'block';
+            }
+        }
+        
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    </script>
+</body>
+</html>
