@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 """
 
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -78,10 +83,17 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
 # Neo4j Graph Database Configuration
-NEO4J_URI = "neo4j://127.0.0.1:7687"
 NEO4J_USERNAME = "neo4j"
 NEO4J_PASSWORD = "studybud_daksh"
-NEO4J_DATABASE = "neo4j"  # default database name
+NEO4J_HOST = "127.0.0.1"
+NEO4J_PORT = "7687"
+
+# THIS IS THE KEY LINE django_neomodel NEEDS:
+NEOMODEL_NEO4J_BOLT_URL = f"bolt://{NEO4J_USERNAME}:{NEO4J_PASSWORD}@{NEO4J_HOST}:{NEO4J_PORT}"
+
+# Register your app so neomodel finds your models
+NEOMODEL_SIGNALS = True
+NEOMODEL_FORCE_TIMEZONE = False
 
 # Keep a minimal database config for Django admin/auth (optional)
 # You can comment this out if you don't need Django's built-in auth
@@ -129,5 +141,3 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# Google Gemini API Configuration
-GEMINI_API_KEY = 'AIzaSyB_pwJcdNvobE6NhdxQJaMsoJ8PV5wgLvM'

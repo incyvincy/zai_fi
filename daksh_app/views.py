@@ -1,11 +1,30 @@
+import os
+import json
+from django.conf import settings
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views import View
-import json
-import traceback
+from studybud.neo4j_driver import run_cypher
 
-# Import the AI Service for dynamic data generation
-from .ai_service import AIService
+# --- HELPER FUNCTION ---
+def get_mock_data(subpath):
+    """
+    Helper to safely load JSON data from the studybud/mock_data directory.
+    """
+    # Construct absolute path: BASE_DIR/studybud/mock_data/subpath
+    file_path = os.path.join(settings.BASE_DIR, 'mock_data', subpath)
+    
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"❌ File not found: {file_path}")
+        return None
+    except json.JSONDecodeError:
+        print(f"❌ Invalid JSON in file: {file_path}")
+        return None
+
+# --- VIEWS ---
 
 
 class StudentListView(View):
@@ -13,12 +32,12 @@ class StudentListView(View):
         return render(request, 'daksh_app/students.html')
     
     def post(self, request):
-        try:
-            # Dynamically generate students via LLM
-            data = AIService.get_students()
+        # Load directly from students.json
+        data = get_mock_data(os.path.join('students', 'students.json'))
+        
+        if data:
             return JsonResponse({'success': True, 'data': data, 'count': len(data)})
-        except Exception as e:
-            return JsonResponse({'success': False, 'error': str(e)}, status=500)
+        return JsonResponse({'success': False, 'error': 'Students data not found'}, status=404)
 
 
 class ExamListView(View):
@@ -26,12 +45,12 @@ class ExamListView(View):
         return render(request, 'daksh_app/exams.html')
     
     def post(self, request):
-        try:
-            # Dynamically generate exams via LLM
-            data = AIService.get_exams()
+        # Load directly from exams.json
+        data = get_mock_data(os.path.join('exams', 'exams.json'))
+        
+        if data:
             return JsonResponse({'success': True, 'data': data, 'count': len(data)})
-        except Exception as e:
-            return JsonResponse({'success': False, 'error': str(e)}, status=500)
+        return JsonResponse({'success': False, 'error': 'Exams data not found'}, status=404)
 
 
 class ExamQuestionsView(View):
@@ -39,13 +58,13 @@ class ExamQuestionsView(View):
         return render(request, 'daksh_app/exam_questions.html', {'exam_id': exam_id})
     
     def post(self, request, exam_id):
-        try:
-            # Dynamically generate questions for this specific exam
-            data = AIService.get_questions(exam_id)
+        # Load specific question file: questions_exam_1.json
+        filename = f"questions_exam_{exam_id}.json"
+        data = get_mock_data(os.path.join('exams', filename))
+        
+        if data:
             return JsonResponse({'success': True, 'exam_id': exam_id, 'data': data, 'count': len(data)})
-        except Exception as e:
-            print(traceback.format_exc())
-            return JsonResponse({'success': False, 'error': str(e)}, status=500)
+        return JsonResponse({'success': False, 'error': f'Questions for exam {exam_id} not found'}, status=404)
 
 
 class ExamReportView(View):
@@ -60,16 +79,15 @@ class ExamReportView(View):
             if not exam_id:
                 return JsonResponse({'success': False, 'error': 'exam_id is required'}, status=400)
             
-            # Load pre-generated exam report (includes all student data)
-            data = AIService.get_exam_report(exam_id)
+            # Load specific report file: exam_report_1.json
+            filename = f"exam_report_{exam_id}.json"
+            data = get_mock_data(os.path.join('reports', filename))
             
-            if data is None:
-                return JsonResponse({'success': False, 'error': f'Exam report {exam_id} not found'}, status=404)
+            if data:
+                return JsonResponse(data)
+            return JsonResponse({'success': False, 'error': f'Report for exam {exam_id} not found'}, status=404)
             
-            return JsonResponse(data)  # Return the complete report structure
         except Exception as e:
-            print(f"Error in ExamReportView: {e}")
-            print(traceback.format_exc())
             return JsonResponse({'success': False, 'error': str(e)}, status=500)
 
 
@@ -85,19 +103,38 @@ class StudentSummaryView(View):
             if not student_id:
                 return JsonResponse({'success': False, 'error': 'student_id is required'}, status=400)
             
-            # Load pre-generated student summary (includes all 15 exam performances)
-            data = AIService.get_student_summary(student_id)
+            # Load specific student file: student_1.json
+            filename = f"student_{student_id}.json"
+            data = get_mock_data(os.path.join('students', filename))
             
-            if data is None:
-                return JsonResponse({'success': False, 'error': f'Student summary {student_id} not found'}, status=404)
+            if data:
+                return JsonResponse(data)
+            return JsonResponse({'success': False, 'error': f'Summary for student {student_id} not found'}, status=404)
             
-            return JsonResponse(data)  # Return the complete student summary structure
         except Exception as e:
-            print(f"Error in StudentSummaryView: {e}")
-            print(traceback.format_exc())
             return JsonResponse({'success': False, 'error': str(e)}, status=500)
 
 
-# Keep existing views
+# Neo4j Connection Test View
+def neo4j_test(request):
+    """
+    Test Neo4j database connection.
+    Expected output: [{"ok": 1}]
+    """
+    try:
+        data = run_cypher("RETURN 1 AS ok")
+        return JsonResponse({
+            'success': True,
+            'message': '✅ Neo4j connection successful!',
+            'data': data
+        }, safe=False)
+    except Exception as e:
+        return JsonResponse({
+            'success': False,
+            'error': str(e),
+            'message': '❌ Neo4j connection failed!'
+        }, status=500)
+
+
 def home(request):
     return render(request, 'daksh_app/home.html')
