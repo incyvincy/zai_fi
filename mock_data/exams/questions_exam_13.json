@@ -1,0 +1,1083 @@
+[
+  {
+    "question_id": 1,
+    "question_text": "Ideally, the fractional change in the magnetic field intensity at a distance 'r' from center on the axis of current carrying coil of radius 'a' to the magnetic field intensity at the center of the same coil is (Take r < a):",
+    "options": {
+      "Option 1": "3/2 (a^2 / r^2)",
+      "Option 2": "2/3 (a^2 / r^2)",
+      "Option 3": "2/3 (r^2 / a^2)",
+      "Option 4": "3/2 (r^2 / a^2)"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 2,
+    "question_text": "The magnitude of the electric field intensity at a point P due to a dipole of dipole moment p, kept at origin along x-axis, at distance r is (Point P is at position vector r):",
+    "options": {
+      "Option 1": "p / (4 * pi * epsilon_0 * r^3)",
+      "Option 2": "2p / (4 * pi * epsilon_0 * r^3)",
+      "Option 3": "p * sqrt(1 + 3 cos^2 theta) / (4 * pi * epsilon_0 * r^3)",
+      "Option 4": "p * sqrt(1 + cos^2 theta) / (4 * pi * epsilon_0 * r^3)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 3,
+    "question_text": "Two heavy spheres of masses 10^4 kg and 10^6 kg and radii 10 m and 20 m respectively are separated by a distance of 100 m. What will be the potential at the mid-point of the line joining their centers?",
+    "options": {
+      "Option 1": "-3 * 10^-5 J/kg",
+      "Option 2": "-6 * 10^-5 J/kg",
+      "Option 3": "-1.35 * 10^-6 J/kg",
+      "Option 4": "-2.7 * 10^-6 J/kg"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 4,
+    "question_text": "An electric appliance of rating 1000 W is used for 4 hours per day. What is the cost of energy to operate it for 30 days at Rs. 4.00 per kWh?",
+    "options": {
+      "Option 1": "Rs. 480",
+      "Option 2": "Rs. 120",
+      "Option 3": "Rs. 4800",
+      "Option 4": "Rs. 240"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 5,
+    "question_text": "In a Young's double slit experiment, if the separation between coherent sources is halved and the distance of the screen from the coherent sources is doubled, then the fringe width becomes:",
+    "options": {
+      "Option 1": "half",
+      "Option 2": "four times",
+      "Option 3": "one-fourth",
+      "Option 4": "double"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 6,
+    "question_text": "A series LCR circuit is driven by a voltage source V(t) = V_0 sin(omega t). The resonant frequency is:",
+    "options": {
+      "Option 1": "1 / (2 * pi * sqrt(LC))",
+      "Option 2": "1 / (sqrt(LC))",
+      "Option 3": "sqrt(LC)",
+      "Option 4": "LC"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 7,
+    "question_text": "What is the relation between the refractive index mu and the angle of minimum deviation D_m for a prism of angle A?",
+    "options": {
+      "Option 1": "mu = sin((A + D_m)/2) / sin(A/2)",
+      "Option 2": "mu = sin(A/2) / sin((A + D_m)/2)",
+      "Option 3": "mu = sin(A + D_m) / sin(A)",
+      "Option 4": "mu = cos((A + D_m)/2) / cos(A/2)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 8,
+    "question_text": "Car B overtakes another car A at a relative speed of 40 m/s. How fast will the image of car B appear to move in the mirror of focal length 10 cm fitted in car A, when the car B is 1.9 m away from the mirror?",
+    "options": {
+      "Option 1": "0.1 m/s",
+      "Option 2": "0.2 m/s",
+      "Option 3": "40 m/s",
+      "Option 4": "0.01 m/s"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 9,
+    "question_text": "Inside a spherical shell of uniform surface charge density, the electric field is:",
+    "options": {
+      "Option 1": "Zero",
+      "Option 2": "Constant, non-zero",
+      "Option 3": "Proportional to distance from center",
+      "Option 4": "Inversely proportional to distance from center"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 10,
+    "question_text": "A mass M hangs on a spring of spring constant k. It is oscillating with a frequency f. If the mass is replaced by 4M, the new frequency will be:",
+    "options": {
+      "Option 1": "2f",
+      "Option 2": "f/2",
+      "Option 3": "f",
+      "Option 4": "4f"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 11,
+    "question_text": "Which of the following is true for an adiabatic process for an ideal gas?",
+    "options": {
+      "Option 1": "PV = constant",
+      "Option 2": "TV^(gamma-1) = constant",
+      "Option 3": "P/T = constant",
+      "Option 4": "V/T = constant"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 12,
+    "question_text": "Identify the logic operation performed by the following circuit: A NAND gate followed by a NOT gate.",
+    "options": {
+      "Option 1": "AND",
+      "Option 2": "OR",
+      "Option 3": "NAND",
+      "Option 4": "NOR"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 13,
+    "question_text": "Two vectors A and B have equal magnitudes. The magnitude of (A + B) is 'n' times the magnitude of (A - B). The angle between A and B is:",
+    "options": {
+      "Option 1": "cos^-1((n^2 - 1) / (n^2 + 1))",
+      "Option 2": "cos^-1((n - 1) / (n + 1))",
+      "Option 3": "sin^-1((n^2 - 1) / (n^2 + 1))",
+      "Option 4": "sin^-1((n - 1) / (n + 1))"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 14,
+    "question_text": "The ratio of the de-Broglie wavelengths of a proton and an alpha particle having the same kinetic energy is:",
+    "options": {
+      "Option 1": "2 : 1",
+      "Option 2": "1 : 2",
+      "Option 3": "1 : 4",
+      "Option 4": "4 : 1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 15,
+    "question_text": "A satellite revolves around the earth in a circular orbit of radius R with a time period T. If the satellite is to revolve in an orbit of radius 4R, then its time period will be:",
+    "options": {
+      "Option 1": "8T",
+      "Option 2": "4T",
+      "Option 3": "2T",
+      "Option 4": "16T"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 16,
+    "question_text": "If the kinetic energy of a body is increased by 300%, then the percentage increase in its momentum is:",
+    "options": {
+      "Option 1": "100%",
+      "Option 2": "150%",
+      "Option 3": "200%",
+      "Option 4": "300%"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 17,
+    "question_text": "The resistance of a wire is R ohm. If it is melted and stretched to n times its original length, its new resistance will be:",
+    "options": {
+      "Option 1": "n R",
+      "Option 2": "n^2 R",
+      "Option 3": "R / n^2",
+      "Option 4": "R / n"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 18,
+    "question_text": "The Moment of Inertia of a solid sphere about an axis passing through its center is I. If the sphere is reformed into a solid disc of the same mass and radius, its moment of inertia about an axis passing through the center and perpendicular to the plane will be:",
+    "options": {
+      "Option 1": "I",
+      "Option 2": "5/4 I",
+      "Option 3": "2/5 I",
+      "Option 4": "5/2 I"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 19,
+    "question_text": "A body cools from 80 C to 60 C in 5 minutes. The temperature of the surroundings is 20 C. The time it takes to cool from 60 C to 40 C is:",
+    "options": {
+      "Option 1": "7.5 min",
+      "Option 2": "10 min",
+      "Option 3": "5 min",
+      "Option 4": "9 min"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 20,
+    "question_text": "A particle executes SHM with amplitude A and time period T. The time taken to move from x=0 to x=A/2 is:",
+    "options": {
+      "Option 1": "T/6",
+      "Option 2": "T/12",
+      "Option 3": "T/4",
+      "Option 4": "T/8"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 21,
+    "question_text": "A force F = (5i + 3j + 2k) N is applied to a particle which moves from r1 = (2i + 7j + 4k) m to r2 = (5i + 2j + 8k) m. The work done by the force is:",
+    "options": {
+      "Option 1": "8 J",
+      "Option 2": "10 J",
+      "Option 3": "12 J",
+      "Option 4": "15 J"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 22,
+    "question_text": "The magnetic flux linked with a coil varies with time as phi = 3t^2 + 4t + 9. The magnitude of the induced emf at t = 2s is:",
+    "options": {
+      "Option 1": "16 V",
+      "Option 2": "9 V",
+      "Option 3": "4 V",
+      "Option 4": "10 V"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 23,
+    "question_text": "An inductor of 0.5 H and a resistor of 100 ohm are connected in series to a 240 V, 50 Hz AC supply. The time lag between the voltage maximum and the current maximum is approximately:",
+    "options": {
+      "Option 1": "3.2 ms",
+      "Option 2": "5.6 ms",
+      "Option 3": "2.5 ms",
+      "Option 4": "10 ms"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 24,
+    "question_text": "A capacitor of capacitance C is charged to a potential V. The flux of the electric field through a closed surface enclosing the capacitor is:",
+    "options": {
+      "Option 1": "CV / epsilon_0",
+      "Option 2": "2CV / epsilon_0",
+      "Option 3": "Zero",
+      "Option 4": "CV"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 25,
+    "question_text": "Two point charges +9e and +e are kept at a distance a. Where should a third charge q be placed on the line joining the two charges so that the system is in equilibrium?",
+    "options": {
+      "Option 1": "a/4 from +e",
+      "Option 2": "a/3 from +e",
+      "Option 3": "a/2 from +e",
+      "Option 4": "a/4 from +9e"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 26,
+    "question_text": "A rod of length L and mass M is hinged at one end. It is released from a horizontal position. The angular acceleration of the rod as it passes through the vertical position is:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "g/L",
+      "Option 3": "3g/2L",
+      "Option 4": "2g/L"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 27,
+    "question_text": "A body of mass m is projected with a velocity v at an angle of 45 degrees to the horizontal. The change in momentum of the body when it hits the ground is:",
+    "options": {
+      "Option 1": "2mv",
+      "Option 2": "mv",
+      "Option 3": "mv sqrt(2)",
+      "Option 4": "mv / sqrt(2)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 28,
+    "question_text": "The ratio of the speed of sound in nitrogen gas to that in helium gas at 300 K is:",
+    "options": {
+      "Option 1": "sqrt(2/7)",
+      "Option 2": "sqrt(1/7)",
+      "Option 3": "sqrt(3)/5",
+      "Option 4": "sqrt(6)/5"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 29,
+    "question_text": "The drift velocity of electrons for a conductor connected to a battery is v_d. If the length of the conductor is doubled and the radius is halved, the drift velocity will become:",
+    "options": {
+      "Option 1": "v_d",
+      "Option 2": "v_d / 2",
+      "Option 3": "v_d / 4",
+      "Option 4": "4 v_d"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 30,
+    "question_text": "An electromagnetic wave of frequency v = 3 MHz passes from vacuum into a dielectric medium with permittivity epsilon = 4. Then:",
+    "options": {
+      "Option 1": "wavelength is halved and frequency remains unchanged",
+      "Option 2": "wavelength is doubled and frequency becomes half",
+      "Option 3": "wavelength is doubled and frequency remains unchanged",
+      "Option 4": "wavelength and frequency both remain unchanged"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 31,
+    "question_text": "Which of the following compounds will give a positive iodoform test?",
+    "options": {
+      "Option 1": "CH3CH2OH",
+      "Option 2": "CH3OH",
+      "Option 3": "HCHO",
+      "Option 4": "C6H5CH2OH"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 32,
+    "question_text": "The correct order of acid strength of the following carboxylic acids is: (I) HCOOH (II) CH3COOH (III) CH3CH2COOH (IV) (COOH)2",
+    "options": {
+      "Option 1": "IV > I > II > III",
+      "Option 2": "I > II > III > IV",
+      "Option 3": "IV > III > II > I",
+      "Option 4": "I > IV > II > III"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 33,
+    "question_text": "Which one of the following species has the largest size?",
+    "options": {
+      "Option 1": "Al",
+      "Option 2": "Al3+",
+      "Option 3": "Mg",
+      "Option 4": "Mg2+"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 34,
+    "question_text": "The number of unpaired electrons in [Ni(CO)4] is:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "1",
+      "Option 3": "2",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 35,
+    "question_text": "The major product formed in the reaction of propene with HBr in the presence of peroxide is:",
+    "options": {
+      "Option 1": "1-Bromopropane",
+      "Option 2": "2-Bromopropane",
+      "Option 3": "Propane",
+      "Option 4": "Propyne"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 36,
+    "question_text": "Which of the following is a bio-degradable polymer?",
+    "options": {
+      "Option 1": "PHBV",
+      "Option 2": "Nylon 6,6",
+      "Option 3": "PVC",
+      "Option 4": "Bakelite"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 37,
+    "question_text": "The magnetic moment of a transition metal ion is 3.87 BM. The number of unpaired electrons present in it is:",
+    "options": {
+      "Option 1": "3",
+      "Option 2": "2",
+      "Option 3": "4",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 38,
+    "question_text": "Which of the following oxides is most acidic in nature?",
+    "options": {
+      "Option 1": "BeO",
+      "Option 2": "MgO",
+      "Option 3": "CaO",
+      "Option 4": "BaO"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 39,
+    "question_text": "Which of the following is an example of an interstitial hydride?",
+    "options": {
+      "Option 1": "TiH1.73",
+      "Option 2": "NaH",
+      "Option 3": "CH4",
+      "Option 4": "H2O"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 40,
+    "question_text": "The correct set of quantum numbers for the valence electron of Rb (Z=37) is:",
+    "options": {
+      "Option 1": "5, 0, 0, +1/2",
+      "Option 2": "5, 1, 0, +1/2",
+      "Option 3": "5, 1, 1, +1/2",
+      "Option 4": "4, 0, 0, +1/2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 41,
+    "question_text": "Which of the following statements is incorrect?",
+    "options": {
+      "Option 1": "Lithium is the strongest reducing agent among alkali metals.",
+      "Option 2": "Lithium is the least reactive among alkali metals.",
+      "Option 3": "LiNO3 decomposes on heating to give LiNO2 and O2.",
+      "Option 4": "LiCl crystallises from aqueous solution as LiCl.2H2O."
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 42,
+    "question_text": "The major product of the reaction of anisole with HI at 373 K is:",
+    "options": {
+      "Option 1": "Phenol and Methyl iodide",
+      "Option 2": "Iodobenzene and Methanol",
+      "Option 3": "Phenol and Methanol",
+      "Option 4": "Iodobenzene and Methyl iodide"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 43,
+    "question_text": "Which of the following amines gives carbylamine reaction?",
+    "options": {
+      "Option 1": "Ethylamine",
+      "Option 2": "Dimethylamine",
+      "Option 3": "Trimethylamine",
+      "Option 4": "N-methylaniline"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 44,
+    "question_text": "The coagulation values in millimoles per liter of the electrolytes used for the coagulation of As2S3 are given below: I. NaCl = 52, II. BaCl2 = 0.69, III. MgSO4 = 0.22. The correct order of their coagulating power is:",
+    "options": {
+      "Option 1": "III > II > I",
+      "Option 2": "I > II > III",
+      "Option 3": "I > III > II",
+      "Option 4": "II > III > I"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 45,
+    "question_text": "Which of the following has the highest boiling point?",
+    "options": {
+      "Option 1": "H2O",
+      "Option 2": "H2S",
+      "Option 3": "H2Se",
+      "Option 4": "H2Te"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 46,
+    "question_text": "Which of the following does not exist?",
+    "options": {
+      "Option 1": "NCl5",
+      "Option 2": "PCl5",
+      "Option 3": "AsF5",
+      "Option 4": "SbCl5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 47,
+    "question_text": "The number of atoms in a body centered cubic unit cell is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "4",
+      "Option 3": "1",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 48,
+    "question_text": "Which one of the following is an artificial sweetener?",
+    "options": {
+      "Option 1": "Sucralose",
+      "Option 2": "Sucrose",
+      "Option 3": "Glucose",
+      "Option 4": "Fructose"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 49,
+    "question_text": "The pH of a 0.1 M solution of a weak acid (Ka = 10^-5) is:",
+    "options": {
+      "Option 1": "3",
+      "Option 2": "4",
+      "Option 3": "5",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 50,
+    "question_text": "Which of the following gases causes the greenhouse effect?",
+    "options": {
+      "Option 1": "CO2",
+      "Option 2": "O2",
+      "Option 3": "N2",
+      "Option 4": "Ar"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 51,
+    "question_text": "The bond order of O2+ is:",
+    "options": {
+      "Option 1": "2.5",
+      "Option 2": "2",
+      "Option 3": "1.5",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 52,
+    "question_text": "Which of the following is an example of an ambidentate ligand?",
+    "options": {
+      "Option 1": "SCN-",
+      "Option 2": "NH3",
+      "Option 3": "H2O",
+      "Option 4": "Cl-"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 53,
+    "question_text": "What is the coordination number of Co in [Co(en)2Cl2]+?",
+    "options": {
+      "Option 1": "6",
+      "Option 2": "4",
+      "Option 3": "5",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 54,
+    "question_text": "For a first order reaction, the time required for 99.9% completion is how many times the half-life?",
+    "options": {
+      "Option 1": "10",
+      "Option 2": "5",
+      "Option 3": "2",
+      "Option 4": "100"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 55,
+    "question_text": "The main constituent of dettol is:",
+    "options": {
+      "Option 1": "Chloroxylenol",
+      "Option 2": "Chloramphenicol",
+      "Option 3": "Bithionol",
+      "Option 4": "Paracetamol"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 56,
+    "question_text": "Which of the following is not a property of transition elements?",
+    "options": {
+      "Option 1": "They do not show variable oxidation states",
+      "Option 2": "They form colored compounds",
+      "Option 3": "They act as catalysts",
+      "Option 4": "They form complexes"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 57,
+    "question_text": "Which of the following solutions will have the highest boiling point?",
+    "options": {
+      "Option 1": "0.1 M Na2SO4",
+      "Option 2": "0.1 M NaCl",
+      "Option 3": "0.1 M Glucose",
+      "Option 4": "0.1 M Urea"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 58,
+    "question_text": "The oxidation number of S in H2SO4 is:",
+    "options": {
+      "Option 1": "+6",
+      "Option 2": "+4",
+      "Option 3": "+2",
+      "Option 4": "0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 59,
+    "question_text": "Which of the following is a state function?",
+    "options": {
+      "Option 1": "Internal Energy",
+      "Option 2": "Heat",
+      "Option 3": "Work",
+      "Option 4": "Heat + Work (Path dependent component? No, Q+W = Delta U is state function)",
+      "Option 5": "Specific Heat (Incorrect)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 60,
+    "question_text": "The monomer of Teflon is:",
+    "options": {
+      "Option 1": "Tetrafluoroethene",
+      "Option 2": "Ethene",
+      "Option 3": "Vinyl chloride",
+      "Option 4": "Styrene"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 61,
+    "question_text": "If the sum of the coefficients in the expansion of (x + y)^n is 4096, then the greatest coefficient in the expansion is:",
+    "options": {
+      "Option 1": "924",
+      "Option 2": "792",
+      "Option 3": "152",
+      "Option 4": "2048"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 62,
+    "question_text": "Let A and B be two independent events such that P(A) = 1/3 and P(B) = 1/6. Then P(neither A nor B) is equal to:",
+    "options": {
+      "Option 1": "5/9",
+      "Option 2": "4/9",
+      "Option 3": "2/9",
+      "Option 4": "1/2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 63,
+    "question_text": "The value of the definite integral from 0 to pi/2 of (sin x / (sin x + cos x)) dx is:",
+    "options": {
+      "Option 1": "pi/4",
+      "Option 2": "pi/2",
+      "Option 3": "pi",
+      "Option 4": "0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 64,
+    "question_text": "If the lines (x-1)/2 = (y+1)/3 = (z-1)/4 and (x-3)/1 = (y-k)/2 = z/1 intersect, then k is equal to:",
+    "options": {
+      "Option 1": "9/2",
+      "Option 2": "2/9",
+      "Option 3": "0",
+      "Option 4": "1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 65,
+    "question_text": "The number of real roots of the equation |x|^2 - 3|x| + 2 = 0 is:",
+    "options": {
+      "Option 1": "4",
+      "Option 2": "3",
+      "Option 3": "2",
+      "Option 4": "1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 66,
+    "question_text": "If A is a square matrix of order 3 such that |A| = 5, then |2A| is equal to:",
+    "options": {
+      "Option 1": "40",
+      "Option 2": "10",
+      "Option 3": "25",
+      "Option 4": "20"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 67,
+    "question_text": "The area bounded by the curve y = x^2 and the line y = 4 is:",
+    "options": {
+      "Option 1": "32/3",
+      "Option 2": "16/3",
+      "Option 3": "8/3",
+      "Option 4": "64/3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 68,
+    "question_text": "The derivative of tan^-1(2x / (1-x^2)) with respect to sin^-1(2x / (1+x^2)) is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "1/2",
+      "Option 4": "0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 69,
+    "question_text": "If the vectors a = 2i - j + k, b = i + 2j - 3k and c = 3i + lambda j + 5k are coplanar, then lambda is equal to:",
+    "options": {
+      "Option 1": "-4",
+      "Option 2": "4",
+      "Option 3": "2",
+      "Option 4": "-2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 70,
+    "question_text": "The equation of the tangent to the parabola y^2 = 8x at the point (2, 4) is:",
+    "options": {
+      "Option 1": "x - y + 2 = 0",
+      "Option 2": "x + y - 6 = 0",
+      "Option 3": "2x - y = 0",
+      "Option 4": "x + 2y - 10 = 0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 71,
+    "question_text": "The distance of the point (1, 2, 3) from the plane 2x + y + 2z + 5 = 0 is:",
+    "options": {
+      "Option 1": "5",
+      "Option 2": "3",
+      "Option 3": "4",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 72,
+    "question_text": "If the mean of 5 observations is 4 and variance is 5.2, and three of the observations are 1, 2, and 6, then the other two observations are:",
+    "options": {
+      "Option 1": "4 and 7",
+      "Option 2": "3 and 8",
+      "Option 3": "2 and 9",
+      "Option 4": "5 and 6"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 73,
+    "question_text": "The general solution of the differential equation dy/dx = (x+y+1)/(x+y-1) is:",
+    "options": {
+      "Option 1": "y - x - ln|x+y| = C",
+      "Option 2": "y - x + ln|x+y| = C",
+      "Option 3": "y + x - ln|x+y| = C",
+      "Option 4": "y + x + ln|x+y| = C"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 74,
+    "question_text": "If alpha and beta are roots of x^2 - x + 1 = 0, then alpha^2021 + beta^2021 is equal to:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "-1",
+      "Option 3": "2",
+      "Option 4": "0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 75,
+    "question_text": "The value of sin(tan^-1(x)) is equal to:",
+    "options": {
+      "Option 1": "x / sqrt(1+x^2)",
+      "Option 2": "1 / sqrt(1+x^2)",
+      "Option 3": "x",
+      "Option 4": "x^2 / (1+x^2)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 76,
+    "question_text": "The number of ways in which 5 different balls can be distributed among 3 boxes such that no box remains empty is:",
+    "options": {
+      "Option 1": "150",
+      "Option 2": "120",
+      "Option 3": "180",
+      "Option 4": "240"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 77,
+    "question_text": "The minimum value of f(x) = x + 1/x for x > 0 is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "1",
+      "Option 3": "0.5",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 78,
+    "question_text": "If a fair coin is tossed 10 times, the probability of getting exactly 6 heads is:",
+    "options": {
+      "Option 1": "105/512",
+      "Option 2": "63/256",
+      "Option 3": "5/16",
+      "Option 4": "21/128"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 79,
+    "question_text": "The equation of the normal to the curve y = x^3 - 3x at the point (2, 2) is:",
+    "options": {
+      "Option 1": "x + 9y - 20 = 0",
+      "Option 2": "9x - y - 16 = 0",
+      "Option 3": "x - 9y + 16 = 0",
+      "Option 4": "9x + y - 20 = 0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 80,
+    "question_text": "If the lines x = ay + b, z = cy + d and x = a'y + b', z = c'y + d' are perpendicular, then:",
+    "options": {
+      "Option 1": "aa' + cc' + 1 = 0",
+      "Option 2": "aa' + cc' = 1",
+      "Option 3": "a'c + ac' = 0",
+      "Option 4": "a + a' + c + c' = 0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 81,
+    "question_text": "The value of k for which the function f(x) = (sqrt(1+kx) - sqrt(1-kx)) / x for x < 0; (2x+1)/(x-1) for 0 <= x < 1 is continuous at x = 0 is:",
+    "options": {
+      "Option 1": "-1",
+      "Option 2": "1",
+      "Option 3": "2",
+      "Option 4": "-2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 82,
+    "question_text": "The locus of the center of a circle which touches the circle x^2 + y^2 - 6x - 6y + 14 = 0 externally and also touches the y-axis is:",
+    "options": {
+      "Option 1": "y^2 - 6y - 10x + 14 = 0",
+      "Option 2": "x^2 - 6x - 10y + 14 = 0",
+      "Option 3": "y^2 - 10y - 6x + 14 = 0",
+      "Option 4": "x^2 - 10x - 6y + 14 = 0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 83,
+    "question_text": "The sum of the first n terms of the series 1 + (1+2) + (1+2+3) + ... is:",
+    "options": {
+      "Option 1": "n(n+1)(n+2)/6",
+      "Option 2": "n(n+1)(2n+1)/6",
+      "Option 3": "n^2(n+1)^2/4",
+      "Option 4": "n(n+1)/2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 84,
+    "question_text": "The system of equations kx + y + z = 1, x + ky + z = 1, x + y + kz = 1 has a unique solution if:",
+    "options": {
+      "Option 1": "k != 1 and k != -2",
+      "Option 2": "k != 1",
+      "Option 3": "k != -2",
+      "Option 4": "k = 1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 85,
+    "question_text": "If y = sin(log x), then x^2 d^2y/dx^2 + x dy/dx + y is equal to:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "1",
+      "Option 3": "-1",
+      "Option 4": "y"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 86,
+    "question_text": "The area of the region bounded by the curves y = x^2 and y = x is:",
+    "options": {
+      "Option 1": "1/6",
+      "Option 2": "1/3",
+      "Option 3": "1/2",
+      "Option 4": "5/6"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 87,
+    "question_text": "If the relation R on the set {1, 2, 3} is defined by R = {(1, 2), (2, 3)}, then the minimum number of ordered pairs to be added to make it an equivalence relation is:",
+    "options": {
+      "Option 1": "7",
+      "Option 2": "4",
+      "Option 3": "5",
+      "Option 4": "6"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 88,
+    "question_text": "The value of tan(1/2 cos^-1(sqrt(5)/3)) is:",
+    "options": {
+      "Option 1": "(3-sqrt(5))/2",
+      "Option 2": "(3+sqrt(5))/2",
+      "Option 3": "2/(3-sqrt(5))",
+      "Option 4": "1/2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 89,
+    "question_text": "If the statement (p -> q) -> (q -> p) is false, then the truth values of p and q are respectively:",
+    "options": {
+      "Option 1": "F, T",
+      "Option 2": "T, F",
+      "Option 3": "T, T",
+      "Option 4": "F, F"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 90,
+    "question_text": "A bag contains 3 red balls and 5 black balls. A ball is drawn at random. The probability that it is red is:",
+    "options": {
+      "Option 1": "3/8",
+      "Option 2": "5/8",
+      "Option 3": "3/5",
+      "Option 4": "1/8"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  }
+]

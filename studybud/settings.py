@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_neomodel',
     'daksh_app.apps.DakshAppConfig',
 ]
 
@@ -127,3 +128,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Google Gemini API Configuration
+GEMINI_API_KEY = 'AIzaSyB_pwJcdNvobE6NhdxQJaMsoJ8PV5wgLvM'

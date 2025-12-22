@@ -17,7 +17,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 15px;
@@ -30,7 +30,10 @@
             text-align: center;
         }
         .input-group {
-            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
         }
         input {
             padding: 12px;
@@ -38,7 +41,6 @@
             border: 2px solid #ddd;
             border-radius: 8px;
             width: 300px;
-            margin-right: 10px;
         }
         .btn {
             background: #667eea;
@@ -59,8 +61,38 @@
             font-size: 18px;
             display: none;
         }
-        .summary-section {
-            margin-top: 30px;
+        .summary-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .summary-box h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+        .summary-box p {
+            font-size: 16px;
+            margin: 8px 0;
+            opacity: 0.95;
+        }
+        .json-container {
+            background: #1e1e1e;
+            border-radius: 12px;
+            padding: 25px;
+            overflow-x: auto;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .json-container pre {
+            color: #d4d4d4;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
         .error {
             background: #ff4444;
@@ -70,48 +102,43 @@
             margin-top: 20px;
             display: none;
         }
-        .success {
-            background: #00C851;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            display: none;
-        }
         .nav {
             margin-bottom: 20px;
+            text-align: center;
         }
         .nav a {
             color: #667eea;
             text-decoration: none;
-            margin-right: 20px;
+            margin: 0 15px;
             font-weight: 600;
+            font-size: 16px;
         }
         .nav a:hover {
             text-decoration: underline;
-        }
-        pre {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
-            overflow-x: auto;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>👤 Student Summary</h1>
+        <div class="nav">
+            <a href="/">Home</a>
+            <a href="/exam-insights/students">Students</a>
+            <a href="/exam-insights/exams">Exams</a>
+            <a href="/exam-insights/exam-report">Exam Report</a>
+            <a href="/exam-insights/student-summary">Student Summary</a>
+        </div>
+
+        <h1>👤 Student Performance Summary</h1>
         
         <div class="input-group">
-            <input type="number" id="studentIdInput" placeholder="Enter Student ID (e.g., 12345)">
+            <input type="number" id="studentIdInput" placeholder="Enter Student ID (1-5)" min="1" max="5">
             <button class="btn" onclick="fetchSummary()">Get Summary</button>
         </div>
         
-        <div class="loading" id="loading">Loading student summary...</div>
+        <div class="loading" id="loading">⏳ Loading student summary...</div>
         <div class="error" id="error"></div>
-        <div class="success" id="success"></div>
         
-        <div class="summary-section" id="summaryContainer"></div>
+        <div id="summaryContainer"></div>
     </div>
 
     <script>
@@ -119,18 +146,16 @@
             const studentId = document.getElementById('studentIdInput').value;
             const loading = document.getElementById('loading');
             const error = document.getElementById('error');
-            const success = document.getElementById('success');
             const container = document.getElementById('summaryContainer');
             
-            if (!studentId) {
-                error.textContent = 'Please enter a student ID';
+            if (!studentId || studentId < 1 || studentId > 5) {
+                error.textContent = 'Please enter a valid Student ID (1-5)';
                 error.style.display = 'block';
                 return;
             }
             
             loading.style.display = 'block';
             error.style.display = 'none';
-            success.style.display = 'none';
             container.innerHTML = '';
             
             try {
@@ -147,10 +172,27 @@
                 loading.style.display = 'none';
                 
                 if (data.success) {
-                    success.textContent = 'Successfully loaded student summary!';
-                    success.style.display = 'block';
+                    const studentInfo = data.student_info;
+                    const examsReport = data.exams_report;
                     
-                    container.innerHTML = `<h2>Student Summary Data:</h2><pre>${JSON.stringify(data.data, null, 2)}</pre>`;
+                    // Summary Box
+                    const summaryBox = `
+                        <div class="summary-box">
+                            <h2>📊 ${studentInfo.student_name}</h2>
+                            <p><strong>Student ID:</strong> ${studentInfo.student_id}</p>
+                            <p><strong>Enrollment ID:</strong> ${studentInfo.enrollment_id}</p>
+                            <p><strong>Total Exams Taken:</strong> ${examsReport.length}</p>
+                        </div>
+                    `;
+                    
+                    // JSON Display with syntax highlighting
+                    const jsonDisplay = `
+                        <div class="json-container">
+                            <pre>${syntaxHighlight(JSON.stringify(data, null, 2))}</pre>
+                        </div>
+                    `;
+                    
+                    container.innerHTML = summaryBox + jsonDisplay;
                 } else {
                     error.textContent = 'Error: ' + (data.error || 'Unknown error');
                     error.style.display = 'block';
@@ -160,6 +202,29 @@
                 error.textContent = 'Network error: ' + err.message;
                 error.style.display = 'block';
             }
+        }
+        
+        function syntaxHighlight(json) {
+            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                let cls = 'number';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'key';
+                        return '<span style="color: #9cdcfe;">' + match + '</span>';
+                    } else {
+                        cls = 'string';
+                        return '<span style="color: #ce9178;">' + match + '</span>';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'boolean';
+                    return '<span style="color: #569cd6;">' + match + '</span>';
+                } else if (/null/.test(match)) {
+                    cls = 'null';
+                    return '<span style="color: #569cd6;">' + match + '</span>';
+                }
+                return '<span style="color: #b5cea8;">' + match + '</span>';
+            });
         }
         
         function getCookie(name) {

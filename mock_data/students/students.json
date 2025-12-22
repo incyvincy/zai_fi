@@ -1,0 +1,27 @@
+[
+    {
+        "student_id": 1,
+        "student_name": "Priya Sharma",
+        "enrollment_id": "24490016"
+    },
+    {
+        "student_id": 2,
+        "student_name": "Rohan Singh",
+        "enrollment_id": "23240012"
+    },
+    {
+        "student_id": 3,
+        "student_name": "Anjali Patel",
+        "enrollment_id": "24490021"
+    },
+    {
+        "student_id": 4,
+        "student_name": "Vikram Kumar",
+        "enrollment_id": "23240018"
+    },
+    {
+        "student_id": 5,
+        "student_name": "Kavya Rao",
+        "enrollment_id": "24490035"
+    }
+]

@@ -1,0 +1,1082 @@
+[
+  {
+    "question_id": 1,
+    "question_text": "Zener breakdown occurs in a p-n junction having p and n both:",
+    "options": {
+      "Option 1": "lightly doped and have wide depletion layer.",
+      "Option 2": "heavily doped and have narrow depletion layer.",
+      "Option 3": "heavily doped and have wide depletion layer.",
+      "Option 4": "lightly doped and have narrow depletion layer."
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 2,
+    "question_text": "According to Bohr atom model, in which of the following transitions will the frequency be maximum?",
+    "options": {
+      "Option 1": "n = 2 to n = 1",
+      "Option 2": "n = 4 to n = 3",
+      "Option 3": "n = 5 to n = 4",
+      "Option 4": "n = 3 to n = 2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 3,
+    "question_text": "An X-ray tube is operated at 1.24 million volt. The shortest wavelength of the produced photon will be:",
+    "options": {
+      "Option 1": "10⁻² nm",
+      "Option 2": "10⁻³ nm",
+      "Option 3": "10⁴ nm",
+      "Option 4": "10⁻¹ nm"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 4,
+    "question_text": "On the basis of kinetic theory of gases, the gas exerts pressure because its molecules:",
+    "options": {
+      "Option 1": "suffer change in momentum when impinge on the walls of container.",
+      "Option 2": "continuously stick to the walls of container.",
+      "Option 3": "continuously lose their energy till it reaches wall.",
+      "Option 4": "are attracted by the walls of container."
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 5,
+    "question_text": "A circular hole of radius a/2 is cut out of a circular disc of radius 'a'. The centroid of the remaining circular portion with respect to point 'O' (center of disc) will be:",
+    "options": {
+      "Option 1": "10/11 a",
+      "Option 2": "2/3 a",
+      "Option 3": "1/6 a",
+      "Option 4": "5/6 a"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 6,
+    "question_text": "Given below are two statements: Statement I: PN junction diodes can be used to function as transistor, simply by connecting two diodes, back to back, which acts as the base terminal. Statement II: In the study of transistor, the amplification factor β indicates ratio of the collector current to the base current.",
+    "options": {
+      "Option 1": "Statement I is false but Statement II is true.",
+      "Option 2": "Both Statement I and Statement II are true.",
+      "Option 3": "Statement I is true but Statement II is false.",
+      "Option 4": "Both Statement I and Statement II are false."
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 7,
+    "question_text": "When a particle executes SHM, the nature of graphical representation of velocity as a function of displacement is:",
+    "options": {
+      "Option 1": "elliptical",
+      "Option 2": "parabolic",
+      "Option 3": "straight line",
+      "Option 4": "circular"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 8,
+    "question_text": "Match List I with List II. (a) Microwave (b) Infrared (c) Gamma Rays (d) X-rays. (i) Radioactive decay (ii) Magnetron (iii) Inner shell electrons (iv) Vibration of atoms.",
+    "options": {
+      "Option 1": "(a)-(ii), (b)-(iv), (c)-(i), (d)-(iii)",
+      "Option 2": "(a)-(vi), (b)-(iv), (c)-(i), (d)-(v)",
+      "Option 3": "(a)-(ii), (b)-(iv), (c)-(vi), (d)-(iii)",
+      "Option 4": "(a)-(vi), (b)-(v), (c)-(i), (d)-(iv)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 9,
+    "question_text": "A logic circuit has inputs A and B. The output C corresponds to the logic operation:",
+    "options": {
+      "Option 1": "A . B",
+      "Option 2": "A . (Not B)",
+      "Option 3": "A + B",
+      "Option 4": "(Not A) . B"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 10,
+    "question_text": "If the source of light used in a Young's double slit experiment is changed from red to violet:",
+    "options": {
+      "Option 1": "the fringes will become brighter.",
+      "Option 2": "consecutive fringe lines will come closer.",
+      "Option 3": "the central bright fringe will become a dark fringe.",
+      "Option 4": "the intensity of minima will increase."
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 11,
+    "question_text": "A body weighs 49 N on a spring balance at the north pole. What will be its weight recorded on the same weighing machine, if it is shifted to the equator?",
+    "options": {
+      "Option 1": "49 N",
+      "Option 2": "49.83 N",
+      "Option 3": "49.17 N",
+      "Option 4": "48.83 N"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 12,
+    "question_text": "If one mole of an ideal gas at (P1, V1) expands isothermally to P1/2, then cools isochorically to P1/4, then compresses adiabatically to initial state, the net work done is:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "RT / 2(γ-1)",
+      "Option 3": "RT [ln 2 - 1/2(γ-1)]",
+      "Option 4": "RT ln 2"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 13,
+    "question_text": "The period of oscillation of a simple pendulum is T = 2π√(L/g). Measured L is 1.0 m (1 mm accuracy) and T is 1.95 s (0.01 s accuracy). The percentage error in g is:",
+    "options": {
+      "Option 1": "1.33%",
+      "Option 2": "1.30%",
+      "Option 3": "1.13%",
+      "Option 4": "1.03%"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 14,
+    "question_text": "A body of mass M is held between two massless springs on a smooth inclined plane. If each spring has constant k, the frequency of oscillation is:",
+    "options": {
+      "Option 1": "1/2π √(2k/M)",
+      "Option 2": "1/2π √(k/Mg sinα)",
+      "Option 3": "1/2π √(2k/Mg sinα)",
+      "Option 4": "1/2π √(k/2M)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 15,
+    "question_text": "A circuit contains four resistors (R=2Ω), two inductors (L=2mH) and a battery (E=9V). The current 'i' just after the switch is closed is:",
+    "options": {
+      "Option 1": "9 A",
+      "Option 2": "3.0 A",
+      "Option 3": "2.25 A",
+      "Option 4": "3.37 A"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 16,
+    "question_text": "The de Broglie wavelength of a proton and alpha-particle are equal. The ratio of their velocities is:",
+    "options": {
+      "Option 1": "4:2",
+      "Option 2": "4:1",
+      "Option 3": "1:4",
+      "Option 4": "4:3"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 17,
+    "question_text": "Two electrons are fixed at distance '2d'. A proton at midpoint is displaced by x (x<<d) perpendicular to line joining. Angular frequency of SHM is:",
+    "options": {
+      "Option 1": "(q² / 2πε₀md³)^(1/2)",
+      "Option 2": "(πε₀md³ / 2q²)^(1/2)",
+      "Option 3": "(2πε₀md³ / q²)^(1/2)",
+      "Option 4": "(2q² / πε₀md³)^(1/2)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 18,
+    "question_text": "A soft ferromagnetic material is placed in an external magnetic field. The magnetic domains:",
+    "options": {
+      "Option 1": "decrease in size and changes orientation.",
+      "Option 2": "may increase or decrease in size and change its orientation.",
+      "Option 3": "increase in size but no change in orientation.",
+      "Option 4": "have no relation with external magnetic field."
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 19,
+    "question_text": "Which of the following equations represents a travelling wave?",
+    "options": {
+      "Option 1": "y = A e⁻ˣ² (vt + θ)",
+      "Option 2": "y = A sin(15x - 2t)",
+      "Option 3": "y = A eˣ cos(ωt - θ)",
+      "Option 4": "y = A sin x cos ωt"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 20,
+    "question_text": "The dimensional formula of Angular Momentum is:",
+    "options": {
+      "Option 1": "M L T⁻¹",
+      "Option 2": "M L² T⁻¹",
+      "Option 3": "M L² T⁻²",
+      "Option 4": "M L⁻¹ T⁻¹"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 21,
+    "question_text": "A uniform metallic wire is elongated by 0.04 m when subjected to a linear force F. The elongation, if its length and diameter is doubled and subjected to the same force will be:",
+    "options": {
+      "Option 1": "2 cm",
+      "Option 2": "4 cm",
+      "Option 3": "1 cm",
+      "Option 4": "8 cm"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 22,
+    "question_text": "A cylindrical wire of radius 0.5 mm and conductivity 5×10⁷ S/m is subjected to an electric field of 10 mV/m. The current in the wire will be x³π mA. The value of x is:",
+    "options": {
+      "Option 1": "5",
+      "Option 2": "25",
+      "Option 3": "10",
+      "Option 4": "2.5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 23,
+    "question_text": "Two cars approach each other at 7.2 km/hr. Horn frequency is 676 Hz. Speed of sound 340 m/s. The beat frequency heard is:",
+    "options": {
+      "Option 1": "8 Hz",
+      "Option 2": "4 Hz",
+      "Option 3": "12 Hz",
+      "Option 4": "6 Hz"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 24,
+    "question_text": "A uniform thin bar of mass 6 kg and length 2.4 meter is bent to make an equilateral hexagon. The moment of inertia about an axis passing through the centre of mass and perpendicular to the plane is x × 10⁻¹ kg m². Value of x is:",
+    "options": {
+      "Option 1": "8",
+      "Option 2": "4",
+      "Option 3": "16",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 25,
+    "question_text": "A point charge of +12 µC is at a distance 6 cm vertically above the centre of a square of side 12 cm. The magnitude of the electric flux through the square is x × 10³ Nm²/C. Value of x is:",
+    "options": {
+      "Option 1": "226",
+      "Option 2": "113",
+      "Option 3": "452",
+      "Option 4": "50"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 26,
+    "question_text": "Two solids A and B of mass 1 kg and 2 kg respectively are moving with equal linear momentum. The ratio of their kinetic energies (K.E.)A / (K.E.)B is A/1. Value of A is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "4",
+      "Option 3": "1",
+      "Option 4": "0.5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 27,
+    "question_text": "Root mean square speed at 27°C is 200 m/s. At 127°C, it is x/√3 m/s. Value of x is:",
+    "options": {
+      "Option 1": "400",
+      "Option 2": "200",
+      "Option 3": "300",
+      "Option 4": "600"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 28,
+    "question_text": "A series LCR circuit resonates at 10⁵ rad/s. It draws 16W from 120V source. Resistance R is:",
+    "options": {
+      "Option 1": "900 Ω",
+      "Option 2": "100 Ω",
+      "Option 3": "450 Ω",
+      "Option 4": "120 Ω"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 29,
+    "question_text": "EM wave 3 GHz enters dielectric (er=2.25). Wavelength in medium is x × 10⁻² cm. Value of x is:",
+    "options": {
+      "Option 1": "667",
+      "Option 2": "333",
+      "Option 3": "1000",
+      "Option 4": "225"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 30,
+    "question_text": "Signal 0.1 kW transmitted. Attenuation -5 dB/km for 20 km. Power received is 10⁻ˣ W. Value of x is:",
+    "options": {
+      "Option 1": "8",
+      "Option 2": "6",
+      "Option 3": "10",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 31,
+    "question_text": "The correct order of increasing tendency towards nucleophilic substitution reaction for the given chloro-nitrobenzenes is:",
+    "options": {
+      "Option 1": "(iv) < (i) < (iii) < (ii)",
+      "Option 2": "(iv) < (i) < (ii) < (iii)",
+      "Option 3": "(i) < (ii) < (iii) < (iv)",
+      "Option 4": "(iv) < (iii) < (ii) < (i)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 32,
+    "question_text": "Match List-I (Metal) with List-II (Ores). (a) Aluminium (b) Iron (c) Copper (d) Zinc. (i) Siderite (ii) Calamine (iii) Kaolinite (iv) Malachite.",
+    "options": {
+      "Option 1": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)",
+      "Option 2": "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+      "Option 3": "(a)-(iii), (b)-(i), (c)-(iv), (d)-(ii)",
+      "Option 4": "(a)-(ii), (b)-(iv), (c)-(i), (d)-(iii)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 33,
+    "question_text": "Match List-I (Salt) with List-II (Flame colour). (a) LiCl (b) NaCl (c) RbCl (d) CsCl. Colours: Crimson Red, Golden Yellow, Violet, Blue.",
+    "options": {
+      "Option 1": "(a)-(ii), (b)-(i), (c)-(iv), (d)-(iii)",
+      "Option 2": "(a)-(ii), (b)-(iv), (c)-(iii), (d)-(i)",
+      "Option 3": "(a)-(iv), (b)-(ii), (c)-(iii), (d)-(i)",
+      "Option 4": "(a)-(i), (b)-(iv), (c)-(ii), (d)-(iii)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 34,
+    "question_text": "Assertion A: Hydrogen is the most abundant element in the Universe, but not in the troposphere. Reason R: Hydrogen is the lightest element.",
+    "options": {
+      "Option 1": "A is false but R is true",
+      "Option 2": "Both A and R are true and R is the correct explanation of A",
+      "Option 3": "A is true but R is false",
+      "Option 4": "Both A and R are true but R is NOT the correct explanation of A"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 35,
+    "question_text": "Statement I: BOD is important for aquatic life survival. Statement II: Optimum BOD is 6.5 ppm.",
+    "options": {
+      "Option 1": "Both Statement I and Statement II are false",
+      "Option 2": "Statement I is false but Statement II is true",
+      "Option 3": "Statement I is true but Statement II is false",
+      "Option 4": "Both Statement I and Statement II are true"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 36,
+    "question_text": "Which carbonyl compound cannot be prepared by addition of water on an alkyne in presence of HgSO4 and H2SO4?",
+    "options": {
+      "Option 1": "CH3-CH2-CHO",
+      "Option 2": "CH3-CO-CH3",
+      "Option 3": "CH3-CHO",
+      "Option 4": "CH3-CO-CH2-CH3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 37,
+    "question_text": "Which one of the following compounds is non-aromatic?",
+    "options": {
+      "Option 1": "Cyclopentadienyl anion",
+      "Option 2": "Cyclopentadiene (sp3 carbon)",
+      "Option 3": "Benzene",
+      "Option 4": "Tropylium ion"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 38,
+    "question_text": "The incorrect statement among the following is:",
+    "options": {
+      "Option 1": "VOSO4 is a reducing agent",
+      "Option 2": "Red colour of ruby is due to the presence of Co3+",
+      "Option 3": "Cr2O3 is an amphoteric oxide",
+      "Option 4": "RuO4 is an oxidizing agent"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 39,
+    "question_text": "According to Bohr's atomic theory: (A) KE is proportional to Z^2/n^2. (B) vn is proportional to Z... Which statements are correct?",
+    "options": {
+      "Option 1": "(C) only",
+      "Option 2": "(A) and (D) only",
+      "Option 3": "(A) only",
+      "Option 4": "(A), (C) and (D) only"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 40,
+    "question_text": "Match drugs: Valium, Morphine, Norethindrone, Vitamin B12.",
+    "options": {
+      "Option 1": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)",
+      "Option 2": "(a)-(i), (b)-(iii), (c)-(iv), (d)-(ii)",
+      "Option 3": "(a)-(ii), (b)-(iv), (c)-(iii), (d)-(i)",
+      "Option 4": "(a)-(iv), (b)-(iii), (c)-(i), (d)-(ii)"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 41,
+    "question_text": "Correct set for melting point order: (1) LiF > LiCl; NaCl > MgO (2) LiF > LiCl; MgO > NaCl",
+    "options": {
+      "Option 1": "Set 1",
+      "Option 2": "Set 2",
+      "Option 3": "Set 3",
+      "Option 4": "Set 4"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 42,
+    "question_text": "Magnetic moments for [FeCl4]2-, [Co(C2O4)3]3-, MnO4 2- are:",
+    "options": {
+      "Option 1": "5.92, 4.90, 0",
+      "Option 2": "5.82, 0, 0",
+      "Option 3": "4.90, 0, 1.73",
+      "Option 4": "4.90, 0, 2.83"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 43,
+    "question_text": "Reagent for Wolf-Kishner reduction:",
+    "options": {
+      "Option 1": "Red P + Cl2",
+      "Option 2": "NH2-NH2 / C2H5ONa",
+      "Option 3": "Ni / H2",
+      "Option 4": "NaBH4"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 44,
+    "question_text": "Diazonium salt of which amine gives coloured dye with beta-Naphthol in NaOH?",
+    "options": {
+      "Option 1": "Methyl amine",
+      "Option 2": "Benzyl amine",
+      "Option 3": "Aniline",
+      "Option 4": "Dimethyl amine"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 45,
+    "question_text": "Sequence to convert nitrobenzene to m-dibromobenzene:",
+    "options": {
+      "Option 1": "Sn/HCl -> Br2 ...",
+      "Option 2": "Sn/HCl -> KBr ...",
+      "Option 3": "NaNO2 ...",
+      "Option 4": "Br2/Fe -> Sn/HCl -> NaNO2/HCl -> CuBr/HBr"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 46,
+    "question_text": "Shape and bond angle of I3- ion:",
+    "options": {
+      "Option 1": "Trigonal planar; 120",
+      "Option 2": "Distorted planar",
+      "Option 3": "Linear; 180",
+      "Option 4": "T-shaped; 180, 90"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 47,
+    "question_text": "Correct order of density for Cr, Fe, Co, Cu, Zn:",
+    "options": {
+      "Option 1": "Cr<Fe<Co<Cu<Zn",
+      "Option 2": "Cr<Zn<Co<Cu<Fe",
+      "Option 3": "Zn<Cu<Co<Fe<Cr",
+      "Option 4": "Zn < Cr < Fe < Co < Cu"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 48,
+    "question_text": "Match reactions: Rosenmund, HVZ, Hoffmann Bromamide, Clemmensen.",
+    "options": {
+      "Option 1": "(a)-(ii), (b)-(i)...",
+      "Option 2": "(a)-(iii)...",
+      "Option 3": "(a)-(iii)...",
+      "Option 4": "(a)-(ii), (b)-(iv), (c)-(i), (d)-(iii)"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 49,
+    "question_text": "In polymer Buna-S, 'S' stands for:",
+    "options": {
+      "Option 1": "Styrene",
+      "Option 2": "Sulphur",
+      "Option 3": "Strength",
+      "Option 4": "Sulphonation"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 50,
+    "question_text": "Most suitable salt for efficient clotting of blood:",
+    "options": {
+      "Option 1": "Mg(HCO3)2",
+      "Option 2": "FeSO4",
+      "Option 3": "NaHCO3",
+      "Option 4": "FeCl3"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 51,
+    "question_text": "Magnitude of change in oxidising power of MnO4-/Mn2+ when H+ decreases from 1M to 10^-4 M is x * 10^-4 V. Value of x is:",
+    "options": {
+      "Option 1": "3776",
+      "Option 2": "1888",
+      "Option 3": "5000",
+      "Option 4": "2500"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 52,
+    "question_text": "Which allotropic form of sulphur shows paramagnetism?",
+    "options": {
+      "Option 1": "S2-form",
+      "Option 2": "Alpha-sulphur",
+      "Option 3": "Beta-sulphur",
+      "Option 4": "S8"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 53,
+    "question_text": "Freezing point of solution of 10g C4H10 in 200g C6H6 (Tf=5.5, Kf=5.12). Temp is x. Value x is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "0",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 54,
+    "question_text": "Volume of 4.75 g acetylene at 50°C and 740 mmHg is x L. Value of x is:",
+    "options": {
+      "Option 1": "5",
+      "Option 2": "10",
+      "Option 3": "2",
+      "Option 4": "8"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 55,
+    "question_text": "Solubility of PbI2 in 0.1 M Pb(NO3)2 is x * 10^-6 mol/L. (Ksp = 8*10^-9). Value of x is:",
+    "options": {
+      "Option 1": "141",
+      "Option 2": "100",
+      "Option 3": "200",
+      "Option 4": "50"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 56,
+    "question_text": "Which amine can be synthesized by Gabriel synthesis?",
+    "options": {
+      "Option 1": "Aniline",
+      "Option 2": "t-butylamine",
+      "Option 3": "n-butylamine (Aliphatic)",
+      "Option 4": "N-methylaniline"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 57,
+    "question_text": "1.86 g aniline gives acetanilide with 10% loss. Amount obtained is x * 10^-2 g. Value of x is:",
+    "options": {
+      "Option 1": "243",
+      "Option 2": "270",
+      "Option 3": "200",
+      "Option 4": "300"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 58,
+    "question_text": "Hydrocarbon CxHy requires 6 vol O2 produces 4 vol CO2. Value of y is:",
+    "options": {
+      "Option 1": "8",
+      "Option 2": "4",
+      "Option 3": "6",
+      "Option 4": "10"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 59,
+    "question_text": "Sucrose hydrolysis half life 3.33 h. Fraction remaining after 9h is f. 1/f = x * 10^-2. Value of x is:",
+    "options": {
+      "Option 1": "81",
+      "Option 2": "50",
+      "Option 3": "100",
+      "Option 4": "25"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 60,
+    "question_text": "Log K for 3HC=CH -> C6H6 is x * 10^-1. Value of x is:",
+    "options": {
+      "Option 1": "855",
+      "Option 2": "400",
+      "Option 3": "1000",
+      "Option 4": "500"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 61,
+    "question_text": "Mirror image of P(a,6,9) wrt line is (20,b,-a-9). |a+b| is:",
+    "options": {
+      "Option 1": "86",
+      "Option 2": "88",
+      "Option 3": "84",
+      "Option 4": "90"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 62,
+    "question_text": "Twice differentiable function, determinant condition, f(0)=1, f'(0)=2. f(1) lies in:",
+    "options": {
+      "Option 1": "(9, 12)",
+      "Option 2": "(6, 9)",
+      "Option 3": "(3, 6)",
+      "Option 4": "(0, 3)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 63,
+    "question_text": "Differential equation f(x)f''(x) - (f'(x))^2 = 0. f(0)=1, f'(0)=2. f(1) is:",
+    "options": {
+      "Option 1": "e",
+      "Option 2": "e^2",
+      "Option 3": "e^3",
+      "Option 4": "e^4"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 64,
+    "question_text": "A possible value of tan(1/4 sin^-1(sqrt(63)/8)) is:",
+    "options": {
+      "Option 1": "1/(2sqrt(2))",
+      "Option 2": "1/sqrt(7)",
+      "Option 3": "sqrt(7)-1",
+      "Option 4": "2sqrt(2)-1"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 65,
+    "question_text": "Probability that two subsets of {1,2,3,4,5} have exactly two elements in intersection:",
+    "options": {
+      "Option 1": "65/2^7",
+      "Option 2": "135/2^9",
+      "Option 3": "65/2^8",
+      "Option 4": "35/2^7"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 66,
+    "question_text": "Vector equation of plane passing through intersection of two planes and point (1,0,2):",
+    "options": {
+      "Option 1": "r.(i - 7j + 3k) = 7/3",
+      "Option 2": "r.(i + 7j + 3k) = 7",
+      "Option 3": "r.(3i + 7j + 3k) = 7",
+      "Option 4": "r.(i + 7j + 3k) = 7/3"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 67,
+    "question_text": "Centroid of triangle (a,c), (2,b), (a,b) is (10/3, 7/3). a,b,c in AP. Quadratic roots alpha, beta. Alpha^2+beta^2-alpha*beta is:",
+    "options": {
+      "Option 1": "71/256",
+      "Option 2": "-69/256",
+      "Option 3": "69/256",
+      "Option 4": "-71/256"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 68,
+    "question_text": "Integral 1 to 3 [x^2-2x-2] dx is:",
+    "options": {
+      "Option 1": "-4",
+      "Option 2": "-5",
+      "Option 3": "-1 - sqrt(2) - sqrt(3)",
+      "Option 4": "-1 + sqrt(2) + sqrt(3)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 69,
+    "question_text": "Function f(x) defined piecewise. Set A where f is increasing is:",
+    "options": {
+      "Option 1": "(-5, -4) U (4, inf)",
+      "Option 2": "(-5, inf)",
+      "Option 3": "(-inf, -5) U (4, inf)",
+      "Option 4": "(-inf, -5) U (-4, inf)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 70,
+    "question_text": "Curve ax^2+bx+c passes (1,2), tangent at origin is y=x. a,b,c are:",
+    "options": {
+      "Option 1": "1, 1, 0",
+      "Option 2": "-1, 1, 1",
+      "Option 3": "1, 0, 1",
+      "Option 4": "1/2, 1/2, 1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 71,
+    "question_text": "Negation of ~p ^ (p v q) is:",
+    "options": {
+      "Option 1": "-p ^ q",
+      "Option 2": "p ^ ~q",
+      "Option 3": "-p v q",
+      "Option 4": "p v -q"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 72,
+    "question_text": "System of linear equations with parameter k. Which statement is correct?",
+    "options": {
+      "Option 1": "(B) and (E)",
+      "Option 2": "(C) and (D)",
+      "Option 3": "(A) and (D)",
+      "Option 4": "(A) and (E)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 73,
+    "question_text": "Line x + sqrt(3)y = 2sqrt(3) is tangent to which curve?",
+    "options": {
+      "Option 1": "x^2 + 9y^2 = 9",
+      "Option 2": "2x^2 - 18y^2 = 9",
+      "Option 3": "y^2 = x / 6sqrt(3)",
+      "Option 4": "x^2 + y^2 = 7"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 74,
+    "question_text": "Jet plane elevation changes from 60 to 30 in 20s at 432 km/h. Height is:",
+    "options": {
+      "Option 1": "1200 sqrt(3) m",
+      "Option 2": "1800 sqrt(3) m",
+      "Option 3": "3600 sqrt(3) m",
+      "Option 4": "2400 sqrt(3) m"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 75,
+    "question_text": "Statements (a) and (b). Tautology check.",
+    "options": {
+      "Option 1": "(a) is tautology not (b)",
+      "Option 2": "Neither",
+      "Option 3": "Both are tautologies",
+      "Option 4": "(b) is tautology not (a)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 76,
+    "question_text": "Matrix A symmetric, B skew-symmetric. System (A^2B^2 - B^2A^2)X = 0 has:",
+    "options": {
+      "Option 1": "unique solution",
+      "Option 2": "exactly two solutions",
+      "Option 3": "infinitely many solutions",
+      "Option 4": "no solution"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 77,
+    "question_text": "Sum of series (n+1)C2 + 2(2C2 + ... + nC2) is:",
+    "options": {
+      "Option 1": "n(n+1)^2(n+2)/12",
+      "Option 2": "n(n-1)(2n+1)/6",
+      "Option 3": "n(n+1)(2n+1)/6",
+      "Option 4": "n(2n+1)(3n+1)/6"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 78,
+    "question_text": "Point P on parabola y=x^2+4 closest to y=4x-1 is:",
+    "options": {
+      "Option 1": "(-2, 8)",
+      "Option 2": "(1, 5)",
+      "Option 3": "(3, 13)",
+      "Option 4": "(2, 8)"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 79,
+    "question_text": "Area of region 5x^2 <= y <= 2x^2 + 9 is:",
+    "options": {
+      "Option 1": "9 sqrt(3)",
+      "Option 2": "12 sqrt(3)",
+      "Option 3": "11 sqrt(3)",
+      "Option 4": "6 sqrt(3)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 80,
+    "question_text": "Integral f(x) from 0 to 2 given f'(x)=f'(2-x), f(0)=1, f(2)=e^2 is:",
+    "options": {
+      "Option 1": "1 + e^2",
+      "Option 2": "1 - e^2",
+      "Option 3": "2(1 - e^2)",
+      "Option 4": "2(1 + e^2)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 81,
+    "question_text": "Number of real roots of (x+1)^2 + |x-5| = 27/4 is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "4",
+      "Option 3": "0",
+      "Option 4": "1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 82,
+    "question_text": "Students S1..S10 divided into 3 groups A,B,C. C has at most 3. Number of ways:",
+    "options": {
+      "Option 1": "31650",
+      "Option 2": "20000",
+      "Option 3": "40000",
+      "Option 4": "15000"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 83,
+    "question_text": "Expression involving f(x) with coefficients a, alpha, b, beta. Value is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "1",
+      "Option 3": "0",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 84,
+    "question_text": "Variance of 10 natural numbers 1...1, k is less than 10. Max k is:",
+    "options": {
+      "Option 1": "11",
+      "Option 2": "9",
+      "Option 3": "12",
+      "Option 4": "10"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 85,
+    "question_text": "Shortest distance between lines involving lambda. Value of lambda is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "-1",
+      "Option 4": "0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 86,
+    "question_text": "Complex sum expression involving powers of 21 and 24. Value is:",
+    "options": {
+      "Option 1": "310",
+      "Option 2": "300",
+      "Option 3": "320",
+      "Option 4": "290"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 87,
+    "question_text": "Locus of point P distance from (5,0) thrice (-5,0). 4r^2 is:",
+    "options": {
+      "Option 1": "56.25",
+      "Option 2": "50.00",
+      "Option 3": "60.00",
+      "Option 4": "45.00"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 88,
+    "question_text": "Sum of combinations nCr product terms. Max value k is:",
+    "options": {
+      "Option 1": "12",
+      "Option 2": "13",
+      "Option 3": "10",
+      "Option 4": "15"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 89,
+    "question_text": "GP sum first four terms 65/12. Product 1. 2alpha is:",
+    "options": {
+      "Option 1": "3",
+      "Option 2": "2",
+      "Option 3": "4",
+      "Option 4": "1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 90,
+    "question_text": "Area of triangle formed by positive x-axis, normal and tangent to circle at (5,7). 24A is:",
+    "options": {
+      "Option 1": "1225",
+      "Option 2": "1200",
+      "Option 3": "1250",
+      "Option 4": "1300"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  }
+]

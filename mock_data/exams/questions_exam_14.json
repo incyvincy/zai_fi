@@ -1,0 +1,1082 @@
+[
+  {
+    "question_id": 1,
+    "question_text": "A body of mass 'm' is dropped from a height 'h'. It reaches the ground with a speed of 0.8 sqrt(2gh). The work done by air friction is:",
+    "options": {
+      "Option 1": "-0.64 mgh",
+      "Option 2": "-0.36 mgh",
+      "Option 3": "0.64 mgh",
+      "Option 4": "0.36 mgh"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 2,
+    "question_text": "Two spherical conductors of radii R1 and R2 are separated by a large distance. They are connected by a wire. The ratio of the charges on them (Q1/Q2) at equilibrium is:",
+    "options": {
+      "Option 1": "R1/R2",
+      "Option 2": "R2/R1",
+      "Option 3": "(R1/R2)^2",
+      "Option 4": "(R2/R1)^2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 3,
+    "question_text": "A particle executes simple harmonic motion with an amplitude A. The displacement of the particle from the mean position when its potential energy is half of its total energy is:",
+    "options": {
+      "Option 1": "A/2",
+      "Option 2": "A/sqrt(2)",
+      "Option 3": "A/3",
+      "Option 4": "A/sqrt(3)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 4,
+    "question_text": "The magnetic field at the center of a circular current carrying loop of radius R is B_c. The magnetic field on the axis of the loop at a distance R from the center is B_a. The ratio B_c : B_a is:",
+    "options": {
+      "Option 1": "1 : sqrt(2)",
+      "Option 2": "2sqrt(2) : 1",
+      "Option 3": "1 : 2sqrt(2)",
+      "Option 4": "sqrt(2) : 1"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 5,
+    "question_text": "A parallel plate capacitor is filled with a dielectric of constant K. If the capacitor was disconnected from the battery before insertion, and the initial energy was U0, the new energy stored in the capacitor is:",
+    "options": {
+      "Option 1": "U0 / K",
+      "Option 2": "K U0",
+      "Option 3": "U0",
+      "Option 4": "U0 / K^2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 6,
+    "question_text": "In a Young's double slit experiment, the fringe width is found to be 0.4 mm. If the whole apparatus is immersed in water of refractive index 4/3, without changing the geometrical arrangement, the new fringe width will be:",
+    "options": {
+      "Option 1": "0.30 mm",
+      "Option 2": "0.40 mm",
+      "Option 3": "0.53 mm",
+      "Option 4": "0.45 mm"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 7,
+    "question_text": "An electron is moving with a speed of 2 x 10^6 m/s. If the uncertainty in its momentum is 0.1%, the minimum uncertainty in its position is approximately (h = 6.6 x 10^-34 Js, me = 9 x 10^-31 kg):",
+    "options": {
+      "Option 1": "3 x 10^-7 m",
+      "Option 2": "3 x 10^-8 m",
+      "Option 3": "3 x 10^-6 m",
+      "Option 4": "3 x 10^-9 m"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 8,
+    "question_text": "Consider a block of mass 10 kg resting on a rough horizontal surface with coefficient of friction 0.5. A horizontal force of 40 N is applied. The acceleration of the block is (g = 10 m/s^2):",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "0.5 m/s^2",
+      "Option 3": "1 m/s^2",
+      "Option 4": "4 m/s^2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 9,
+    "question_text": "The ratio of the escape velocity on planet A to that on planet B is 1:2. If the radius of planet A is twice that of B, the ratio of the mean density of A to that of B is:",
+    "options": {
+      "Option 1": "1:2",
+      "Option 2": "1:4",
+      "Option 3": "1:8",
+      "Option 4": "1:16"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 10,
+    "question_text": "A Carnot engine operates between temperatures T1 and T2 (T1 > T2). If the efficiency is 1/6, and lowering T2 by 62 K increases efficiency to 1/3, the temperature T1 is:",
+    "options": {
+      "Option 1": "372 K",
+      "Option 2": "310 K",
+      "Option 3": "330 K",
+      "Option 4": "375 K"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 11,
+    "question_text": "A wire of resistance R is stretched to twice its original length. The new resistance of the wire will be:",
+    "options": {
+      "Option 1": "2R",
+      "Option 2": "4R",
+      "Option 3": "R/2",
+      "Option 4": "R/4"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 12,
+    "question_text": "If the earth shrinks to half of its radius without changing its mass, the duration of the day will become:",
+    "options": {
+      "Option 1": "6 hours",
+      "Option 2": "12 hours",
+      "Option 3": "24 hours",
+      "Option 4": "48 hours"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 13,
+    "question_text": "A logic gate circuit has two inputs A and B and output Y. If the output is 1 only when A=0 and B=1, the gate combination behaves as which logical operation considering standard gates and inverters?",
+    "options": {
+      "Option 1": "AND gate",
+      "Option 2": "OR gate",
+      "Option 3": "(NOT A) AND B",
+      "Option 4": "NAND gate"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 14,
+    "question_text": "The de-Broglie wavelength of a proton moving with velocity v is equal to the wavelength of a photon. The ratio of the kinetic energy of the proton to the energy of the photon is (c is speed of light):",
+    "options": {
+      "Option 1": "v/c",
+      "Option 2": "v/2c",
+      "Option 3": "2v/c",
+      "Option 4": "c/v"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 15,
+    "question_text": "In an LCR series circuit, the voltage across R is 100V, and R = 1k Ohm with C = 2 microF. The resonant frequency omega is 200 rad/s. At resonance, the voltage across L is:",
+    "options": {
+      "Option 1": "250 V",
+      "Option 2": "2500 V",
+      "Option 3": "25 V",
+      "Option 4": "50 V"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 16,
+    "question_text": "A light ray enters a solid glass sphere of refractive index 1.5 at an angle of incidence 60 degrees. The angle of refraction at the first surface is:",
+    "options": {
+      "Option 1": "30 degrees",
+      "Option 2": "45 degrees",
+      "Option 3": "sin^-1(1/sqrt(3))",
+      "Option 4": "sin^-1(1/3)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 17,
+    "question_text": "A force F = (3x^2 + 2x - 5) N acts on a particle. The work done by the force in displacing the particle from x=0 to x=2 m is:",
+    "options": {
+      "Option 1": "2 J",
+      "Option 2": "4 J",
+      "Option 3": "6 J",
+      "Option 4": "8 J"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 18,
+    "question_text": "Two coherent sources of light with intensity ratio 81:1 produce interference fringes. The ratio of maximum to minimum intensity in the interference pattern is:",
+    "options": {
+      "Option 1": "25:16",
+      "Option 2": "10:8",
+      "Option 3": "25:4",
+      "Option 4": "5:4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 19,
+    "question_text": "The dimensions of magnetic permeability mu_0 are:",
+    "options": {
+      "Option 1": "[M L T^-2 A^-2]",
+      "Option 2": "[M L^2 T^-2 A^-2]",
+      "Option 3": "[M L T^-2 A^-1]",
+      "Option 4": "[M L^2 T^-1 A^-1]"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 20,
+    "question_text": "A raindrop of radius r falls from a certain height h above ground. The work done by the gravitational force is proportional to:",
+    "options": {
+      "Option 1": "r",
+      "Option 2": "r^2",
+      "Option 3": "r^3",
+      "Option 4": "r^4"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 21,
+    "question_text": "A tuning fork produces 4 beats/sec with a sonometer wire of length 50 cm. If the length of the wire is decreased by 1 cm, the number of beats is still 4. The frequency of the tuning fork is:",
+    "options": {
+      "Option 1": "396 Hz",
+      "Option 2": "400 Hz",
+      "Option 3": "404 Hz",
+      "Option 4": "392 Hz"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 22,
+    "question_text": "An electric dipole of moment p is placed in a uniform electric field E. The maximum torque experienced by the dipole is:",
+    "options": {
+      "Option 1": "pE",
+      "Option 2": "pE/2",
+      "Option 3": "2pE",
+      "Option 4": "Zero"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 23,
+    "question_text": "In a nuclear reactor, the moderator is used to:",
+    "options": {
+      "Option 1": "Absorb neutrons",
+      "Option 2": "Slow down neutrons",
+      "Option 3": "Accelerate neutrons",
+      "Option 4": "Control the reaction rate"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 24,
+    "question_text": "A carrier wave of peak voltage 12 V is used to transmit a message signal. To have a modulation index of 75%, the peak voltage of the modulating signal should be:",
+    "options": {
+      "Option 1": "9 V",
+      "Option 2": "12 V",
+      "Option 3": "16 V",
+      "Option 4": "6 V"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 25,
+    "question_text": "The energy of an electron in the nth orbit of hydrogen atom is En = -13.6/n^2 eV. The energy required to excite the electron from the ground state to the first excited state is:",
+    "options": {
+      "Option 1": "10.2 eV",
+      "Option 2": "12.1 eV",
+      "Option 3": "13.6 eV",
+      "Option 4": "3.4 eV"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 26,
+    "question_text": "A solid sphere rolls down an inclined plane of inclination 30 degrees without slipping. The acceleration of the center of mass is:",
+    "options": {
+      "Option 1": "g/3",
+      "Option 2": "5g/14",
+      "Option 3": "5g/7",
+      "Option 4": "2g/3"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 27,
+    "question_text": "If 10^22 gas molecules each of mass 10^-26 kg strike a surface of area 1 m^2 per second elastically with a speed of 10^4 m/s normal to the surface, the pressure exerted is:",
+    "options": {
+      "Option 1": "2 N/m^2",
+      "Option 2": "4 N/m^2",
+      "Option 3": "1 N/m^2",
+      "Option 4": "8 N/m^2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 28,
+    "question_text": "A screw gauge has a pitch of 1 mm and 100 divisions on the circular scale. The least count of the instrument is:",
+    "options": {
+      "Option 1": "0.01 mm",
+      "Option 2": "0.001 mm",
+      "Option 3": "0.1 mm",
+      "Option 4": "0.02 mm"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 29,
+    "question_text": "The half-life of a radioactive substance is 20 minutes. The time interval between 33% decay and 67% decay is:",
+    "options": {
+      "Option 1": "20 minutes",
+      "Option 2": "40 minutes",
+      "Option 3": "10 minutes",
+      "Option 4": "13 minutes"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 30,
+    "question_text": "An alternating voltage V = 140 sin(50 pi t) is applied to a resistor of resistance 10 Ohm. The power dissipated in the resistor is:",
+    "options": {
+      "Option 1": "980 W",
+      "Option 2": "1960 W",
+      "Option 3": "1000 W",
+      "Option 4": "500 W"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 31,
+    "question_text": "Which one of the following complexes is diamagnetic?",
+    "options": {
+      "Option 1": "[CoF6]3-",
+      "Option 2": "[Ni(CN)4]2-",
+      "Option 3": "[Fe(CN)6]3-",
+      "Option 4": "[Cu(NH3)4]2+"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 32,
+    "question_text": "The major product of the reaction between tert-butyl chloride and sodium ethoxide is:",
+    "options": {
+      "Option 1": "tert-butyl ethyl ether",
+      "Option 2": "2-methylprop-1-ene",
+      "Option 3": "2-chloro-2-methylpropane",
+      "Option 4": "But-1-ene"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 33,
+    "question_text": "The correct order of increasing ionization enthalpy for the elements B, C, N, O is:",
+    "options": {
+      "Option 1": "B < C < N < O",
+      "Option 2": "B < C < O < N",
+      "Option 3": "C < B < O < N",
+      "Option 4": "B < O < C < N"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 34,
+    "question_text": "Which of the following compounds is not aromatic?",
+    "options": {
+      "Option 1": "Benzene",
+      "Option 2": "Cyclooctatetraene",
+      "Option 3": "Pyridine",
+      "Option 4": "Thiophene"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 35,
+    "question_text": "The shape of XeF4 molecule is:",
+    "options": {
+      "Option 1": "Tetrahedral",
+      "Option 2": "Square planar",
+      "Option 3": "Pyramidal",
+      "Option 4": "Octahedral"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 36,
+    "question_text": "Which of the following is a non-reducing sugar?",
+    "options": {
+      "Option 1": "Glucose",
+      "Option 2": "Fructose",
+      "Option 3": "Maltose",
+      "Option 4": "Sucrose"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 37,
+    "question_text": "The product formed when Propanal reacts with dilute NaOH is:",
+    "options": {
+      "Option 1": "3-hydroxy-2-methylpentanal",
+      "Option 2": "3-hydroxyhexanal",
+      "Option 3": "4-hydroxy-4-methylpentan-2-one",
+      "Option 4": "2-methylpent-2-enal"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 38,
+    "question_text": "Which of the following is an example of a condensation polymer?",
+    "options": {
+      "Option 1": "Polyethylene",
+      "Option 2": "PVC",
+      "Option 3": "Nylon-6,6",
+      "Option 4": "Teflon"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 39,
+    "question_text": "The most acidic compound among the following is:",
+    "options": {
+      "Option 1": "Ethanol",
+      "Option 2": "Phenol",
+      "Option 3": "p-Nitrophenol",
+      "Option 4": "m-Cresol"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 40,
+    "question_text": "For a first order reaction, the time required for 99% completion is related to the half-life t1/2 by:",
+    "options": {
+      "Option 1": "t99% = 10 * t1/2",
+      "Option 2": "t99% = 6.64 * t1/2",
+      "Option 3": "t99% = 2 * t1/2",
+      "Option 4": "t99% = 50 * t1/2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 41,
+    "question_text": "Which of the following oxides is amphoteric?",
+    "options": {
+      "Option 1": "Na2O",
+      "Option 2": "MgO",
+      "Option 3": "Al2O3",
+      "Option 4": "SO3"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 42,
+    "question_text": "The correct increasing order of basic strength for the following compounds is: (I) Aniline (II) p-Nitroaniline (III) p-Toluidine",
+    "options": {
+      "Option 1": "II < I < III",
+      "Option 2": "III < I < II",
+      "Option 3": "II < III < I",
+      "Option 4": "I < II < III"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 43,
+    "question_text": "Which of the following elements has the highest negative electron gain enthalpy?",
+    "options": {
+      "Option 1": "F",
+      "Option 2": "Cl",
+      "Option 3": "Br",
+      "Option 4": "I"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 44,
+    "question_text": "A solution of urea (molar mass 60 g/mol) boils at 100.18 C at atmospheric pressure. If Kf and Kb for water are 1.86 and 0.512 K kg/mol respectively, the freezing point of the solution will be:",
+    "options": {
+      "Option 1": "-0.654 C",
+      "Option 2": "0.654 C",
+      "Option 3": "-6.54 C",
+      "Option 4": "-0.18 C"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 45,
+    "question_text": "Which of the following compounds gives a positive carbylamine test?",
+    "options": {
+      "Option 1": "Dimethylamine",
+      "Option 2": "Trimethylamine",
+      "Option 3": "Aniline",
+      "Option 4": "N-methylaniline"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 46,
+    "question_text": "The gas evolved when methylmagnesium bromide is treated with ethanol is:",
+    "options": {
+      "Option 1": "Methane",
+      "Option 2": "Ethane",
+      "Option 3": "Propane",
+      "Option 4": "Hydrogen"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 47,
+    "question_text": "The oxidation number of Mn in KMnO4 is:",
+    "options": {
+      "Option 1": "+6",
+      "Option 2": "+7",
+      "Option 3": "+4",
+      "Option 4": "+2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 48,
+    "question_text": "Which of the following is an example of an elastomer?",
+    "options": {
+      "Option 1": "Nylon-6",
+      "Option 2": "Polystyrene",
+      "Option 3": "Buna-S",
+      "Option 4": "Bakelite"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 49,
+    "question_text": "The spin-only magnetic moment of [Fe(H2O)6]2+ complex is approximately:",
+    "options": {
+      "Option 1": "4.90 BM",
+      "Option 2": "5.92 BM",
+      "Option 3": "2.83 BM",
+      "Option 4": "1.73 BM"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 50,
+    "question_text": "During the electrolysis of molten sodium chloride, the product obtained at the cathode is:",
+    "options": {
+      "Option 1": "Chlorine gas",
+      "Option 2": "Sodium metal",
+      "Option 3": "Hydrogen gas",
+      "Option 4": "Oxygen gas"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 51,
+    "question_text": "The number of atoms per unit cell in a body-centered cubic structure is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "4",
+      "Option 4": "6"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 52,
+    "question_text": "Which of the following amines is the strongest base in aqueous solution?",
+    "options": {
+      "Option 1": "Methylamine",
+      "Option 2": "Dimethylamine",
+      "Option 3": "Trimethylamine",
+      "Option 4": "Aniline"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 53,
+    "question_text": "The IUPAC name of the complex [Pt(NH3)2Cl(NO2)] is:",
+    "options": {
+      "Option 1": "Diamminechloridonitrito-N-platinum(II)",
+      "Option 2": "Diamminechloridonitroplatinum(II)",
+      "Option 3": "Chloridodiamminenitrito-N-platinum(II)",
+      "Option 4": "Diamminechloridonitrito-O-platinum(II)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 54,
+    "question_text": "Which of the following compounds is used as a tranquilizer?",
+    "options": {
+      "Option 1": "Aspirin",
+      "Option 2": "Penicillin",
+      "Option 3": "Equanil",
+      "Option 4": "Morphine"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 55,
+    "question_text": "The bond order of O2+ is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "2.5",
+      "Option 3": "1.5",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 56,
+    "question_text": "Which of the following reactions is used to prepare benzene from phenol?",
+    "options": {
+      "Option 1": "Reaction with Zn dust",
+      "Option 2": "Reaction with Na/Ether",
+      "Option 3": "Reaction with NaOH",
+      "Option 4": "Reaction with HCl"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 57,
+    "question_text": "The equivalent weight of K2Cr2O7 in acidic medium is (M is molar mass):",
+    "options": {
+      "Option 1": "M/3",
+      "Option 2": "M/5",
+      "Option 3": "M/6",
+      "Option 4": "M/1"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 58,
+    "question_text": "Which one of the following statements about zeolite is false?",
+    "options": {
+      "Option 1": "They are used as cation exchangers",
+      "Option 2": "They have open structure which enables them to take up small molecules",
+      "Option 3": "Zeolites are aluminosilicates having three dimensional network",
+      "Option 4": "Some of the SiO4 4- units are replaced by AlO4 5- and AlO6 9- ions in zeolites"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 59,
+    "question_text": "In the extraction of copper from its sulphide ore, the metal is finally obtained by the reduction of cuprous oxide with:",
+    "options": {
+      "Option 1": "Iron sulphide (FeS)",
+      "Option 2": "Carbon monoxide (CO)",
+      "Option 3": "Copper (I) sulphide (Cu2S)",
+      "Option 4": "Sulphur dioxide (SO2)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 60,
+    "question_text": "What is the role of cryolite in the metallurgy of aluminium?",
+    "options": {
+      "Option 1": "To increase the melting point of alumina",
+      "Option 2": "To decrease the melting point of alumina",
+      "Option 3": "To remove impurities",
+      "Option 4": "To act as a reducing agent"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 61,
+    "question_text": "If A and B are two sets such that n(A)=3 and n(B)=2, then the total number of functions from A to B is:",
+    "options": {
+      "Option 1": "6",
+      "Option 2": "8",
+      "Option 3": "9",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 62,
+    "question_text": "The value of limit x -> 0 (sin 3x / x) is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "3",
+      "Option 3": "1/3",
+      "Option 4": "0"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 63,
+    "question_text": "If z = 1 + i, then arg(z) is:",
+    "options": {
+      "Option 1": "pi/4",
+      "Option 2": "pi/2",
+      "Option 3": "pi",
+      "Option 4": "3pi/4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 64,
+    "question_text": "The sum of the infinite geometric series 1 + 1/2 + 1/4 + 1/8 + ... is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "1.5",
+      "Option 4": "Infinity"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 65,
+    "question_text": "The equation of the circle with center (1, -2) and radius 4 is:",
+    "options": {
+      "Option 1": "(x-1)^2 + (y+2)^2 = 16",
+      "Option 2": "(x+1)^2 + (y-2)^2 = 16",
+      "Option 3": "(x-1)^2 + (y-2)^2 = 4",
+      "Option 4": "x^2 + y^2 = 16"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 66,
+    "question_text": "The value of the definite integral from 0 to pi/2 of sin^2 x dx is:",
+    "options": {
+      "Option 1": "pi/2",
+      "Option 2": "pi/4",
+      "Option 3": "pi",
+      "Option 4": "1"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 67,
+    "question_text": "If A is a square matrix such that A^2 = A, then (I+A)^3 - 7A is equal to:",
+    "options": {
+      "Option 1": "A",
+      "Option 2": "I-A",
+      "Option 3": "I",
+      "Option 4": "3A"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 68,
+    "question_text": "The number of ways to arrange the letters of the word 'APPLE' is:",
+    "options": {
+      "Option 1": "120",
+      "Option 2": "60",
+      "Option 3": "24",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 69,
+    "question_text": "If the mean of 5 observations is 10 and their variance is 4, then the sum of squares of these observations is:",
+    "options": {
+      "Option 1": "500",
+      "Option 2": "520",
+      "Option 3": "504",
+      "Option 4": "540"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 70,
+    "question_text": "The eccentricity of the ellipse 9x^2 + 16y^2 = 144 is:",
+    "options": {
+      "Option 1": "sqrt(7)/4",
+      "Option 2": "sqrt(7)/3",
+      "Option 3": "4/5",
+      "Option 4": "3/4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 71,
+    "question_text": "The solution of the differential equation dy/dx = y/x is:",
+    "options": {
+      "Option 1": "y = x + c",
+      "Option 2": "y = cx",
+      "Option 3": "xy = c",
+      "Option 4": "y = c e^x"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 72,
+    "question_text": "If the vectors a = 2i + j - k and b = i - j + 2k are perpendicular, then a.b is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "-1",
+      "Option 3": "0",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 73,
+    "question_text": "The derivative of log(sin x) with respect to x is:",
+    "options": {
+      "Option 1": "tan x",
+      "Option 2": "cot x",
+      "Option 3": "sec x",
+      "Option 4": "cosec x"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 74,
+    "question_text": "If P(A) = 0.4, P(B) = 0.5, and A and B are independent events, then P(A union B) is:",
+    "options": {
+      "Option 1": "0.9",
+      "Option 2": "0.2",
+      "Option 3": "0.7",
+      "Option 4": "0.1"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 75,
+    "question_text": "The area bounded by the curve y = x^2, the x-axis and the lines x = 1 and x = 2 is:",
+    "options": {
+      "Option 1": "7/3 sq units",
+      "Option 2": "5/3 sq units",
+      "Option 3": "3 sq units",
+      "Option 4": "1 sq unit"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 76,
+    "question_text": "The distance of the point (1, 2, 3) from the plane x + y + z = 9 is:",
+    "options": {
+      "Option 1": "sqrt(3)",
+      "Option 2": "3",
+      "Option 3": "1",
+      "Option 4": "3/sqrt(3)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 77,
+    "question_text": "Which of the following is a tautology?",
+    "options": {
+      "Option 1": "p -> (p or q)",
+      "Option 2": "p -> (p and q)",
+      "Option 3": "(p or q) -> p",
+      "Option 4": "(p and q) -> ~p"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 78,
+    "question_text": "The coefficient of x^5 in the expansion of (x + 3)^8 is:",
+    "options": {
+      "Option 1": "1512",
+      "Option 2": "56",
+      "Option 3": "1344",
+      "Option 4": "28"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 79,
+    "question_text": "The minimum value of 3 cos x + 4 sin x is:",
+    "options": {
+      "Option 1": "-5",
+      "Option 2": "5",
+      "Option 3": "7",
+      "Option 4": "-7"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 80,
+    "question_text": "If alpha and beta are roots of x^2 - x - 1 = 0, then alpha^2 + beta^2 is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "3",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 81,
+    "question_text": "The sum of the first n odd natural numbers is:",
+    "options": {
+      "Option 1": "2n",
+      "Option 2": "n^2",
+      "Option 3": "n(n+1)",
+      "Option 4": "n(n+1)/2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 82,
+    "question_text": "The value of k for which the system of equations kx + y = 1 and x + ky = 2 has no solution is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "-1",
+      "Option 3": "2",
+      "Option 4": "-2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 83,
+    "question_text": "The tangent to the curve y = x^2 at point (1, 1) makes an angle with the x-axis equal to:",
+    "options": {
+      "Option 1": "45 degrees",
+      "Option 2": "60 degrees",
+      "Option 3": "tan^-1(2)",
+      "Option 4": "30 degrees"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 84,
+    "question_text": "If a line makes angles 90, 60, and 30 degrees with the positive direction of x, y, and z axes respectively, then its direction cosines are:",
+    "options": {
+      "Option 1": "0, 1/2, sqrt(3)/2",
+      "Option 2": "1, 1/2, 1/2",
+      "Option 3": "0, 1/sqrt(2), 1/sqrt(2)",
+      "Option 4": "Such a line cannot exist"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 85,
+    "question_text": "The value of sin(tan^-1(x)) is:",
+    "options": {
+      "Option 1": "x / sqrt(1+x^2)",
+      "Option 2": "1 / sqrt(1+x^2)",
+      "Option 3": "x",
+      "Option 4": "x^2 / (1+x^2)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 86,
+    "question_text": "The projection of vector i - j on vector i + j is:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "1",
+      "Option 3": "sqrt(2)",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 87,
+    "question_text": "Let f(x) = |x|. The function is:",
+    "options": {
+      "Option 1": "Continuous and differentiable at x=0",
+      "Option 2": "Continuous but not differentiable at x=0",
+      "Option 3": "Differentiable but not continuous at x=0",
+      "Option 4": "Neither continuous nor differentiable at x=0"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 88,
+    "question_text": "The number of subsets of a set containing 5 elements is:",
+    "options": {
+      "Option 1": "10",
+      "Option 2": "25",
+      "Option 3": "32",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 89,
+    "question_text": "If y = e^(2x), then the second derivative d^2y/dx^2 is:",
+    "options": {
+      "Option 1": "2e^(2x)",
+      "Option 2": "4e^(2x)",
+      "Option 3": "e^(2x)",
+      "Option 4": "8e^(2x)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 90,
+    "question_text": "The modulus of the complex number 3 - 4i is:",
+    "options": {
+      "Option 1": "3",
+      "Option 2": "4",
+      "Option 3": "5",
+      "Option 4": "7"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  }
+]

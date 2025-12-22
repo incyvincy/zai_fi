@@ -1,0 +1,1082 @@
+[
+  {
+    "question_id": 1,
+    "question_text": "A large block of wood of mass M = 5.99 kg is hanging from two long massless cords. A bullet of mass m = 10g is fired into the block and gets embedded in it. The (block + bullet) then swing upwards, their centre of mass rising a vertical distance h = 9.8 cm before the (block + bullet) pendulum comes momentarily to rest at the end of its arc. The speed of the bullet just before collision is: (Take g = 9.8 ms^-2)",
+    "options": {
+      "Option 1": "841.4 m/s",
+      "Option 2": "811.4 m/s",
+      "Option 3": "831.4 m/s",
+      "Option 4": "821.4 m/s"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 2,
+    "question_text": "A charge Q is moving dl distance in the magnetic field B. Find the value of work done by B.",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "Infinite",
+      "Option 3": "Zero",
+      "Option 4": "-1"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 3,
+    "question_text": "What will be the nature of flow of water from a circular tap, when its flow rate increased from 0.18 L/min to 0.48 L/min? The radius of the tap and viscosity of water are 0.5 cm and 10^-3 Pa s, respectively. (Density of water: 10^3 kg/m^3)",
+    "options": {
+      "Option 1": "Unsteady to steady flow",
+      "Option 2": "Remains steady flow",
+      "Option 3": "Remains turbulent flow",
+      "Option 4": "Steady flow to unsteady flow"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 4,
+    "question_text": "A mosquito is moving with a velocity v = 0.5t^2 i + 3t j + 9 k m/s and accelerating in uniform conditions. What will be the direction of mosquito after 2s?",
+    "options": {
+      "Option 1": "tan^-1(2/3) from x-axis",
+      "Option 2": "tan^-1(2/3) from y-axis",
+      "Option 3": "tan^-1(5/2) from y-axis",
+      "Option 4": "tan^-1(5/2) from x-axis"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 5,
+    "question_text": "Find out the surface charge density at the intersection of point x = 3 m plane and x-axis, in the region of uniform line charge of 8 nC/m lying along the z-axis in free space.",
+    "options": {
+      "Option 1": "0.424 nC m^-2",
+      "Option 2": "47.88 C/m",
+      "Option 3": "0.07 nC m^-2",
+      "Option 4": "4.0 nC m^-2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 6,
+    "question_text": "The de-Broglie wavelength associated with an electron and a proton were calculated by accelerating them through same potential of 100 V. What should nearly be the ratio of their wavelengths? (m_p = 1.00727 u, m_e = 0.00055 u)",
+    "options": {
+      "Option 1": "1860:1",
+      "Option 2": "(1860)^2 : 1",
+      "Option 3": "41.4 : 1",
+      "Option 4": "43 : 1"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 7,
+    "question_text": "The half-life of Au-198 is 2.7 days. The activity of 1.50 mg of Au-198 if its atomic weight is 198 g mol^-1 is, (NA = 6 x 10^23 /mol)",
+    "options": {
+      "Option 1": "240 Ci",
+      "Option 2": "357 Ci",
+      "Option 3": "535 Ci",
+      "Option 4": "252 Ci"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 8,
+    "question_text": "Calculate the value of mean free path (lambda) for oxygen molecules at temperature 27 C and pressure 1.01 x 10^5 Pa. Assume the molecular diameter 0.3 nm and the gas is ideal.",
+    "options": {
+      "Option 1": "58 nm",
+      "Option 2": "32 nm",
+      "Option 3": "86 nm",
+      "Option 4": "102 nm"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 9,
+    "question_text": "The refractive index of a converging lens is 1.4. What will be the focal length of this lens if it is placed in a medium of same refractive index?",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "Infinite",
+      "Option 3": "R1R2 / (R1-R2)",
+      "Option 4": "Zero"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 10,
+    "question_text": "In order to determine the Young's Modulus of a wire of radius 0.2 cm (measured using a scale of least count = 0.001 cm) and length 1m (measured using a scale of least count = 1 mm), a weight of mass 1kg (measured using a scale of least count = 1 g) was hanged to get the elongation of 0.5 cm (measured using a scale of least count 0.001 cm). What will be the fractional error in the value of Young's Modulus determined by this experiment?",
+    "options": {
+      "Option 1": "0.14%",
+      "Option 2": "0.9%",
+      "Option 3": "9%",
+      "Option 4": "1.4%"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 11,
+    "question_text": "A resistor develops 500 J of thermal energy in 20s when a current of 1.5 A is passed through it. If the current is increased from 1.5 A to 3A, what will be the energy developed in 20 s.",
+    "options": {
+      "Option 1": "1500 J",
+      "Option 2": "1000 J",
+      "Option 3": "500 J",
+      "Option 4": "2000 J"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 12,
+    "question_text": "Statement I: A cyclist is moving on an unbanked road with a speed of 7 kmh^-1 and takes a sharp circular turn along a path of radius of 2m without reducing the speed. The static friction coefficient is 0.2. The cyclist will not slip and pass the curve. Statement II: If the road is banked at an angle of 45 deg, cyclist can cross the curve of 2m radius with the speed of 18.5 kmh^-1 without slipping. Choose the correct answer.",
+    "options": {
+      "Option 1": "Statement I is incorrect and statement II is correct",
+      "Option 2": "Statement I is correct and statement II is incorrect",
+      "Option 3": "Both statement I and statement II are false",
+      "Option 4": "Both statement I and statement II are true"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 13,
+    "question_text": "Two identical antennas mounted on identical towers are separated from each other by a distance of 45 km. What should nearly be the minimum height of receiving antenna to receive the signals in line of sight? (Assume radius of earth is 6400 km)",
+    "options": {
+      "Option 1": "19.77 m",
+      "Option 2": "39.55 m",
+      "Option 3": "79.1 m",
+      "Option 4": "158.2 m"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 14,
+    "question_text": "Amplitude of a mass-spring system, which is executing simple harmonic motion decreases with time. If mass = 500g, Decay constant = 20 g/s then how much time is required for the amplitude of the system to drop to half of its initial value? (ln 2 = 0.693)",
+    "options": {
+      "Option 1": "34.65 s",
+      "Option 2": "17.32 s",
+      "Option 3": "0.034 s",
+      "Option 4": "15.01 s"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 15,
+    "question_text": "Calculate the time interval between 33% decay and 67% decay if half-life of a substance is 20 minutes.",
+    "options": {
+      "Option 1": "60 minutes",
+      "Option 2": "20 minutes",
+      "Option 3": "40 minutes",
+      "Option 4": "13 minutes"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 16,
+    "question_text": "Red light differs from blue light as they have:",
+    "options": {
+      "Option 1": "Different frequencies and different wavelengths",
+      "Option 2": "Different frequencies and same wavelengths",
+      "Option 3": "Same frequencies and same wavelengths",
+      "Option 4": "Same frequencies and different wavelengths"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 17,
+    "question_text": "The energy dissipated by a resistor is 10 mJ in 1s when an electric current of 2 mA flows through it. The resistance is x ohm. The value of x is:",
+    "options": {
+      "Option 1": "2500",
+      "Option 2": "2000",
+      "Option 3": "3000",
+      "Option 4": "1500"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 18,
+    "question_text": "In a parallel plate capacitor set up, the plate area of capacitor is 2 m^2 and the plates are separated by 1m. If the space between the plates are filled with a dielectric material of thickness 0.5 m and area 2 m^2 (Dielectric constant = 3.2), the capacitance of the set-up will be x e0. Value of x is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "4",
+      "Option 3": "3",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 19,
+    "question_text": "If one wants to remove all the mass of the earth to infinity in order to break it up completely. The amount of energy that needs to be supplied will be x/5 GM^2/R. where x is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "3",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 20,
+    "question_text": "A force F = 4i + 3j + 4k is applied on an intersection point of x=2 plane and x-axis. The magnitude of torque of this force about a point (2, 3, 4) is:",
+    "options": {
+      "Option 1": "10",
+      "Option 2": "20",
+      "Option 3": "30",
+      "Option 4": "40"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 21,
+    "question_text": "A deviation of 2 degrees is produced in the yellow ray when prism of crown and flint glass are achromatically combined. Taking dispersive powers of crown and flint glass are 0.02 and 0.03 respectively and refractive index for yellow light for these glasses are 1.5 and 1.6 respectively. The refracting angles for crown glass prism will be (in degree):",
+    "options": {
+      "Option 1": "10",
+      "Option 2": "12",
+      "Option 3": "14",
+      "Option 4": "16"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 22,
+    "question_text": "A body of mass 2kg moves under a force of (2i + 3j + 5k) N. It starts from rest and was at the origin initially. After 4s, its new coordinates are (8, b, 20). The value of b is:",
+    "options": {
+      "Option 1": "10",
+      "Option 2": "12",
+      "Option 3": "14",
+      "Option 4": "8"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 23,
+    "question_text": "A swimmer can swim with velocity of 12 km/h in still water. Water flowing in a river has velocity 6 km/h. The direction with respect to the direction of flow of river water he should swim in order to reach the point on the other bank just opposite to his starting point is x degrees. x is:",
+    "options": {
+      "Option 1": "120",
+      "Option 2": "150",
+      "Option 3": "90",
+      "Option 4": "135"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 24,
+    "question_text": "A closed organ pipe of length L and an open organ pipe contain gases of densities rho1 and rho2 respectively. The compressibility of gases are equal in both the pipes. Both the pipes are vibrating in their first overtone with same frequency. The length of the open pipe is x/3 L sqrt(rho1/rho2). where x is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "3",
+      "Option 3": "4",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 25,
+    "question_text": "A solid disc of radius 'a' and mass 'm' rolls down without slipping on an inclined plane making an angle theta with the horizontal. The acceleration of the disc will be 2/b g sin theta. where b is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "3",
+      "Option 3": "4",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 26,
+    "question_text": "One main scale division of a vernier callipers is 'a' cm and nth division of the vernier scale coincide with (n-1)th division of the main scale. The least count of the callipers in mm is:",
+    "options": {
+      "Option 1": "10na / (n-1)",
+      "Option 2": "10a / (n-1)",
+      "Option 3": "((n-1)/(10n))a",
+      "Option 4": "10a / n"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 27,
+    "question_text": "For changing the capacitance of a given parallel plate capacitor, a dielectric material of dielectric constant K is used, which has the same area as the plates of the capacitor. The thickness of the dielectric slab is 3/4 d, where 'd' is the separation between the plates of parallel plate capacitor. The new capacitance (C') in terms of original capacitance (C0) is given by the following relation:",
+    "options": {
+      "Option 1": "C' = ((3+K)/4K) C0",
+      "Option 2": "C' = ((4+K)/3) C0",
+      "Option 3": "C' = (4K/(K+3)) C0",
+      "Option 4": "C' = (4/(3+K)) C0"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 28,
+    "question_text": "The pressure acting on a submarine is 3 x 10^5 Pa at a certain depth. If the depth is doubled, the percentage increase in the pressure acting on the submarine would be (Assume that atmospheric pressure is 1 x 10^5 Pa, density of water is 10^3 kg m^-3, g = 10 ms^-2)",
+    "options": {
+      "Option 1": "200/3 %",
+      "Option 2": "200/5 %",
+      "Option 3": "5/200 %",
+      "Option 4": "3/200 %"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 29,
+    "question_text": "A plane electromagnetic wave of frequency 500 MHz is travelling in vacuum along y-direction. At a particular point in space and time, B = 8.0 x 10^-8 z T. The value of electric field at this point is: (speed of light = 3 x 10^8 ms^-1) x, y, z are unit vectors along x, y and z direction.",
+    "options": {
+      "Option 1": "-24 x V/m",
+      "Option 2": "2.6 x V/m",
+      "Option 3": "24 x V/m",
+      "Option 4": "-2.6 y V/m"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 30,
+    "question_text": "The maximum and minimum distances of a comet from the Sun are 1.6 x 10^12 m and 8.0 x 10^10 m respectively. If the speed of the comet at the nearest point is 6 x 10^4 ms^-1 the speed at the farthest point is:",
+    "options": {
+      "Option 1": "1.5 x 10^3 m/s",
+      "Option 2": "6.0 x 10^3 m/s",
+      "Option 3": "3.0 x 10^3 m/s",
+      "Option 4": "4.5 x 10^3 m/s"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 31,
+    "question_text": "2,4-DNP test can be used to identify:",
+    "options": {
+      "Option 1": "aldehyde",
+      "Option 2": "halogens",
+      "Option 3": "ether",
+      "Option 4": "amine"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 32,
+    "question_text": "Identify A in the following chemical reaction. Reaction of 4-methoxybenzaldehyde with HCHO in NaOH, followed by EtBr/NaH, then HI/heat.",
+    "options": {
+      "Option 1": "Compound with O-ethyl and -CH2I",
+      "Option 2": "Compound with -OH and -CH2I",
+      "Option 3": "Compound with -OCH3 and -CH2OH",
+      "Option 4": "Compound with -OH and -CH2OH"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 33,
+    "question_text": "The nature of charge on resulting colloidal particles when FeCl3 is added to excess of hot water is:",
+    "options": {
+      "Option 1": "positive",
+      "Option 2": "neutral",
+      "Option 3": "sometimes positive and sometimes negative",
+      "Option 4": "negative"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 34,
+    "question_text": "Match List-I with List-II. List-I: (a) Siderite (b) Calamine (c) Malachite (d) Cryolite. List-II: (i) Cu (ii) Ca (iii) Fe (iv) Al (v) Zn.",
+    "options": {
+      "Option 1": "(a)-(iii), (b)-(v), (c)-(i), (d)-(iv)",
+      "Option 2": "(a)-(iii), (b)-(v), (c)-(i), (d)-(ii)",
+      "Option 3": "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+      "Option 4": "(a)-(iii), (b)-(i), (c)-(v), (d)-(ii)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 35,
+    "question_text": "In CH2=C=CH-CH3 molecule, the hybridization of carbon 1, 2, 3 and 4 respectively are:",
+    "options": {
+      "Option 1": "sp2, sp, sp2, sp3",
+      "Option 2": "sp2, sp2, sp2, sp3",
+      "Option 3": "sp2, sp3, sp2, sp3",
+      "Option 4": "sp3, sp, sp3, sp3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 36,
+    "question_text": "Match List-I with List-II. (a) Sucrose (b) Lactose (c) Maltose. (i) Beta-D-Galactose and Beta-D-Glucose (ii) Alpha-D-Glucose and Beta-D-Fructose (iii) Alpha-D-Glucose and Alpha-D-Glucose.",
+    "options": {
+      "Option 1": "(a)-(iii), (b)-(ii), (c)-(i)",
+      "Option 2": "(a)-(iii), (b)-(i), (c)-(ii)",
+      "Option 3": "(a)-(i), (b)-(iii), (c)-(ii)",
+      "Option 4": "(a)-(ii), (b)-(i), (c)-(iii)"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 37,
+    "question_text": "Which pair of oxides is acidic in nature?",
+    "options": {
+      "Option 1": "N2O, BaO",
+      "Option 2": "CaO, SiO2",
+      "Option 3": "B2O3, CaO",
+      "Option 4": "B2O3, SiO2"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 38,
+    "question_text": "Calgon is used for water treatment. Which of the following statement is NOT true about calgon?",
+    "options": {
+      "Option 1": "Calgon contains the 2nd most abundant element by weight in the earth's crust.",
+      "Option 2": "It is also known as Graham's salt.",
+      "Option 3": "It is polymeric compound and is water soluble.",
+      "Option 4": "It does not remove Ca2+ ion by precipitation."
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 39,
+    "question_text": "Ceric ammonium nitrate and CHCl3/alc. KOH are used for the identification of functional groups present in ____ and ____ respectively.",
+    "options": {
+      "Option 1": "alcohol, amine",
+      "Option 2": "amine, alcohol",
+      "Option 3": "alcohol, phenol",
+      "Option 4": "amine, phenol"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 40,
+    "question_text": "Statement I: In TlI3 isomorphous to CsI3, the metal is present in +1 oxidation state. Statement II: Tl metals has fourteen f electrons in its electronic configuration. Choose the correct answer:",
+    "options": {
+      "Option 1": "Both A and R are correct and R is the correct explanation of A",
+      "Option 2": "A is not correct but R is correct",
+      "Option 3": "Both A and R are correct R is NOT the correct explanation of A",
+      "Option 4": "A is correct but R is not correct"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 41,
+    "question_text": "The correct order of electron gain enthalpy is:",
+    "options": {
+      "Option 1": "S > Se > Te > O",
+      "Option 2": "O > S > Se > Te",
+      "Option 3": "S > O > Se > Te",
+      "Option 4": "Te > Se > S > O"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 42,
+    "question_text": "Identify A in the given chemical reaction. Propanal reacts with NaOH, EtOH, H2O, heat. (Aldol Condensation)",
+    "options": {
+      "Option 1": "2-methylpent-2-enal",
+      "Option 2": "Hex-2-enal",
+      "Option 3": "3-hydroxy-2-methylpentanal",
+      "Option 4": "Propanoic acid"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 43,
+    "question_text": "Match List-I with List-II. List-I: (a) Benzenediazonium chloride -> Chlorobenzene (Cu2Cl2/HCl) (b) ... -> ... (Cu/HCl) (c) Ethyl chloride -> Butane (Na/Ether) (d) Chlorobenzene -> Biphenyl (Na/Ether). List-II: (i) Wurtz (ii) Sandmeyer (iii) Fittig (iv) Gatterman.",
+    "options": {
+      "Option 1": "(a)-(ii), (b)-(i), (c)-(iv), (d)-(iii)",
+      "Option 2": "(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)",
+      "Option 3": "(a)-(ii), (b)-(iv), (c)-(i), (d)-(iii)",
+      "Option 4": "(a)-(iii), (b)-(i), (c)-(iv), (d)-(ii)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 44,
+    "question_text": "Identify A in the given reaction: OH-C6H4-CH2OH reacts with SOCl2.",
+    "options": {
+      "Option 1": "OH-C6H4-CH2Cl",
+      "Option 2": "Cl-C6H4-CH2Cl",
+      "Option 3": "OH-C6H4-CH2OH (No reaction)",
+      "Option 4": "Cl-C6H4-CH2OH"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 45,
+    "question_text": "Match List-I (Process) with List-II (Method). (a) Sodium Carbonate (b) Titanium (c) Chlorine (d) Sodium hydroxide. (i) Deacon (ii) Castner-Kellner (iii) Van-Arkel (iv) Solvay.",
+    "options": {
+      "Option 1": "(a)-(iii), (b)-(ii), (c)-(i), (d)-(iv)",
+      "Option 2": "(a)-(iv), (b)-(iii), (c)-(i), (d)-(ii)",
+      "Option 3": "(a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)",
+      "Option 4": "(a)-(i), (b)-(iii), (c)-(v), (d)-(ii)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 46,
+    "question_text": "Match List-I (Molecule) with List-II (Bond Order). (a) Ne2 (b) N2 (c) F2 (d) O2. (i) 1 (ii) 2 (iii) 0 (iv) 3.",
+    "options": {
+      "Option 1": "(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)",
+      "Option 2": "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+      "Option 3": "(a)-(ii), (b)-(i), (c)-(iv), (d)-(iii)",
+      "Option 4": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 47,
+    "question_text": "Which of the following forms of hydrogen emits low energy beta- particles?",
+    "options": {
+      "Option 1": "Proton H+",
+      "Option 2": "Deuterium",
+      "Option 3": "Protium",
+      "Option 4": "Tritium"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 48,
+    "question_text": "Choose the correct order of basic nature of the amines: A. Phenyl methanamine B. N,N-Dimethylaniline C. N-Methyl aniline D. Benzenamine.",
+    "options": {
+      "Option 1": "D > C > B > A",
+      "Option 2": "D > B > C > A",
+      "Option 3": "A > C > B > D",
+      "Option 4": "A > B > C > D"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 49,
+    "question_text": "Reaction: (1) Zn, HCl (2) Cr2O3, 773K. Starting material: Pentan-2-one? No, likely a ketone to alkane then aromatization. Major product is:",
+    "options": {
+      "Option 1": "Ethylbenzene",
+      "Option 2": "Propylbenzene",
+      "Option 3": "o-Xylene (1,2-dimethylbenzene)",
+      "Option 4": "Toluene"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 50,
+    "question_text": "Seliwanoff test and Xanthoproteic test are used for the identification of ____ and ____ respectively.",
+    "options": {
+      "Option 1": "ketoses, proteins",
+      "Option 2": "proteins, ketoses",
+      "Option 3": "aldoses, ketoses",
+      "Option 4": "ketoses, aldoses"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 51,
+    "question_text": "The NaNO3 weighed out to make 50 mL of an aqueous solution containing 70.0 mg Na+ per mL is x g. The value of x is:",
+    "options": {
+      "Option 1": "13",
+      "Option 2": "10",
+      "Option 3": "15",
+      "Option 4": "12"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 52,
+    "question_text": "The number of stereoisomers possible for [Co(ox)2(Br)(NH3)]2- is:",
+    "options": {
+      "Option 1": "3",
+      "Option 2": "2",
+      "Option 3": "4",
+      "Option 4": "1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 53,
+    "question_text": "The average S-F bond energy in kJ mol-1 of SF6 is x. (Given formation enthalpies: SF6=-1100, S=275, F=80). The value of x is:",
+    "options": {
+      "Option 1": "309",
+      "Option 2": "300",
+      "Option 3": "315",
+      "Option 4": "320"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 54,
+    "question_text": "Emf of the following cell at 298 K in V is x * 10^-2. Zn | Zn2+(0.1 M) || Ag+(0.01 M) | Ag. E0_cell = 1.56 V. The value of x is:",
+    "options": {
+      "Option 1": "147",
+      "Option 2": "150",
+      "Option 3": "145",
+      "Option 4": "155"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 55,
+    "question_text": "A ball weighing 10g is moving with a velocity of 90 m/s. If the uncertainty in its velocity is 5%, then the uncertainty in its position is x * 10^-33 m. The value of x is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "3",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 56,
+    "question_text": "In mildly alkaline medium, thiosulphate ion is oxidized by MnO4- to A. The oxidation state of sulphur in A is:",
+    "options": {
+      "Option 1": "6",
+      "Option 2": "4",
+      "Option 3": "2",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 57,
+    "question_text": "When 12.2 g of benzoic acid is dissolved in 100g of water, the freezing point of solution was found to be -0.93 C (Kf=1.86). The number (n) of benzoic acid molecules associated is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "1",
+      "Option 3": "3",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 58,
+    "question_text": "If the activation energy of a reaction is 80.9 kJ/mol, the fraction of molecules at 700K, having enough energy to react to form products is e^-x. The value of x is:",
+    "options": {
+      "Option 1": "14",
+      "Option 2": "12",
+      "Option 3": "16",
+      "Option 4": "10"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 59,
+    "question_text": "The pH of ammonium phosphate solution, if pka of phosphoric acid and pkb of ammonium hydroxide are 5.23 and 4.75 respectively, is:",
+    "options": {
+      "Option 1": "7",
+      "Option 2": "6",
+      "Option 3": "8",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 60,
+    "question_text": "The number of octahedral voids per lattice site in a lattice is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "0",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 61,
+    "question_text": "The maximum value of determinant |sin^2x 1+cos^2x cos2x; 1+sin^2x cos^2x cos2x; sin^2x cos^2x sin2x| is:",
+    "options": {
+      "Option 1": "sqrt(7)",
+      "Option 2": "3/4",
+      "Option 3": "sqrt(5)",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 62,
+    "question_text": "Let A denote the event that a 6-digit integer formed by 0, 1, 2, 3, 4, 5, 6 without repetitions, be divisible by 3. Then probability of event A is equal to:",
+    "options": {
+      "Option 1": "9/56",
+      "Option 2": "4/9",
+      "Option 3": "3/7",
+      "Option 4": "11/27"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 63,
+    "question_text": "Let alpha be such that the function f(x) (involving cos^-1 and sin^-1) is continuous at x=0. Then alpha is:",
+    "options": {
+      "Option 1": "pi/sqrt(2)",
+      "Option 2": "0",
+      "Option 3": "no such alpha exists",
+      "Option 4": "pi/4"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 64,
+    "question_text": "If (x, y, z) lie on a plane passing through (42, 0, 0), (0, 42, 0) and (0, 0, 42), then value of expression (complicated fraction sum) is:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "3",
+      "Option 3": "39",
+      "Option 4": "-45"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 65,
+    "question_text": "Consider the integral I = integral 0 to 10 [x]e^[x] / e^(x-1) dx. Value of I is:",
+    "options": {
+      "Option 1": "9(e-1)",
+      "Option 2": "45(e+1)",
+      "Option 3": "45(e-1)",
+      "Option 4": "9(e+1)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 66,
+    "question_text": "Locus of mirror image of y^2=4x w.r.t y=x is C. Tangent to C at P(2,1) is:",
+    "options": {
+      "Option 1": "x-y=1",
+      "Option 2": "2x+y=5",
+      "Option 3": "x+3y=5",
+      "Option 4": "x+2y=4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 67,
+    "question_text": "y(x) solution of dy/dx + (tanx)y = sinx, y(0)=0. y(pi/4) is:",
+    "options": {
+      "Option 1": "1/4 log 2",
+      "Option 2": "1/(2sqrt(2)) log 2",
+      "Option 3": "log 2",
+      "Option 4": "1/2 log 2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 68,
+    "question_text": "Relation (a,b)=(c,d) iff ad=bc on {2..30}. Number of pairs related to (4,3) is:",
+    "options": {
+      "Option 1": "5",
+      "Option 2": "6",
+      "Option 3": "8",
+      "Option 4": "7"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 69,
+    "question_text": "Circle intercepts 2sqrt(2) and 2sqrt(5). Shortest distance from origin to tangent perpendicular to x+2y=0 is:",
+    "options": {
+      "Option 1": "sqrt(11)",
+      "Option 2": "sqrt(7)",
+      "Option 3": "sqrt(6)",
+      "Option 4": "sqrt(10)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 70,
+    "question_text": "Least value of |z| satisfying inequality with exp and log is:",
+    "options": {
+      "Option 1": "3",
+      "Option 2": "sqrt(5)",
+      "Option 3": "2",
+      "Option 4": "8"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 71,
+    "question_text": "Rectangle ABCD points 5, 7, 6, 9. Beta - Alpha (Quads - Triangles) is:",
+    "options": {
+      "Option 1": "795",
+      "Option 2": "1173",
+      "Option 3": "1890",
+      "Option 4": "717"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 72,
+    "question_text": "Intersection of ellipse x^2/16 + y^2/b^2 = 1 and circle x^2+y^2=4b (b>4) lies on y^2=3x^2. b is:",
+    "options": {
+      "Option 1": "12",
+      "Option 2": "5",
+      "Option 3": "6",
+      "Option 4": "10"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 73,
+    "question_text": "Number of real solutions of sin^-1(3x/5) + sin^-1(4x/5) = sin^-1 x is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "1",
+      "Option 3": "3",
+      "Option 4": "0"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 74,
+    "question_text": "Points A(-1,1), B(3,4), C(2,0). Line y=mx intersects AC, BC at P, Q. Area A1=3A2. m is:",
+    "options": {
+      "Option 1": "4/15",
+      "Option 2": "1",
+      "Option 3": "2",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 75,
+    "question_text": "Function f(x) with log term. Increasing interval?",
+    "options": {
+      "Option 1": "(-inf, -1) U [1/2, inf) - {1}",
+      "Option 2": "(-inf, inf) - {-1, 1}",
+      "Option 3": "(-1, 1/2]",
+      "Option 4": "(-inf, 1/2] - {-1}"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 76,
+    "question_text": "f(x+1)=xf(x). g(x)=ln f(x). |g''(5)-g''(1)| is:",
+    "options": {
+      "Option 1": "205/144",
+      "Option 2": "197/144",
+      "Option 3": "187/144",
+      "Option 4": "1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 77,
+    "question_text": "Polynomial P(x) integral 0 to 1 is 1. P(2)=5. 9(b+c) is:",
+    "options": {
+      "Option 1": "9",
+      "Option 2": "15",
+      "Option 3": "7",
+      "Option 4": "11"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 78,
+    "question_text": "Foot of perpendicular from (4,3,8) on line L1 is (3,5,7). Shortest dist L1 and L2 is:",
+    "options": {
+      "Option 1": "1/2",
+      "Option 2": "1/sqrt(6)",
+      "Option 3": "sqrt(2/3)",
+      "Option 4": "1/sqrt(3)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 79,
+    "question_text": "Diff Eq C1 and C2. Area enclosed is:",
+    "options": {
+      "Option 1": "pi - 1",
+      "Option 2": "pi/2 - 1",
+      "Option 3": "pi + 1",
+      "Option 4": "pi/4 + 1"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 80,
+    "question_text": "Vector r cross a = b cross r. Dot products given. alpha + |r|^2 is:",
+    "options": {
+      "Option 1": "9",
+      "Option 2": "15",
+      "Option 3": "13",
+      "Option 4": "11"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 81,
+    "question_text": "Distance of point (1,2,3) from plane parallel to line is sqrt(7/2). |m| is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "3",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 82,
+    "question_text": "Statistics. Combined variance 17/9. n is:",
+    "options": {
+      "Option 1": "3",
+      "Option 2": "4",
+      "Option 3": "5",
+      "Option 4": "6"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 83,
+    "question_text": "Matrix A=XB. Condition on coefficients. k is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "-1",
+      "Option 4": "0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 84,
+    "question_text": "Integral with tan inverse terms. 10(alpha+...) is:",
+    "options": {
+      "Option 1": "5",
+      "Option 2": "6",
+      "Option 3": "7",
+      "Option 4": "8"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 85,
+    "question_text": "f(x) and g(x) piecewise. gof continuous. a+b is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "0",
+      "Option 3": "2",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 86,
+    "question_text": "GP and AP mixed problem. 72(a+b) is:",
+    "options": {
+      "Option 1": "12",
+      "Option 2": "14",
+      "Option 3": "16",
+      "Option 4": "18"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 87,
+    "question_text": "Triangle sides 5, 12. Area 30. 2R+r is:",
+    "options": {
+      "Option 1": "13",
+      "Option 2": "15",
+      "Option 3": "17",
+      "Option 4": "19"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 88,
+    "question_text": "Sum of series 63A = ... n is:",
+    "options": {
+      "Option 1": "4",
+      "Option 2": "5",
+      "Option 3": "6",
+      "Option 4": "7"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 89,
+    "question_text": "Vector c perp a, b. Dot product 8. Value of c.(a x b) is:",
+    "options": {
+      "Option 1": "24",
+      "Option 2": "26",
+      "Option 3": "28",
+      "Option 4": "30"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 90,
+    "question_text": "Log series Sn(x). S24=1093. S12(2x)=265. a is:",
+    "options": {
+      "Option 1": "8",
+      "Option 2": "16",
+      "Option 3": "32",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  }
+]

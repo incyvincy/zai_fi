@@ -1,0 +1,18 @@
+{
+    "exam_id": "Exam 1",
+    "total_candidates": 150,
+    "average_score": 78.5,
+    "highest_score": 96,
+    "difficulty_analysis": {
+        "easy_questions_count": 10,
+        "medium_questions_count": 15,
+        "hard_questions_count": 5,
+        "overall_difficulty": "Medium"
+    },
+    "topic_wise_weakness": [
+        "Calculus: Derivatives of inverse trigonometric functions",
+        "Algebra: Solving exponential and logarithmic equations",
+        "Geometry: Volume of irregular solids",
+        "Statistics: Probability distributions"
+    ]
+}

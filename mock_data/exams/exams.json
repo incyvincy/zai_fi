@@ -1,0 +1,92 @@
+[
+    {
+        "exam_id": 1,
+        "exam_name": "JEE Mains Mock - 8th Jan Shift 1",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 2,
+        "exam_name": "JEE Mains Mock - 8th Jan Shift 2",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 3,
+        "exam_name": "JEE Mains Mock - 15th Jan Shift 1",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 4,
+        "exam_name": "JEE Mains Mock - 15th Jan Shift 2",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 5,
+        "exam_name": "JEE Mains Mock - 22nd Jan Shift 1",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 6,
+        "exam_name": "JEE Mains Mock - 22nd Jan Shift 2",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 7,
+        "exam_name": "JEE Mains Mock - 27th Jan Shift 1",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 8,
+        "exam_name": "JEE Mains Mock - 27th Jan Shift 2",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 9,
+        "exam_name": "JEE Mains Mock - 29th Jan Shift 1",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 10,
+        "exam_name": "JEE Mains Mock - 29th Jan Shift 2",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 11,
+        "exam_name": "JEE Mains Mock - 3rd Apr Shift 1",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 12,
+        "exam_name": "JEE Mains Mock - 3rd Apr Shift 2",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 13,
+        "exam_name": "JEE Mains Mock - 6th Apr Shift 1",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 14,
+        "exam_name": "JEE Mains Mock - 6th Apr Shift 2",
+        "duration": "180",
+        "total_questions": 90
+    },
+    {
+        "exam_id": 15,
+        "exam_name": "JEE Mains Mock - 10th Apr Shift 1",
+        "duration": "180",
+        "total_questions": 90
+    }
+]

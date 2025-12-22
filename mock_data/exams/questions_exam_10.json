@@ -1,0 +1,1082 @@
+[
+  {
+    "question_id": 1,
+    "question_text": "Which of the following statements are correct? (A) Electric monopoles do not exist whereas magnetic monopoles exist. (B) Magnetic field lines due to a solenoid at its ends and outside cannot be completely straight and confined. (C) Magnetic field lines are completely confined within a toroid. (D) Magnetic field lines inside a bar magnet are not parallel. (E) Chi = -1 is the condition for a perfect diamagnetic material, where Chi is its magnetic susceptibility.",
+    "options": {
+      "Option 1": "(C) and (E) only",
+      "Option 2": "(B) and (D) only",
+      "Option 3": "(A) and (B) only",
+      "Option 4": "(B) and (C) only"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 2,
+    "question_text": "A block of mass m slides along a floor while a force of magnitude F is applied to it at an angle theta as shown in figure. The coefficient of kinetic friction is mu_k. Then, the block's acceleration 'a' is given by: (g is acceleration due to gravity)",
+    "options": {
+      "Option 1": "(F/m) cos theta - mu_k (g - (F/m) sin theta)",
+      "Option 2": "-(F/m) cos theta - mu_k (g - (F/m) sin theta)",
+      "Option 3": "(F/m) cos theta - mu_k (g + (F/m) sin theta)",
+      "Option 4": "(F/m) cos theta + mu_k (g - (F/m) sin theta)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 3,
+    "question_text": "The maximum and minimum distances of a comet from the Sun are 1.6 x 10^12 m and 8.0 x 10^10 m respectively. If the speed of the comet at the nearest point is 6 x 10^4 m/s, the speed at the farthest point is:",
+    "options": {
+      "Option 1": "1.5 x 10^3 m/s",
+      "Option 2": "3.0 x 10^3 m/s",
+      "Option 3": "6.0 x 10^3 m/s",
+      "Option 4": "4.5 x 10^3 m/s"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 4,
+    "question_text": "A plane electromagnetic wave of frequency 500 MHz is travelling in vacuum along y-direction. At a particular point in space and time, B = 8.0 x 10^-8 z T. The value of electric field at this point is: (speed of light = 3 x 10^8 m/s)",
+    "options": {
+      "Option 1": "-24 x V/m",
+      "Option 2": "2.6 x V/m",
+      "Option 3": "24 x V/m",
+      "Option 4": "-2.6 y V/m"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 5,
+    "question_text": "Three particles of masses 1 kg, 2 kg and 3 kg are placed at the vertices A, B and C of an equilateral triangle ABC of a side 1 m. If A is at the origin (0,0) and B is at (1,0), then the x-coordinate of the center of mass of the system is:",
+    "options": {
+      "Option 1": "7/12 m",
+      "Option 2": "1/2 m",
+      "Option 3": "5/12 m",
+      "Option 4": "3/4 m"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 6,
+    "question_text": "For a transistor alpha and beta are current gains for common base and common emitter configurations respectively. The correct relation between them is:",
+    "options": {
+      "Option 1": "alpha = beta / (1 - beta)",
+      "Option 2": "alpha = beta / (1 + beta)",
+      "Option 3": "beta = alpha / (1 + alpha)",
+      "Option 4": "beta = 1 / (1 - alpha)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 7,
+    "question_text": "The volume V of an enclosure contains a mixture of three gases, 16 g of oxygen, 28 g of nitrogen and 44 g of carbon dioxide at absolute temperature T. Consider R as universal gas constant. The pressure of the mixture of gases is:",
+    "options": {
+      "Option 1": "88RT/V",
+      "Option 2": "3RT/V",
+      "Option 3": "5/2 RT/V",
+      "Option 4": "4RT/V"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 8,
+    "question_text": "A bar magnet of length 14 cm is placed in the magnetic meridian with its north pole pointing towards the geographic north pole. A neutral point is obtained at a distance of 18 cm from the center of the magnet. If BH = 0.4 G, the magnetic moment of the magnet is (1 G = 10^-4 T):",
+    "options": {
+      "Option 1": "2.88 J/T",
+      "Option 2": "28.80 J/T",
+      "Option 3": "0.288 J/T",
+      "Option 4": "288 J/T"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 9,
+    "question_text": "The velocity-displacement graph describing the motion of a bicycle is a straight line passing through origin with positive slope. The acceleration-displacement graph of the bicycle's motion is best described by:",
+    "options": {
+      "Option 1": "A parabola",
+      "Option 2": "A straight line with positive slope",
+      "Option 3": "A straight line parallel to displacement axis",
+      "Option 4": "A straight line with negative slope"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 10,
+    "question_text": "A 25 m long antenna is mounted on an antenna tower. The height of the antenna tower is 75 m. The wavelength (in meter) of the signal transmitted by this antenna would be:",
+    "options": {
+      "Option 1": "100",
+      "Option 2": "200",
+      "Option 3": "300",
+      "Option 4": "400"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 11,
+    "question_text": "A conducting wire of length 'l', area of cross-section A and electric resistivity rho is connected between the terminals of a battery. A potential difference V is developed between its ends, causing an electric current. If the length of the wire of the same material is doubled and the area of cross-section is halved, the resultant current would be:",
+    "options": {
+      "Option 1": "1/4 (VA)/(rho l)",
+      "Option 2": "3/4 (VA)/(rho l)",
+      "Option 3": "1/4 (rho l)/(VA)",
+      "Option 4": "4 (VA)/(rho l)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 12,
+    "question_text": "One main scale division of a vernier callipers is 'a' cm and nth division of the vernier scale coincide with (n-1)th division of the main scale. The least count of the callipers in mm is:",
+    "options": {
+      "Option 1": "10na / (n-1)",
+      "Option 2": "10a / (n-1)",
+      "Option 3": "(n-1)a / (10n)",
+      "Option 4": "10a / n"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 13,
+    "question_text": "The angle of deviation through a prism is minimum when (A) Incident ray and emergent ray are symmetric to the prism (B) The refracted ray inside the prism becomes parallel to its base (C) Angle of incidence is equal to that of the angle of emergence (D) When angle of emergence is double the angle of incidence. Choose the correct answer:",
+    "options": {
+      "Option 1": "Statements (A), (B) and (C) are true",
+      "Option 2": "Only statement (D) is true",
+      "Option 3": "Only statements (A) and (B) are true",
+      "Option 4": "Statements (B) and (C) are true"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 14,
+    "question_text": "Four equal masses, m each are placed at the corners of a square of length (l). The moment of inertia of the system about an axis passing through one corner A and parallel to the diagonal DB would be:",
+    "options": {
+      "Option 1": "ml^2",
+      "Option 2": "2 ml^2",
+      "Option 3": "3 ml^2",
+      "Option 4": "sqrt(3) ml^2"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 15,
+    "question_text": "For changing the capacitance of a given parallel plate capacitor, a dielectric material of dielectric constant K is used, which has the same area as the plates of the capacitor. The thickness of the dielectric slab is 3/4 d, where 'd' is the separation between the plates of parallel plate capacitor. The new capacitance (C') in terms of original capacitance (C0) is given by:",
+    "options": {
+      "Option 1": "C' = ((3+K)/4K) C0",
+      "Option 2": "C' = ((4+K)/3) C0",
+      "Option 3": "C' = (4K/(K+3)) C0",
+      "Option 4": "C' = (4/(3+K)) C0"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 16,
+    "question_text": "Time period of a simple pendulum is T inside a lift when the lift is stationary. If the lift moves upwards with an acceleration g/2, the time period of pendulum will be:",
+    "options": {
+      "Option 1": "sqrt(3) T",
+      "Option 2": "T/sqrt(3)",
+      "Option 3": "sqrt(3/2) T",
+      "Option 4": "sqrt(2/3) T"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 17,
+    "question_text": "An RC circuit is driven by a AC source generating a square wave. The output wave pattern monitored across the capacitor would look close to:",
+    "options": {
+      "Option 1": "Triangle wave like",
+      "Option 2": "Square wave",
+      "Option 3": "Exponential charge/discharge curve",
+      "Option 4": "Sine wave"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 18,
+    "question_text": "The stopping potential in the context of photoelectric effect depends on the following property of incident electromagnetic radiation:",
+    "options": {
+      "Option 1": "Phase",
+      "Option 2": "Intensity",
+      "Option 3": "Amplitude",
+      "Option 4": "Frequency"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 19,
+    "question_text": "A block of 200 g mass moves with a uniform speed in a horizontal circular groove, with vertical side walls of radius 20 cm. If the block takes 40 s to complete one round, the normal force by the side walls of the groove is:",
+    "options": {
+      "Option 1": "9.859 x 10^-4 N",
+      "Option 2": "9.859 x 10^-2 N",
+      "Option 3": "6.28 x 10^-3 N",
+      "Option 4": "0.0314 N"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 20,
+    "question_text": "In thermodynamics, heat and work are:",
+    "options": {
+      "Option 1": "Path functions",
+      "Option 2": "Intensive thermodynamic state variables",
+      "Option 3": "Extensive thermodynamic state variables",
+      "Option 4": "Point functions"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 21,
+    "question_text": "A conducting bar of length L is free to slide on two parallel conducting rails. Two resistors R1 and R2 are connected across the ends of the rails. There is a uniform magnetic field B pointing into the page. An external agent pulls the bar to the left at a constant speed V. The correct statement about the directions of induced currents I1 and I2 flowing through R1 and R2 respectively is:",
+    "options": {
+      "Option 1": "Both I1 and I2 are in anticlockwise direction",
+      "Option 2": "Both I1 and I2 are in clockwise direction",
+      "Option 3": "I1 is in clockwise direction and I2 is in anticlockwise direction",
+      "Option 4": "I1 is in anticlockwise direction and I2 is in clockwise direction"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 22,
+    "question_text": "Consider a 20 kg uniform circular disk of radius 0.2 m. It is pin supported at its center and is at rest initially. The disk is acted upon by a constant force F = 20 N through a massless string wrapped around its periphery. Suppose the disk makes n number of revolutions to attain an angular speed of 50 rad/s. The value of n is:",
+    "options": {
+      "Option 1": "20",
+      "Option 2": "10",
+      "Option 3": "30",
+      "Option 4": "40"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 23,
+    "question_text": "A fringe width of 6 mm was produced for two slits separated by 1 mm apart. The screen is placed 10 m away. The wavelength of light used is 'x' nm. The value of 'x' is:",
+    "options": {
+      "Option 1": "600",
+      "Option 2": "500",
+      "Option 3": "400",
+      "Option 4": "700"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 24,
+    "question_text": "The first three spectral lines of H-atom in the Balmer series are given lambda1, lambda2, lambda3 considering the Bohr atomic model, the wave lengths of first and third spectral lines (lambda1/lambda3) are related by a factor of approximately x * 10^-1. The value of x is:",
+    "options": {
+      "Option 1": "15",
+      "Option 2": "12",
+      "Option 3": "18",
+      "Option 4": "20"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 25,
+    "question_text": "Ideally, a circuit has a Zener diode with Vz = 15V connected in reverse bias across a load. If the unregulated input voltage varies between 20V and 30V, and the series resistance is such that the Zener current is 5 mA, the power dissipated across the Zener diode is x * 10^-1 watt. The value of x is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "0.75",
+      "Option 3": "1.5",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 26,
+    "question_text": "A sinusoidal voltage of peak value 250 V is applied to a series LCR circuit, in which R=8 ohm, L=24 mH and C=60 microF. The value of power dissipated at resonant condition is 'x' kW. The value of x is:",
+    "options": {
+      "Option 1": "4",
+      "Option 2": "2",
+      "Option 3": "6",
+      "Option 4": "8"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 27,
+    "question_text": "In a logic circuit with two inputs A and B and output Y, if input A=0 and B=1 yields Y=0, A=1 and B=1 yields Y=0, A=0 and B=0 yields Y=1, then the logic gate behaves like:",
+    "options": {
+      "Option 1": "NOR",
+      "Option 2": "NAND",
+      "Option 3": "XOR",
+      "Option 4": "XNOR"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 28,
+    "question_text": "The resistance R = V/I, where V = (50 +/- 2) V and I = (20 +/- 0.2) A. The percentage error in R is 'x' %. The value of 'x' is:",
+    "options": {
+      "Option 1": "5",
+      "Option 2": "4",
+      "Option 3": "6",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 29,
+    "question_text": "Consider a frame that is made up of two thin massless rods AB and AC. A vertical force P of magnitude 100 N is applied at point A of the frame. Suppose the force is P resolved parallel to the arms AB and AC of the frame. The magnitude of the resolved component along the arm AC is x N. The value of x is (Given angles allow simple resolution):",
+    "options": {
+      "Option 1": "82",
+      "Option 2": "80",
+      "Option 3": "85",
+      "Option 4": "90"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 30,
+    "question_text": "A ball of mass 10 kg moving with a velocity 10sqrt(3) m/s along X-axis, hits another ball of mass 20 kg which is at rest. After collision, the first ball comes to rest and the second one disintegrates into two equal pieces. One of the pieces starts moving along Y-axis at a speed of 10 m/s. The second piece starts moving at a speed of 20 m/s at an angle theta (degree) with respect to the X-axis. The value of theta is:",
+    "options": {
+      "Option 1": "30",
+      "Option 2": "45",
+      "Option 3": "60",
+      "Option 4": "90"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 31,
+    "question_text": "During the qualitative analysis of salt with cation y2+, addition of a reagent X to alkaline solution of the salt gives a bright red precipitate. The reagent X and the cation y2+ present respectively are:",
+    "options": {
+      "Option 1": "Dimethylglyoxime and Ni2+",
+      "Option 2": "Dimethylglyoxime and Co2+",
+      "Option 3": "Nessler's reagent and Hg2+",
+      "Option 4": "Nessler's reagent and Ni2+"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 32,
+    "question_text": "Match List-I with List-II. List-I: (a) 10-17 September 1987 (b) 4-13 September 2002 (c) 19-23 June 1997 (d) 1-12 December 1997. List-II: (i) Earth Summit (ii) Kyoto Protocol (iii) Montreal Protocol (iv) World Summit on Sustainable Development.",
+    "options": {
+      "Option 1": "(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)",
+      "Option 2": "(a)-(ii), (b)-(iv), (c)-(iii), (d)-(i)",
+      "Option 3": "(a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)",
+      "Option 4": "(a)-(iii), (b)-(i), (c)-(iv), (d)-(ii)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 33,
+    "question_text": "The major products A and B formed in the following reaction sequence are: (1) CH3-CH2-CH2-Br + KCN -> A (2) A + 4[H] (LiAlH4) -> B.",
+    "options": {
+      "Option 1": "A = Butanenitrile, B = Butan-1-amine",
+      "Option 2": "A = Propanenitrile, B = Propan-1-amine",
+      "Option 3": "A = Butanenitrile, B = Butan-2-amine",
+      "Option 4": "A = Propyl isocyanide, B = Propyl amine"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 34,
+    "question_text": "Match List-I with List-II. List-I: (a) Be (b) Mg (c) Ca (d) Sr. List-II: (i) Treatment of cancer (ii) Extraction of metals (iii) Incendiary bombs and signals (iv) Windows of X-ray tubes.",
+    "options": {
+      "Option 1": "(a)-(iv), (b)-(iii), (c)-(i), (d)-(ii)",
+      "Option 2": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)",
+      "Option 3": "(a)-(iii), (b)-(iv), (c)-(ii), (d)-(i)",
+      "Option 4": "(a)-(iii), (b)-(iv), (c)-(i), (d)-(ii)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 35,
+    "question_text": "Identify the major products A and B in the following reaction sequence: (1) CH3-CH=CH2 + HBr -> A (2) A + KOH (alc) -> B.",
+    "options": {
+      "Option 1": "A = 2-Bromopropane, B = Propene",
+      "Option 2": "A = 1-Bromopropane, B = Propene",
+      "Option 3": "A = 2-Bromopropane, B = Propyne",
+      "Option 4": "A = 1-Bromopropane, B = Propyne"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 36,
+    "question_text": "Which of the following compounds is NOT an antacid?",
+    "options": {
+      "Option 1": "Phenelzine",
+      "Option 2": "Ranitidine",
+      "Option 3": "Aluminium hydroxide",
+      "Option 4": "Cimetidine"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 37,
+    "question_text": "The correct order of bond dissociation enthalpy of halogens is:",
+    "options": {
+      "Option 1": "Cl2 > Br2 > F2 > I2",
+      "Option 2": "F2 > Cl2 > Br2 > I2",
+      "Option 3": "Cl2 > F2 > Br2 > I2",
+      "Option 4": "I2 > Br2 > Cl2 > F2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 38,
+    "question_text": "Consider the elements Mg, Al, S, P and Si, the correct increasing order of their first ionization enthalpy is:",
+    "options": {
+      "Option 1": "Mg < Al < Si < S < P",
+      "Option 2": "Al < Mg < Si < S < P",
+      "Option 3": "Mg < Al < Si < P < S",
+      "Option 4": "Al < Mg < Si < P < S"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 39,
+    "question_text": "The hybridization of the central metal ion in the complex [Ni(CN)4]2- is:",
+    "options": {
+      "Option 1": "dsp2",
+      "Option 2": "sp3",
+      "Option 3": "sp3d",
+      "Option 4": "sp3d2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 40,
+    "question_text": "Which of the following is a condensation polymer?",
+    "options": {
+      "Option 1": "Nylon 6,6",
+      "Option 2": "Buna-S",
+      "Option 3": "Teflon",
+      "Option 4": "Neoprene"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 41,
+    "question_text": "Deficiency of vitamin C causes:",
+    "options": {
+      "Option 1": "Scurvy",
+      "Option 2": "Rickets",
+      "Option 3": "Night blindness",
+      "Option 4": "Beriberi"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 42,
+    "question_text": "Identify the incorrect statement regarding the structure of proteins.",
+    "options": {
+      "Option 1": "The tertiary structure of protein is a 3-dimensional structure.",
+      "Option 2": "The secondary structure involves hydrogen bonding.",
+      "Option 3": "The primary structure describes the sequence of amino acids.",
+      "Option 4": "The quaternary structure is formed by a single polypeptide chain."
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 43,
+    "question_text": "Among the following, the most acidic compound is:",
+    "options": {
+      "Option 1": "p-Nitrophenol",
+      "Option 2": "Phenol",
+      "Option 3": "m-Nitrophenol",
+      "Option 4": "o-Cresol"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 44,
+    "question_text": "The correct IUPAC name of the complex K3[Fe(CN)6] is:",
+    "options": {
+      "Option 1": "Potassium hexacyanidoferrate(III)",
+      "Option 2": "Potassium hexacyanidoferrate(II)",
+      "Option 3": "Tripotassium hexacyanoiron(III)",
+      "Option 4": "Potassium hexacyanoiron(II)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 45,
+    "question_text": "Match List-I with List-II. List-I: (a) Siderite (b) Calamine (c) Malachite (d) Cryolite. List-II: (i) Cu (ii) Ca (iii) Fe (iv) Al (v) Zn.",
+    "options": {
+      "Option 1": "(a)-(iii), (b)-(v), (c)-(i), (d)-(iv)",
+      "Option 2": "(a)-(i), (b)-(ii), (c)-(iii), (d)-(iv)",
+      "Option 3": "(a)-(iii), (b)-(i), (c)-(v), (d)-(ii)",
+      "Option 4": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 46,
+    "question_text": "Statement I: Sodium hydride can be used as an oxidising agent. Statement II: The lone pair of electrons on nitrogen in pyridine makes it basic. Choose the correct answer:",
+    "options": {
+      "Option 1": "Statement I is false but Statement II is true",
+      "Option 2": "Both Statement I and Statement II are true",
+      "Option 3": "Statement I is true but Statement II is false",
+      "Option 4": "Both Statement I and Statement II are false"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 47,
+    "question_text": "Which of the following compounds reacts with Hinsberg's reagent to give a solid insoluble in alkali?",
+    "options": {
+      "Option 1": "N-Ethyl-N-methylamine",
+      "Option 2": "Ethylamine",
+      "Option 3": "Triethylamine",
+      "Option 4": "Methylamine"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 48,
+    "question_text": "The gas evolved on heating CH3MgBr in methanol is:",
+    "options": {
+      "Option 1": "Methane",
+      "Option 2": "Ethane",
+      "Option 3": "Propane",
+      "Option 4": "Hydrogen"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 49,
+    "question_text": "In a reaction A + B -> Product, the rate is doubled when the concentration of B is doubled, and the rate increases by a factor of 8 when the concentrations of both the reactants (A and B) are doubled. Rate law for the reaction can be written as:",
+    "options": {
+      "Option 1": "Rate = k[A]^2 [B]",
+      "Option 2": "Rate = k[A] [B]^2",
+      "Option 3": "Rate = k[A]^2 [B]^2",
+      "Option 4": "Rate = k[A] [B]"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 50,
+    "question_text": "Which of the following properties is shown by an ideal solution?",
+    "options": {
+      "Option 1": "It follows Raoult's law over the entire range of concentration",
+      "Option 2": "Delta H_mix is not zero",
+      "Option 3": "Delta V_mix is not zero",
+      "Option 4": "It forms an azeotropic mixture"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 51,
+    "question_text": "The number of lone pairs of electrons on the central I atom in I3- is:",
+    "options": {
+      "Option 1": "3",
+      "Option 2": "2",
+      "Option 3": "1",
+      "Option 4": "0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 52,
+    "question_text": "250 mL of 0.5 M NaOH was added to 500 mL of 1 M HCl. The number of unreacted HCl molecules in the solution after complete reaction is x * 10^21. The value of x is:",
+    "options": {
+      "Option 1": "226",
+      "Option 2": "150",
+      "Option 3": "300",
+      "Option 4": "450"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 53,
+    "question_text": "The spin only magnetic moment value for the complex [Co(CN)6]4- is x BM. Value of x is (nearest integer):",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "1",
+      "Option 3": "3",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 54,
+    "question_text": "The number of stereoisomers possible for [Co(ox)2(Br)(NH3)]2- is:",
+    "options": {
+      "Option 1": "3",
+      "Option 2": "2",
+      "Option 3": "4",
+      "Option 4": "1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 55,
+    "question_text": "The pH of ammonium phosphate solution, if pka of phosphoric acid and pkb of ammonium hydroxide are 5.23 and 4.75 respectively, is:",
+    "options": {
+      "Option 1": "7",
+      "Option 2": "6",
+      "Option 3": "8",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 56,
+    "question_text": "The number of octahedral voids per lattice site in a lattice is:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "0",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 57,
+    "question_text": "In Carius method of estimation of halogens, 250 mg of an organic compound gave 141 mg of AgBr. The percentage of bromine in the compound is: (Atomic mass Ag = 108, Br = 80)",
+    "options": {
+      "Option 1": "24",
+      "Option 2": "36",
+      "Option 3": "48",
+      "Option 4": "60"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 58,
+    "question_text": "The average S-F bond energy in kJ/mol of SF6 is x. (Given formation enthalpies: SF6=-1100, S=275, F=80). The value of x is:",
+    "options": {
+      "Option 1": "309",
+      "Option 2": "300",
+      "Option 3": "315",
+      "Option 4": "320"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 59,
+    "question_text": "Consider the reaction of MnO4- with C2O4 2- in acidic medium. The coefficients of MnO4-, C2O4 2- and H+ in the balanced chemical equation are respectively:",
+    "options": {
+      "Option 1": "2, 5, 16",
+      "Option 2": "5, 2, 16",
+      "Option 3": "2, 5, 8",
+      "Option 4": "5, 2, 8"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 60,
+    "question_text": "When 12.2 g of benzoic acid is dissolved in 100g of water, the freezing point of solution was found to be -0.93 C (Kf=1.86). The number (n) of benzoic acid molecules associated is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "1",
+      "Option 3": "3",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 61,
+    "question_text": "Let alpha and beta be the roots of x^2 - 6x - 2 = 0. If an = alpha^n - beta^n for n >= 1, then the value of (a10 - 2a8) / (2a9) is:",
+    "options": {
+      "Option 1": "3",
+      "Option 2": "6",
+      "Option 3": "-3",
+      "Option 4": "-6"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 62,
+    "question_text": "The differential equation of the family of circles passing through the origin and having their centers on the x-axis is:",
+    "options": {
+      "Option 1": "y^2 = x^2 + 2xy (dy/dx)",
+      "Option 2": "x^2 = y^2 + xy (dy/dx)",
+      "Option 3": "y^2 = x^2 - 2xy (dy/dx)",
+      "Option 4": "x^2 + y^2 = 2xy (dy/dx)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 63,
+    "question_text": "The value of the limit x tends to 0 of (tan(2x) - 2tan(x)) / (3x)^2 is:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "1",
+      "Option 3": "2",
+      "Option 4": "1/2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 64,
+    "question_text": "If the system of linear equations x + y + z = 5, x + 2y + 3z = 9, x + 3y + alpha z = beta has infinitely many solutions, then beta - alpha is equal to:",
+    "options": {
+      "Option 1": "8",
+      "Option 2": "21",
+      "Option 3": "5",
+      "Option 4": "18"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 65,
+    "question_text": "Let A = {1, 2, 3, ... 10} and f: A -> A be defined as f(k) = k+1 if k is odd, k if k is even. The number of possible functions g: A -> A such that gof = f is:",
+    "options": {
+      "Option 1": "10^5",
+      "Option 2": "5^5",
+      "Option 3": "10C5",
+      "Option 4": "5!"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 66,
+    "question_text": "If f(x) = log((1+x)/(1-x)), then f(2x/(1+x^2)) is equal to:",
+    "options": {
+      "Option 1": "2f(x)",
+      "Option 2": "f(x)",
+      "Option 3": "f(x)^2",
+      "Option 4": "-f(x)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 67,
+    "question_text": "The sum of the series Sum(n=1 to infinity) (n^2+6n+10)/(2n+1)! is equal to:",
+    "options": {
+      "Option 1": "41/8 e - 19/8 e^-1 - 10",
+      "Option 2": "41/8 e + 19/8 e^-1 - 10",
+      "Option 3": "-41/8 e + 19/8 e^-1 - 10",
+      "Option 4": "41/8 e + 19/8 e^-1 + 10"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 68,
+    "question_text": "The value of integral from -1 to 1 of log(sqrt(1-x) + sqrt(1+x)) dx is:",
+    "options": {
+      "Option 1": "log 2 + pi/2 - 1",
+      "Option 2": "2 log 2 + pi/4 - 1",
+      "Option 3": "0.5 log 2 + pi/4 - 1.5",
+      "Option 4": "2 log 2 + pi/2 - 0.5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 69,
+    "question_text": "Let P be a plane lx + my + nz = 0 containing the line, (1-x)/1 = (y+4)/2 = (z+2)/3. If plane P divides the line segment AB joining points A(-3, -6, 1) and B(2, 4, -3) in ratio k:1 then the value of k is equal to:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "1.5",
+      "Option 3": "3",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 70,
+    "question_text": "Consider the integral I = integral 0 to 10 [x]e^[x] / e^(x-1) dx. Value of I is:",
+    "options": {
+      "Option 1": "45(e-1)",
+      "Option 2": "9(e-1)",
+      "Option 3": "45(e+1)",
+      "Option 4": "9(e+1)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 71,
+    "question_text": "Let z satisfy |z+5| <= 4 and z(1+i) + z_bar(1-i) >= -10. Max value of |z+1|^2 is alpha + beta sqrt(2). alpha + beta is:",
+    "options": {
+      "Option 1": "48",
+      "Option 2": "50",
+      "Option 3": "40",
+      "Option 4": "32"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 72,
+    "question_text": "If the curve y = y(x) represented by the solution of the differential equation (2xy^2 - y)dx + xdy = 0 passes through the intersection of the lines 2x - 3y = 1 and 3x + 2y = 8, then |y(1)| is equal to:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "2",
+      "Option 3": "0.5",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 73,
+    "question_text": "Let P be the point on the parabola y^2 = 8x which is at a minimum distance from the center C of the circle x^2 + (y+6)^2 = 1. Then the equation of the circle, passing through C and having its center at P is:",
+    "options": {
+      "Option 1": "x^2 + y^2 - 4x + 8y + 12 = 0",
+      "Option 2": "x^2 + y^2 - x + 4y - 12 = 0",
+      "Option 3": "x^2 + y^2 - x/4 + 2y - 24 = 0",
+      "Option 4": "x^2 + y^2 - 4x + 9y + 18 = 0"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 74,
+    "question_text": "A pack of cards has one card missing. Two cards are drawn randomly and are found to be spades. The probability that the missing card is not a spade, is:",
+    "options": {
+      "Option 1": "39/50",
+      "Option 2": "52/867",
+      "Option 3": "3/4",
+      "Option 4": "22/425"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 75,
+    "question_text": "If a, b, c are in A.P. and centroid of the triangle with vertices (a, c), (2, b) and (a, b) is (10/3, 7/3), then alpha, beta are roots of equation ax^2 + bx + c = 0. The value of alpha^2 + beta^2 - alpha*beta is:",
+    "options": {
+      "Option 1": "-71/256",
+      "Option 2": "71/256",
+      "Option 3": "69/256",
+      "Option 4": "-69/256"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 76,
+    "question_text": "If 15 sin^4 alpha + 10 cos^4 alpha = 6, for some alpha in R, then the value of 27 sec^6 alpha + 8 cosec^6 alpha is:",
+    "options": {
+      "Option 1": "250",
+      "Option 2": "500",
+      "Option 3": "400",
+      "Option 4": "350"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 77,
+    "question_text": "Let f(x) be a polynomial of degree 4 having extreme values at x = 1 and x = 2. If lim x->0 (1 + f(x)/x^2) = 3, then f(2) is equal to:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "-1",
+      "Option 3": "4",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 78,
+    "question_text": "The number of elements in the set {n in {1, 2, ..., 100} | 11^n > 10^n + 9^n} is:",
+    "options": {
+      "Option 1": "96",
+      "Option 2": "97",
+      "Option 3": "98",
+      "Option 4": "99"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 79,
+    "question_text": "Let the vectors a, b, c be such that |a| = 2, |b| = 4 and |c| = 4. If the projection of b on a is equal to the projection of c on a and b is perpendicular to c, then the value of |a+b-c| is:",
+    "options": {
+      "Option 1": "6",
+      "Option 2": "5.5",
+      "Option 3": "7",
+      "Option 4": "4.5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 80,
+    "question_text": "If the fourth term in the expansion of (x + x^(log_2 x))^7 is 4480, then the value of x where x is in (2, 3) is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "3",
+      "Option 3": "4",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 81,
+    "question_text": "Let z and w be two complex numbers such that w = z z_bar - 2z + 2, |(z+i)/(z-3i)| = 1 and Re(w) has minimum value. Then, the minimum value of n in N for which w^n is real, is equal to",
+    "options": {
+      "Option 1": "4",
+      "Option 2": "2",
+      "Option 3": "3",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 82,
+    "question_text": "If a, b, c are three distinct real numbers in G.P. and a + b + c = xb, then x cannot be:",
+    "options": {
+      "Option 1": "-2",
+      "Option 2": "-3",
+      "Option 3": "4",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 83,
+    "question_text": "The coefficient of x^3 in the expansion of (1-x+x^2)^5 is:",
+    "options": {
+      "Option 1": "-50",
+      "Option 2": "-20",
+      "Option 3": "10",
+      "Option 4": "-10"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 84,
+    "question_text": "Let A be a 3x3 symmetric matrix with integer entries. If sum of diagonal elements of A^2 is 1, then the possible number of such matrices is:",
+    "options": {
+      "Option 1": "6",
+      "Option 2": "4",
+      "Option 3": "12",
+      "Option 4": "8"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 85,
+    "question_text": "The area bounded by the curve 4y^2 = x^2(4-x)(x-2) is:",
+    "options": {
+      "Option 1": "pi/2",
+      "Option 2": "pi",
+      "Option 3": "3pi/2",
+      "Option 4": "2pi"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 86,
+    "question_text": "If y = y(x) is the solution of the differential equation dy/dx + (tan x)y = sin x, 0 <= x <= pi/3, with y(0) = 0, then y(pi/4) equal to:",
+    "options": {
+      "Option 1": "(1/2sqrt(2)) log 2",
+      "Option 2": "(1/4) log 2",
+      "Option 3": "log 2",
+      "Option 4": "(1/2) log 2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 87,
+    "question_text": "Let f:R->R be a continuous function such that f(x) + f(x+1) = 2, for all x in R. If I1 = integral 0 to 8 f(x) dx and I2 = integral -1 to 3 f(x) dx, then the value of I1 + 2I2 is equal to",
+    "options": {
+      "Option 1": "16",
+      "Option 2": "12",
+      "Option 3": "20",
+      "Option 4": "18"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 88,
+    "question_text": "Let the functions f:R->R and g:R->R be defined as: f(x) = {x+2, x<0; x^2, x>=0} and g(x) = {x^3, x<1; 3x-2, x>=1}. Then, the number of points in R where (fog)(x) is NOT differentiable is equal to:",
+    "options": {
+      "Option 1": "1",
+      "Option 2": "3",
+      "Option 3": "0",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 89,
+    "question_text": "The sum of the series 1 + 2x + 3x^2 + 4x^3 + ... to infinity (where |x|<1) is:",
+    "options": {
+      "Option 1": "(1-x)^-2",
+      "Option 2": "(1+x)^-2",
+      "Option 3": "(1-x)^-1",
+      "Option 4": "x(1-x)^-2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 90,
+    "question_text": "Let P be a plane passing through the points (1,0,1), (1,-2,1) and (0,1,-2). Let a vector a = alpha i + beta j + gamma k be such that a is parallel to the plane P, perpendicular to (i + 2j + 3k) and a.(i + j + 2k) = 2. Then (alpha - beta + gamma)^2 equals:",
+    "options": {
+      "Option 1": "81",
+      "Option 2": "64",
+      "Option 3": "100",
+      "Option 4": "49"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  }
+]

@@ -17,7 +17,7 @@
             padding: 20px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
             border-radius: 15px;
@@ -31,6 +31,7 @@
         }
         .input-group {
             margin-bottom: 20px;
+            text-align: center;
         }
         input {
             padding: 12px;
@@ -78,23 +79,115 @@
             margin-top: 20px;
             display: none;
         }
-        .nav {
-            margin-bottom: 20px;
+        
+        /* JSON Viewer Styles */
+        .json-container {
+            background: #1e1e1e;
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            max-height: 800px;
+            overflow-y: auto;
         }
-        .nav a {
-            color: #667eea;
-            text-decoration: none;
-            margin-right: 20px;
+        
+        .json-viewer {
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #d4d4d4;
+        }
+        
+        .json-key {
+            color: #9cdcfe;
             font-weight: 600;
         }
-        .nav a:hover {
-            text-decoration: underline;
+        
+        .json-string {
+            color: #ce9178;
         }
-        pre {
-            background: #f5f5f5;
-            padding: 20px;
-            border-radius: 8px;
-            overflow-x: auto;
+        
+        .json-number {
+            color: #b5cea8;
+        }
+        
+        .json-boolean {
+            color: #569cd6;
+        }
+        
+        .json-null {
+            color: #569cd6;
+        }
+        
+        .json-bracket {
+            color: #ffd700;
+            font-weight: bold;
+        }
+        
+        .json-comma {
+            color: #d4d4d4;
+        }
+        
+        .json-colon {
+            color: #d4d4d4;
+        }
+        
+        .collapsible {
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        .collapsible:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .collapsed {
+            display: none;
+        }
+        
+        .expand-icon {
+            display: inline-block;
+            width: 12px;
+            margin-right: 5px;
+            color: #808080;
+        }
+        
+        .summary-box {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .summary-item {
+            margin: 5px 0;
+            color: #333;
+        }
+        
+        .summary-item strong {
+            color: #667eea;
+        }
+        
+        .controls {
+            margin-bottom: 15px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .control-btn {
+            background: #f0f0f0;
+            color: #333;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+        
+        .control-btn:hover {
+            background: #e0e0e0;
         }
     </style>
 </head>
@@ -103,7 +196,7 @@
         <h1>📊 Exam Report</h1>
         
         <div class="input-group">
-            <input type="number" id="examIdInput" placeholder="Enter Exam ID (e.g., 1170)">
+            <input type="number" id="examIdInput" placeholder="Enter Exam ID (1-15)" min="1" max="15">
             <button class="btn" onclick="fetchReport()">Get Report</button>
         </div>
         
@@ -115,6 +208,8 @@
     </div>
 
     <script>
+        let currentData = null;
+        
         async function fetchReport() {
             const examId = document.getElementById('examIdInput').value;
             const loading = document.getElementById('loading');
@@ -123,7 +218,7 @@
             const container = document.getElementById('reportContainer');
             
             if (!examId) {
-                error.textContent = 'Please enter an exam ID';
+                error.textContent = 'Please enter an exam ID (1-15)';
                 error.style.display = 'block';
                 return;
             }
@@ -146,11 +241,48 @@
                 const data = await response.json();
                 loading.style.display = 'none';
                 
-                if (data.success) {
-                    success.textContent = `Successfully loaded exam report! Stored ${data.stored_responses || 0} responses.`;
+                if (data.success !== false) {
+                    currentData = data;
+                    
+                    // Create summary
+                    const examInfo = data.exam_info || {};
+                    const studentsReport = data.students_report || [];
+                    
+                    success.textContent = `✓ Successfully loaded exam report for ${examInfo.exam_name || 'Exam ' + examId}`;
                     success.style.display = 'block';
                     
-                    container.innerHTML = `<h2>Exam Report Data:</h2><pre>${JSON.stringify(data.data, null, 2)}</pre>`;
+                    // Display summary
+                    let summaryHtml = `
+                        <div class="summary-box">
+                            <h3 style="margin-bottom: 10px; color: #667eea;">📋 Exam Summary</h3>
+                            <div class="summary-item"><strong>Exam:</strong> ${examInfo.exam_name || 'N/A'}</div>
+                            <div class="summary-item"><strong>Total Questions:</strong> ${examInfo.total_questions || 0}</div>
+                            <div class="summary-item"><strong>Duration:</strong> ${examInfo.duration || 0} minutes</div>
+                            <div class="summary-item"><strong>Students:</strong> ${studentsReport.length}</div>
+                        </div>
+                    `;
+                    
+                    // Controls
+                    summaryHtml += `
+                        <div class="controls">
+                            <button class="control-btn" onclick="copyJSON()">📋 Copy JSON</button>
+                            <button class="control-btn" onclick="downloadJSON()">💾 Download JSON</button>
+                        </div>
+                    `;
+                    
+                    // JSON viewer with syntax highlighting
+                    const jsonString = JSON.stringify(data, null, 2);
+                    const highlightedJSON = syntaxHighlight(jsonString);
+                    
+                    summaryHtml += `
+                        <h3 style="margin-bottom: 15px; color: #333;">Complete JSON Data (${jsonString.length.toLocaleString()} characters):</h3>
+                        <div class="json-container">
+                            <pre class="json-viewer">${highlightedJSON}</pre>
+                        </div>
+                    `;
+                    
+                    container.innerHTML = summaryHtml;
+                    
                 } else {
                     error.textContent = 'Error: ' + (data.error || 'Unknown error');
                     error.style.display = 'block';
@@ -160,6 +292,43 @@
                 error.textContent = 'Network error: ' + err.message;
                 error.style.display = 'block';
             }
+        }
+        
+        function syntaxHighlight(json) {
+            json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+                var cls = 'json-number';
+                if (/^"/.test(match)) {
+                    if (/:$/.test(match)) {
+                        cls = 'json-key';
+                    } else {
+                        cls = 'json-string';
+                    }
+                } else if (/true|false/.test(match)) {
+                    cls = 'json-boolean';
+                } else if (/null/.test(match)) {
+                    cls = 'json-null';
+                }
+                return '<span class="' + cls + '">' + match + '</span>';
+            });
+        }
+        
+        function copyJSON() {
+            if (!currentData) return;
+            navigator.clipboard.writeText(JSON.stringify(currentData, null, 2))
+                .then(() => alert('✓ JSON copied to clipboard!'))
+                .catch(err => alert('Failed to copy: ' + err));
+        }
+        
+        function downloadJSON() {
+            if (!currentData) return;
+            const dataStr = JSON.stringify(currentData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = `exam_report_${currentData.exam_info?.exam_id || 'data'}.json`;
+            link.click();
         }
         
         function getCookie(name) {

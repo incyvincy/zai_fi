@@ -1,0 +1,722 @@
+[
+    {
+        "question_id": 1,
+        "question_text": "A particle starts from rest and moves along a straight line with an acceleration 'a' given by a = 2t - 4 m/s^2, where 't' is the time in seconds. Find the velocity of the particle after 3 seconds.",
+        "options": {
+            "Option 1": "1 m/s",
+            "Option 2": "3 m/s",
+            "Option 3": "-3 m/s",
+            "Option 4": "0 m/s"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 2,
+        "question_text": "A stone is dropped from a height 'h' and simultaneously another stone is thrown upwards from the ground with a speed of 20 m/s. If they meet after 1.5 seconds, what is the height 'h'? (Take g = 10 m/s^2)",
+        "options": {
+            "Option 1": "18.75 m",
+            "Option 2": "30 m",
+            "Option 3": "37.5 m",
+            "Option 4": "45 m"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 3,
+        "question_text": "A block of mass 2 kg is placed on a rough horizontal surface. The coefficient of static friction is 0.4 and the coefficient of kinetic friction is 0.3. A horizontal force F is applied to the block. If F = 6 N, what is the frictional force acting on the block? (Take g = 10 m/s^2)",
+        "options": {
+            "Option 1": "8 N",
+            "Option 2": "6 N",
+            "Option 3": "4 N",
+            "Option 4": "0 N"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 4,
+        "question_text": "Two blocks of masses m1 = 1 kg and m2 = 2 kg are connected by a light string and placed on a frictionless horizontal surface. A force of 12 N is applied to m2. What is the tension in the string?",
+        "options": {
+            "Option 1": "4 N",
+            "Option 2": "6 N",
+            "Option 3": "8 N",
+            "Option 4": "12 N"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 5,
+        "question_text": "A force F = (5i + 3j) N acts on a particle. The particle moves from position r1 = (2i - j) m to r2 = (4i + 2j) m. The work done by the force is:",
+        "options": {
+            "Option 1": "16 J",
+            "Option 2": "10 J",
+            "Option 3": "6 J",
+            "Option 4": "4 J"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 6,
+        "question_text": "A block of mass 1 kg is pushed up an inclined plane of inclination 30 degrees by a force of 15 N acting parallel to the plane. If the block moves 2 m up the plane, what is the work done against gravity? (Take g = 10 m/s^2)",
+        "options": {
+            "Option 1": "10 J",
+            "Option 2": "15 J",
+            "Option 3": "20 J",
+            "Option 4": "30 J"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 7,
+        "question_text": "A solid sphere of mass M and radius R rolls without slipping on a horizontal surface with a linear velocity V. The ratio of its rotational kinetic energy to its total kinetic energy is:",
+        "options": {
+            "Option 1": "2/7",
+            "Option 2": "2/5",
+            "Option 3": "5/7",
+            "Option 4": "7/5"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 8,
+        "question_text": "A disc of mass M and radius R is rotating with angular velocity \u03c9. A second disc of mass M and radius R is dropped gently on the first disc. Both discs have the same axis. The final angular velocity will be:",
+        "options": {
+            "Option 1": "\u03c9/2",
+            "Option 2": "\u03c9/4",
+            "Option 3": "2\u03c9",
+            "Option 4": "\u03c9"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 9,
+        "question_text": "The escape velocity from the surface of the Earth is 11.2 km/s. If a planet has radius 4 times that of Earth and the same mean density as Earth, then the escape velocity from the planet is:",
+        "options": {
+            "Option 1": "11.2 km/s",
+            "Option 2": "22.4 km/s",
+            "Option 3": "44.8 km/s",
+            "Option 4": "5.6 km/s"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 10,
+        "question_text": "A geostationary satellite orbits the Earth at a height of approximately 36,000 km. The time period of a satellite orbiting at a height of 9,000 km will be approximately:",
+        "options": {
+            "Option 1": "6 hours",
+            "Option 2": "12 hours",
+            "Option 3": "24 hours",
+            "Option 4": "3 hours"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 11,
+        "question_text": "A gas is expanded from volume V to 2V isothermally. Then it is expanded to 4V adiabatically. If the initial pressure is P and \u03b3=1.5, the final pressure is:",
+        "options": {
+            "Option 1": "P/(4\u221a2)",
+            "Option 2": "P/2",
+            "Option 3": "P/(2\u221a2)",
+            "Option 4": "P/4"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 12,
+        "question_text": "A Carnot engine operates between 227\u00b0C and 27\u00b0C. It absorbs 6 \u00d7 10^4 J of heat at the higher temperature. The amount of heat converted into work is:",
+        "options": {
+            "Option 1": "2.4 \u00d7 10^4 J",
+            "Option 2": "3.6 \u00d7 10^4 J",
+            "Option 3": "1.2 \u00d7 10^4 J",
+            "Option 4": "4.8 \u00d7 10^4 J"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 13,
+        "question_text": "Two point charges +q and +4q are placed 12 cm apart. Find the position of a point between them where the electric field is zero.",
+        "options": {
+            "Option 1": "4 cm from +q",
+            "Option 2": "8 cm from +q",
+            "Option 3": "6 cm from +q",
+            "Option 4": "3 cm from +q"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 14,
+        "question_text": "A parallel plate capacitor with air between the plates has capacitance C. If the distance between the plates is doubled and the space between them is filled with a dielectric of dielectric constant 6, the new capacitance is:",
+        "options": {
+            "Option 1": "3C",
+            "Option 2": "12C",
+            "Option 3": "C/3",
+            "Option 4": "6C"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 15,
+        "question_text": "Three resistors 2\u03a9, 3\u03a9, and 6\u03a9 are connected in parallel. This combination is connected in series with a 5\u03a9 resistor. If the circuit is connected to a 12V battery, the current drawn from the battery is:",
+        "options": {
+            "Option 1": "1 A",
+            "Option 2": "2 A",
+            "Option 3": "0.5 A",
+            "Option 4": "3 A"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 16,
+        "question_text": "A wire of resistance R is stretched uniformly to 'n' times its original length. What is its new resistance?",
+        "options": {
+            "Option 1": "nR",
+            "Option 2": "n^2R",
+            "Option 3": "R/n",
+            "Option 4": "R/n^2"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 17,
+        "question_text": "A charge 'q' is moving with velocity 'v' in a uniform magnetic field 'B'. The magnetic force acting on the charge is maximum when the angle between 'v' and 'B' is:",
+        "options": {
+            "Option 1": "0 degrees",
+            "Option 2": "45 degrees",
+            "Option 3": "90 degrees",
+            "Option 4": "180 degrees"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 18,
+        "question_text": "A long straight wire carries a current of 10 A. At what perpendicular distance from the wire will the magnetic field strength be 2 x 10^-5 T? (Take \u03bc\u2080 = 4\u03c0 x 10^-7 T m/A)",
+        "options": {
+            "Option 1": "5 cm",
+            "Option 2": "10 cm",
+            "Option 3": "1 cm",
+            "Option 4": "20 cm"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 19,
+        "question_text": "A coil with N turns and area A is placed in a time-varying magnetic field B(t) = B\u2080 sin(\u03c9t). The induced EMF in the coil is:",
+        "options": {
+            "Option 1": "-NAB\u2080\u03c9 cos(\u03c9t)",
+            "Option 2": "NAB\u2080\u03c9 cos(\u03c9t)",
+            "Option 3": "NAB\u2080 sin(\u03c9t)",
+            "Option 4": "NAB\u2080\u03c9 sin(\u03c9t)"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 20,
+        "question_text": "An L-C-R series circuit has L = 10 mH, C = 1 \u03bcF, and R = 5 \u03a9. The quality factor (Q-factor) of the circuit is:",
+        "options": {
+            "Option 1": "10",
+            "Option 2": "20",
+            "Option 3": "50",
+            "Option 4": "100"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 21,
+        "question_text": "An object is placed 15 cm in front of a concave mirror of focal length 10 cm. The nature and position of the image formed are:",
+        "options": {
+            "Option 1": "Real, inverted, 30 cm from mirror",
+            "Option 2": "Virtual, erect, 30 cm from mirror",
+            "Option 3": "Real, inverted, 6 cm from mirror",
+            "Option 4": "Virtual, erect, 6 cm from mirror"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 22,
+        "question_text": "In Young's double-slit experiment, the fringe width is 0.4 mm. If the entire apparatus is immersed in water (refractive index 4/3), the new fringe width will be:",
+        "options": {
+            "Option 1": "0.3 mm",
+            "Option 2": "0.4 mm",
+            "Option 3": "0.53 mm",
+            "Option 4": "0.2 mm"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 23,
+        "question_text": "The ratio of the longest wavelength in the Balmer series to the shortest wavelength in the Paschen series for a hydrogen atom is:",
+        "options": {
+            "Option 1": "4/9",
+            "Option 2": "5/36",
+            "Option 3": "7/108",
+            "Option 4": "8/7"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 24,
+        "question_text": "If the half-life of a radioactive substance is 10 hours, what fraction of the original sample will remain after 30 hours?",
+        "options": {
+            "Option 1": "1/2",
+            "Option 2": "1/4",
+            "Option 3": "1/8",
+            "Option 4": "1/16"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 25,
+        "question_text": "A projectile is thrown with an initial velocity of 20 m/s at an angle of 30 degrees with the horizontal. The range of the projectile is approximately: (Take g = 10 m/s^2)",
+        "options": {
+            "Option 1": "34.6 m",
+            "Option 2": "20 m",
+            "Option 3": "17.3 m",
+            "Option 4": "40 m"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 26,
+        "question_text": "A block of mass 5 kg is placed on a horizontal table. The coefficient of static friction between the block and the table is 0.5. A force of 20 N is applied horizontally. What is the acceleration of the block? (Take g = 10 m/s^2, coefficient of kinetic friction = 0.4)",
+        "options": {
+            "Option 1": "0 m/s^2",
+            "Option 2": "1 m/s^2",
+            "Option 3": "2 m/s^2",
+            "Option 4": "3 m/s^2"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 27,
+        "question_text": "A spring of spring constant 100 N/m is stretched by 10 cm. The potential energy stored in the spring is:",
+        "options": {
+            "Option 1": "0.5 J",
+            "Option 2": "1 J",
+            "Option 3": "0.05 J",
+            "Option 4": "10 J"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 28,
+        "question_text": "A uniform rod of length L and mass M is pivoted at one end. It is released from rest in a horizontal position. The initial angular acceleration of the rod is:",
+        "options": {
+            "Option 1": "3g/(2L)",
+            "Option 2": "g/L",
+            "Option 3": "g/(2L)",
+            "Option 4": "2g/(3L)"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 29,
+        "question_text": "The minimum energy required to launch a satellite from Earth's surface into a circular orbit at a height R (radius of Earth) from the surface is (G = gravitational constant, M = mass of Earth, R = radius of Earth):",
+        "options": {
+            "Option 1": "GMm/(6R)",
+            "Option 2": "GMm/(4R)",
+            "Option 3": "GMm/(3R)",
+            "Option 4": "GMm/(2R)"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 30,
+        "question_text": "An ideal gas undergoes a process in which its volume V and temperature T are related as VT^k = constant, where k is a positive constant. If the molar specific heat capacity of the gas is C, then for this process C is given by (R is the ideal gas constant, C_v is molar specific heat at constant volume):",
+        "options": {
+            "Option 1": "C_v + R/(1-k)",
+            "Option 2": "C_v + R/k",
+            "Option 3": "C_v + R(1-k)",
+            "Option 4": "C_v - Rk"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 31,
+        "question_text": "Calculate the wavelength (in nm) of an electron moving with a velocity of 2.05 \u00d7 10^7 m/s. (Given: mass of electron = 9.1 \u00d7 10^-31 kg, Planck's constant = 6.626 \u00d7 10^-34 J s)",
+        "options": {
+            "Option 1": "35.5 nm",
+            "Option 2": "3.55 nm",
+            "Option 3": "355 nm",
+            "Option 4": "0.355 nm"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 32,
+        "question_text": "Which of the following electronic transitions in a hydrogen atom will emit the photon of highest frequency?",
+        "options": {
+            "Option 1": "n=2 to n=1",
+            "Option 2": "n=4 to n=3",
+            "Option 3": "n=5 to n=2",
+            "Option 4": "n=3 to n=1"
+        },
+        "correct_option": "Option 4",
+        "marks": 4
+    },
+    {
+        "question_id": 33,
+        "question_text": "The correct set of four quantum numbers for the valence electron of Rubidium (Z=37) is:",
+        "options": {
+            "Option 1": "5, 0, 0, +1/2",
+            "Option 2": "5, 1, 0, +1/2",
+            "Option 3": "4, 0, 0, +1/2",
+            "Option 4": "5, 1, 1, +1/2"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 34,
+        "question_text": "Identify the molecule that has a non-zero dipole moment.",
+        "options": {
+            "Option 1": "CO2",
+            "Option 2": "CCl4",
+            "Option 3": "BF3",
+            "Option 4": "NH3"
+        },
+        "correct_option": "Option 4",
+        "marks": 4
+    },
+    {
+        "question_id": 35,
+        "question_text": "Which of the following pairs has both species with sp3 hybridization?",
+        "options": {
+            "Option 1": "SiF4, C2H4",
+            "Option 2": "BF3, NH3",
+            "Option 3": "H2O, NH3",
+            "Option 4": "CH4, C2H2"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 36,
+        "question_text": "Which of the following statements about molecular orbitals is incorrect?",
+        "options": {
+            "Option 1": "Bonding molecular orbitals have lower energy than corresponding atomic orbitals.",
+            "Option 2": "Antibonding molecular orbitals have higher energy than corresponding atomic orbitals.",
+            "Option 3": "The number of molecular orbitals formed is always equal to the number of atomic orbitals combining.",
+            "Option 4": "Molecular orbitals are polycentric, while atomic orbitals are monocentric."
+        },
+        "correct_option": "Option 4",
+        "marks": 4
+    },
+    {
+        "question_id": 37,
+        "question_text": "For a spontaneous process, which of the following is always true?",
+        "options": {
+            "Option 1": "\u0394H < 0",
+            "Option 2": "\u0394G < 0",
+            "Option 3": "\u0394S_system > 0",
+            "Option 4": "\u0394S_surroundings > 0"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 38,
+        "question_text": "Calculate the work done (in Joules) when 2 moles of an ideal gas expand isothermally and reversibly from 10 L to 20 L at 27 \u00b0C. (Given: R = 8.314 J mol\u207b\u00b9 K\u207b\u00b9)",
+        "options": {
+            "Option 1": "-3459 J",
+            "Option 2": "3459 J",
+            "Option 3": "-1729 J",
+            "Option 4": "1729 J"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 39,
+        "question_text": "The standard enthalpy of formation of NH3(g) is -46.1 kJ/mol. What is the standard enthalpy change for the reaction: N2(g) + 3H2(g) \u2192 2NH3(g)?",
+        "options": {
+            "Option 1": "-46.1 kJ",
+            "Option 2": "-92.2 kJ",
+            "Option 3": "46.1 kJ",
+            "Option 4": "92.2 kJ"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 40,
+        "question_text": "For the reaction 2A(g) + B(g) \u21cc 3C(g) + D(g), if the initial concentration of A is 2 M and B is 1 M, and at equilibrium, the concentration of C is 0.9 M, calculate the equilibrium constant K_c.",
+        "options": {
+            "Option 1": "0.15",
+            "Option 2": "0.30",
+            "Option 3": "0.45",
+            "Option 4": "0.60"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 41,
+        "question_text": "Which of the following will decrease the pH of a 0.1 M CH3COOH solution?",
+        "options": {
+            "Option 1": "Adding solid CH3COONa",
+            "Option 2": "Adding 0.1 M HCl",
+            "Option 3": "Adding distilled water",
+            "Option 4": "Heating the solution"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 42,
+        "question_text": "The solubility product (K_sp) of AgCl is 1.6 \u00d7 10^-10 at 25 \u00b0C. The solubility of AgCl in 0.01 M NaCl solution will be:",
+        "options": {
+            "Option 1": "1.6 \u00d7 10^-8 M",
+            "Option 2": "1.6 \u00d7 10^-12 M",
+            "Option 3": "1.6 \u00d7 10^-10 M",
+            "Option 4": "1.26 \u00d7 10^-5 M"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 43,
+        "question_text": "In the reaction: Cr2O7^2- + 14H+ + 6I- \u2192 2Cr^3+ + 3I2 + 7H2O, the equivalent weight of K2Cr2O7 is (M = molar mass of K2Cr2O7):",
+        "options": {
+            "Option 1": "M/3",
+            "Option 2": "M/6",
+            "Option 3": "M/2",
+            "Option 4": "M/1"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 44,
+        "question_text": "Which of the following elements can exhibit an oxidation state of +7?",
+        "options": {
+            "Option 1": "Fe",
+            "Option 2": "Cr",
+            "Option 3": "Mn",
+            "Option 4": "Ni"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 45,
+        "question_text": "Which of the following order of ionic radii is correct?",
+        "options": {
+            "Option 1": "Na+ < Mg2+ < Al3+",
+            "Option 2": "O2- > F- > Na+",
+            "Option 3": "Cl- > K+ > Ca2+",
+            "Option 4": "Al3+ > Mg2+ > Na+"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 46,
+        "question_text": "The correct order of increasing first ionization enthalpy is:",
+        "options": {
+            "Option 1": "B < C < N < O < F",
+            "Option 2": "B < C < O < N < F",
+            "Option 3": "B < O < C < N < F",
+            "Option 4": "B < O < N < C < F"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 47,
+        "question_text": "Which of the following is an incorrect statement regarding p-block elements?",
+        "options": {
+            "Option 1": "Boron forms electron deficient compounds.",
+            "Option 2": "Carbon shows allotropy.",
+            "Option 3": "Nitrogen can form stable pentavalent compounds.",
+            "Option 4": "Oxygen is more electronegative than sulfur."
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 48,
+        "question_text": "Which of the following compounds is known as 'inorganic benzene'?",
+        "options": {
+            "Option 1": "B3N3H6",
+            "Option 2": "B2H6",
+            "Option 3": "SiO2",
+            "Option 4": "P4O10"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 49,
+        "question_text": "The dissolution of aluminum in dilute NaOH results in the formation of:",
+        "options": {
+            "Option 1": "Al2O3",
+            "Option 2": "Al(OH)3",
+            "Option 3": "Na[Al(OH)4]",
+            "Option 4": "Na3AlF6"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 50,
+        "question_text": "Which of the following statements about transition elements is incorrect?",
+        "options": {
+            "Option 1": "They generally form colored compounds.",
+            "Option 2": "They exhibit variable oxidation states.",
+            "Option 3": "They are typically diamagnetic.",
+            "Option 4": "They form alloys readily."
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 51,
+        "question_text": "The magnetic moment (spin-only) of a transition metal ion is 3.87 BM. The number of unpaired electrons in the ion is:",
+        "options": {
+            "Option 1": "1",
+            "Option 2": "2",
+            "Option 3": "3",
+            "Option 4": "4"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 52,
+        "question_text": "Which of the following compounds exhibits optical isomerism?",
+        "options": {
+            "Option 1": "2,2-Dimethylbutane",
+            "Option 2": "2-Chlorobutane",
+            "Option 3": "1-Bromopropane",
+            "Option 4": "2-Methylpropane"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 53,
+        "question_text": "What is the IUPAC name of the following compound? CH3CH(CH3)CH2CH(OH)CH3",
+        "options": {
+            "Option 1": "2,4-Dimethylpentan-3-ol",
+            "Option 2": "4-Methylpentan-2-ol",
+            "Option 3": "2-Methylpentan-4-ol",
+            "Option 4": "1,3-Dimethylbutan-2-ol"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 54,
+        "question_text": "The major product formed when 2-bromopropane reacts with alcoholic KOH is:",
+        "options": {
+            "Option 1": "Propan-1-ol",
+            "Option 2": "Propene",
+            "Option 3": "Propyne",
+            "Option 4": "Propan-2-ol"
+        },
+        "correct_option": "Option 2",
+        "marks": 4
+    },
+    {
+        "question_id": 55,
+        "question_text": "Which reagent is used to distinguish between ethane and ethene?",
+        "options": {
+            "Option 1": "Br2/CCl4",
+            "Option 2": "Na/liquid NH3",
+            "Option 3": "Conc. H2SO4",
+            "Option 4": "KMnO4 (cold, dilute)"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 56,
+        "question_text": "Ozonolysis of a hydrocarbon gives only propanone. The hydrocarbon is:",
+        "options": {
+            "Option 1": "2,3-Dimethylbut-2-ene",
+            "Option 2": "2-Methylpropene",
+            "Option 3": "But-2-yne",
+            "Option 4": "2-Methylbut-2-ene"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 57,
+        "question_text": "Identify the major product (X) formed in the following reaction: CH3CH2OH + PCl5 \u2192 X + HCl + POCl3",
+        "options": {
+            "Option 1": "CH3CH2Cl",
+            "Option 2": "CH3CHO",
+            "Option 3": "CH3COOH",
+            "Option 4": "CH3CH2OCl"
+        },
+        "correct_option": "Option 1",
+        "marks": 4
+    },
+    {
+        "question_id": 58,
+        "question_text": "Which of the following alcohols would be most resistant to oxidation?",
+        "options": {
+            "Option 1": "Ethanol",
+            "Option 2": "Propan-1-ol",
+            "Option 3": "2-Methylpropan-2-ol",
+            "Option 4": "Propan-2-ol"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 59,
+        "question_text": "Which of the following reagents can be used to distinguish between acetaldehyde and acetone?",
+        "options": {
+            "Option 1": "Tollens' reagent",
+            "Option 2": "Fehling's solution",
+            "Option 3": "Both (1) and (2)",
+            "Option 4": "Grignard reagent"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    },
+    {
+        "question_id": 60,
+        "question_text": "The reaction of an aldehyde with an alcohol in the presence of an acid catalyst forms:",
+        "options": {
+            "Option 1": "Ester",
+            "Option 2": "Ether",
+            "Option 3": "Hemiacetal and then acetal",
+            "Option 4": "Ketone"
+        },
+        "correct_option": "Option 3",
+        "marks": 4
+    }
+]

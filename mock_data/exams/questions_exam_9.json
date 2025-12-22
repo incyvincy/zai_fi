@@ -1,0 +1,1082 @@
+[
+  {
+    "question_id": 1,
+    "question_text": "An oil drop of radius 2 mm with a density 3 g cm^-3 is held stationary under a constant electric field 3.55 x 10^5 V/m in the Millikan's oil drop experiment. What is the number of excess electrons that the oil drop will possess? (Consider g = 9.81 m/s^2)",
+    "options": {
+      "Option 1": "4.88 x 10^11",
+      "Option 2": "1.73 x 10^10",
+      "Option 3": "17.3 x 10^10",
+      "Option 4": "1.73 x 10^12"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 2,
+    "question_text": "Match List-I with List-II. List-I: (a) rms speed of gas molecules (b) Pressure exerted by ideal gas (c) Average kinetic energy of a molecule (d) Total internal energy of 1 mole of a diatomic gas. List-II: (i) (1/3) nm v_rms^2 (ii) (3/2) kT (iii) (5/2) RT (iv) sqrt(3RT/M).",
+    "options": {
+      "Option 1": "(a)-(i), (b)-(iv), (c)-(ii), (d)-(iii)",
+      "Option 2": "(a)-(iii), (b)-(ii), (c)-(iv), (d)-(i)",
+      "Option 3": "(a)-(iv), (b)-(i), (c)-(ii), (d)-(iii)",
+      "Option 4": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 3,
+    "question_text": "A constant magnetic field of 1 Tesla is applied in the x > 0 region. A metallic circular ring of radius 1 m is moving with a constant velocity of 1 m/s along the x-axis. At t = 0 s, the centre of the ring is at x = -1 m. What will be the value of the induced emf in the ring at t = 1 s? (Assume the velocity is towards positive x-axis).",
+    "options": {
+      "Option 1": "1 V",
+      "Option 2": "2 V",
+      "Option 3": "0 V",
+      "Option 4": "0.5 V"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 4,
+    "question_text": "The time period of a simple pendulum is given by T = 2π √(L/g). The measured value of the length of the pendulum is 10 cm known to 1 mm accuracy. The time for 200 oscillations of the pendulum is found to be 100 seconds using a clock of 1s resolution. The percentage accuracy in the determination of g using this pendulum is 'x'. The value of 'x' to the nearest integer is:",
+    "options": {
+      "Option 1": "2%",
+      "Option 2": "3%",
+      "Option 3": "5%",
+      "Option 4": "4%"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 5,
+    "question_text": "A particle of mass m moves in a circular orbit under the central potential field U(r) = -C/r, where C is a positive constant. The correct radius - velocity graph of the particle's motion is:",
+    "options": {
+      "Option 1": "A curve where v increases as r increases",
+      "Option 2": "A straight line parallel to r-axis",
+      "Option 3": "A curve where v decreases as r increases (Rectangular Hyperbola type)",
+      "Option 4": "A straight line passing through origin"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 6,
+    "question_text": "A thin circular ring of mass M and radius r is rotating about its axis with an angular speed w. Two particles having mass m each are now attached at diametrically opposite points. The angular speed of the ring will become:",
+    "options": {
+      "Option 1": "wM / (M + m)",
+      "Option 2": "wM / (M + 2m)",
+      "Option 3": "w(M - 2m) / (M + 2m)",
+      "Option 4": "w(M + 2m) / M"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 7,
+    "question_text": "For an electromagnetic wave travelling in free space, the relation between average energy densities due to electric (Ue) and magnetic (Um) fields is:",
+    "options": {
+      "Option 1": "Ue = Um",
+      "Option 2": "Ue > Um",
+      "Option 3": "Ue < Um",
+      "Option 4": "Ue != Um"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 8,
+    "question_text": "A radioactive sample is undergoing a decay. At any time t1, its activity is A and at another time t2, the activity is A/5. What is the average life time for the sample?",
+    "options": {
+      "Option 1": "(t1 - t2) / ln 5",
+      "Option 2": "ln(t2 + t1) / 2",
+      "Option 3": "(t2 - t1) / ln 5",
+      "Option 4": "ln 5 / (t2 - t1)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 9,
+    "question_text": "Imagine that the electron in a hydrogen atom is replaced by a muon (μ). The mass of the muon particle is 207 times that of an electron and charge is equal to the charge of an electron. The ionization potential of this hydrogen-like atom will be:",
+    "options": {
+      "Option 1": "13.6 eV",
+      "Option 2": "27.2 eV",
+      "Option 3": "331.2 eV",
+      "Option 4": "2815.2 eV"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 10,
+    "question_text": "Your friend is in a stationary train at the railway station. You are in a moving train on a parallel track. Your train is moving with speed 10 m/s. If your friend throws a ball vertically upwards with speed 10 m/s, the path of the ball as seen by you will be:",
+    "options": {
+      "Option 1": "Straight line",
+      "Option 2": "Circle",
+      "Option 3": "Parabola",
+      "Option 4": "Ellipse"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 11,
+    "question_text": "A heavy box is to be dragged along a rough horizontal floor. To do so, person A pushes it at an angle 30 degrees from the horizontal and requires a minimum force Fa, while person B pulls the box at an angle 60 degrees from the horizontal and needs minimum force Fb. If the coefficient of friction between the box and the floor is sqrt(3)/5, the ratio Fa/Fb is:",
+    "options": {
+      "Option 1": "sqrt(3)",
+      "Option 2": "5/sqrt(3)",
+      "Option 3": "sqrt(3)/2",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 12,
+    "question_text": "A heat engine has an efficiency of 1/6. When the temperature of the sink is reduced by 62 C, its efficiency doubles. The temperature of the source is:",
+    "options": {
+      "Option 1": "37 C",
+      "Option 2": "62 C",
+      "Option 3": "99 C",
+      "Option 4": "124 C"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 13,
+    "question_text": "A parallel plate capacitor is charged to a potential V. After disconnecting the charging battery the distance between the plates of the capacitor is increased using an insulating handle. As a result the potential difference between the plates:",
+    "options": {
+      "Option 1": "decreases",
+      "Option 2": "does not change",
+      "Option 3": "becomes zero",
+      "Option 4": "increases"
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 14,
+    "question_text": "A plane electromagnetic wave of frequency 500 MHz is travelling in vacuum along y-direction. At a particular point in space and time, B = 8.0 x 10^-8 z T. The value of electric field at this point is: (speed of light = 3 x 10^8 ms^-1) x, y, z are unit vectors along x, y and z direction.",
+    "options": {
+      "Option 1": "-24 x V/m",
+      "Option 2": "2.6 x V/m",
+      "Option 3": "24 x V/m",
+      "Option 4": "-2.6 y V/m"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 15,
+    "question_text": "The position, velocity and acceleration of a particle moving with a constant acceleration can be represented by:",
+    "options": {
+      "Option 1": "Quadratic, Linear, Constant",
+      "Option 2": "Linear, Quadratic, Constant",
+      "Option 3": "Constant, Linear, Quadratic",
+      "Option 4": "Quadratic, Constant, Linear"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 16,
+    "question_text": "The dipole moment of a circular loop carrying a current I, is m and the magnetic field at the centre of the loop is B1. When the dipole moment is doubled by keeping the current constant, the magnetic field at the centre of the loop is B2. The ratio B1/B2 is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "sqrt(3)",
+      "Option 3": "sqrt(2)",
+      "Option 4": "1/sqrt(2)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 17,
+    "question_text": "An electron moving with speed v along the positive x-axis enters a uniform magnetic field B acting along the positive y-axis. The force on the electron is in:",
+    "options": {
+      "Option 1": "Positive z-direction",
+      "Option 2": "Negative z-direction",
+      "Option 3": "Negative y-direction",
+      "Option 4": "Positive y-direction"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 18,
+    "question_text": "The volume V of an enclosure contains a mixture of three gases, 16 g of oxygen, 28 g of nitrogen and 44 g of carbon dioxide at absolute temperature T. Consider R as universal gas constant. The pressure of the mixture of gases is:",
+    "options": {
+      "Option 1": "88RT/V",
+      "Option 2": "3RT/V",
+      "Option 3": "5/2 RT/V",
+      "Option 4": "4RT/V"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 19,
+    "question_text": "In a series LCR circuit, the resonance frequency is v. The half power points are at frequencies v1 and v2. The quality factor is:",
+    "options": {
+      "Option 1": "(v1+v2) / (v2-v1)",
+      "Option 2": "v / (v2-v1)",
+      "Option 3": "(v2-v1) / v",
+      "Option 4": "v / (v1+v2)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 20,
+    "question_text": "Consider a block kept on an inclined plane (inclination 45 degrees) moves with constant velocity. If the inclination is changed to 60 degrees, the acceleration of the block will be:",
+    "options": {
+      "Option 1": "g (1 - 1/sqrt(3))",
+      "Option 2": "g (sqrt(3)/2 - 1/2)",
+      "Option 3": "g/sqrt(2)",
+      "Option 4": "2g/3"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 21,
+    "question_text": "The electric field in a region is given by E = (2/5 E0 i + 3/5 E0 j) with E0 = 2.0 x 10^3 N/C. The flux of this field through a rectangular surface of area 0.2 m^2 parallel to the y-z plane is:",
+    "options": {
+      "Option 1": "160 Nm^2/C",
+      "Option 2": "320 Nm^2/C",
+      "Option 3": "80 Nm^2/C",
+      "Option 4": "400 Nm^2/C"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 22,
+    "question_text": "A particle of mass M is moving in a circle of fixed radius R in such a way that its centripetal acceleration at time t is given by n^2 R t^2 where n is a constant. The power delivered to the particle by the force acting on it, is:",
+    "options": {
+      "Option 1": "M n R^2 t",
+      "Option 2": "M n^2 R^2 t",
+      "Option 3": "M n R^2 t^2",
+      "Option 4": "1/2 M n^2 R^2 t^2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 23,
+    "question_text": "Ideally, a black body at room temperature throws out:",
+    "options": {
+      "Option 1": "Visible light",
+      "Option 2": "Infrared radiation",
+      "Option 3": "Ultraviolet radiation",
+      "Option 4": "No radiation"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 24,
+    "question_text": "A wire of length L and mass M is bent in the form of a semi-circle. The gravitational field at the centre of the semi-circle is:",
+    "options": {
+      "Option 1": "2GM / (pi L^2)",
+      "Option 2": "2pi GM / L^2",
+      "Option 3": "GM / (pi L)",
+      "Option 4": "pi GM / L^2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 25,
+    "question_text": "A signal of 0.1 kW is transmitted in a cable. The attenuation of cable is -5 dB per km and cable length is 20 km. The power received at receiver is 10^-x W. The value of x is:",
+    "options": {
+      "Option 1": "4",
+      "Option 2": "8",
+      "Option 3": "6",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 26,
+    "question_text": "The equivalent resistance between points A and B in a network of infinite resistors each of resistance R connected in a ladder network is:",
+    "options": {
+      "Option 1": "R (1 + sqrt(5))/2",
+      "Option 2": "R (1 + sqrt(3))/2",
+      "Option 3": "2R",
+      "Option 4": "R"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 27,
+    "question_text": "A ball of mass 10 kg moving with a velocity 10sqrt(3) m/s along X-axis, hits another ball of mass 20 kg which is at rest. After collision, the first ball comes to rest and the second one disintegrates into two equal pieces. One of the pieces starts moving along Y-axis at a speed of 10 m/s. The second piece starts moving at a speed of 20 m/s at an angle theta (degree) with respect to the X-axis. The value of theta to the nearest integer is",
+    "options": {
+      "Option 1": "30",
+      "Option 2": "45",
+      "Option 3": "60",
+      "Option 4": "90"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 28,
+    "question_text": "In a Young's double slit experiment, if the source is moved by a distance x perpendicular to the central axis, the central maximum shifts by:",
+    "options": {
+      "Option 1": "(x/d) D",
+      "Option 2": "(d/x) D",
+      "Option 3": "(x/D) d",
+      "Option 4": "Zero"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 29,
+    "question_text": "If speed V, area A and force F are chosen as fundamental units, then the dimension of Young's modulus will be:",
+    "options": {
+      "Option 1": "F A^-1 V^0",
+      "Option 2": "F A^2 V^-1",
+      "Option 3": "F A^-1 V^1",
+      "Option 4": "F A V"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 30,
+    "question_text": "Consider two satellites S1 and S2 with periods of revolution 1 hr and 8 hr respectively revolving around a planet in circular orbits. The ratio of angular velocity of S1 to the angular velocity of S2 is:",
+    "options": {
+      "Option 1": "8 : 1",
+      "Option 2": "1 : 4",
+      "Option 3": "2 : 1",
+      "Option 4": "1 : 8"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 31,
+    "question_text": "The IUPAC name of the following compound is: CH3-CH(OH)-CH2-CH2-COOH",
+    "options": {
+      "Option 1": "4-Hydroxypentanoic acid",
+      "Option 2": "1-Carboxy-3-butanol",
+      "Option 3": "1-Hydroxy-4-pentanoic acid",
+      "Option 4": "4-Carboxypentanol"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 32,
+    "question_text": "Match List-I with List-II. List-I: (a) 2 SO2(g) + O2(g) -> 2 SO3(g) (b) 4 NH3(g) + 5 O2(g) -> 4 NO(g) + 6 H2O(g) (c) N2(g) + 3 H2(g) -> 2 NH3(g) (d) Vegetable oil + H2 -> Vegetable Ghee. List-II (Catalyst): (i) Pt(s) (ii) V2O5 (iii) Fe(s) (iv) Ni(s).",
+    "options": {
+      "Option 1": "(a)-(ii), (b)-(i), (c)-(iii), (d)-(iv)",
+      "Option 2": "(a)-(iii), (b)-(i), (c)-(ii), (d)-(iv)",
+      "Option 3": "(a)-(iv), (b)-(iii), (c)-(ii), (d)-(i)",
+      "Option 4": "(a)-(iii), (b)-(ii), (c)-(i), (d)-(iv)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 33,
+    "question_text": "Identify the major products A and B in the following reaction sequence: (1) Aniline + NaNO2/HCl (0-5 C) -> A (2) A + HBF4, then heat -> B.",
+    "options": {
+      "Option 1": "A = Benzene diazonium chloride, B = Fluorobenzene",
+      "Option 2": "A = Nitrobenzene, B = Fluorobenzene",
+      "Option 3": "A = Benzene diazonium chloride, B = Benzene",
+      "Option 4": "A = Fluorobenzene, B = Nitrobenzene"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 34,
+    "question_text": "The correct order of increasing intermolecular forces in the following is:",
+    "options": {
+      "Option 1": "Propane < Butane < Pentane < Ethanol",
+      "Option 2": "Propane < Ethanol < Butane < Pentane",
+      "Option 3": "Ethanol < Propane < Butane < Pentane",
+      "Option 4": "Pentane < Butane < Propane < Ethanol"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 35,
+    "question_text": "Which of the following compounds will give a positive Iodoform test?",
+    "options": {
+      "Option 1": "2-Pentanone",
+      "Option 2": "3-Pentanone",
+      "Option 3": "Benzaldehyde",
+      "Option 4": "1-Propanol"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 36,
+    "question_text": "The spin only magnetic moment of [MnBr4]2- is 5.9 BM. The geometry of the complex ion is:",
+    "options": {
+      "Option 1": "Tetrahedral",
+      "Option 2": "Square planar",
+      "Option 3": "Octahedral",
+      "Option 4": "Trigonal bipyramidal"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 37,
+    "question_text": "Which one of the following lanthanoids does not form MO2? [M is lanthanoid metal]",
+    "options": {
+      "Option 1": "Yb",
+      "Option 2": "Pr",
+      "Option 3": "Nd",
+      "Option 4": "Dy"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 38,
+    "question_text": "Among the following, the aromatic compounds are: (A) Cyclopentadienyl anion (B) Cycloheptatrienyl cation (C) Azulene (D) Cyclooctatetraene. Choose the correct answer from the following options:",
+    "options": {
+      "Option 1": "(A), (B) and (C) only",
+      "Option 2": "(A) and (B) only",
+      "Option 3": "(B) and (C) only",
+      "Option 4": "(A), (B), (C) and (D)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 39,
+    "question_text": "Given below are two statements : Statement I: The value of the parameter 'a' (Van der Waals constant) is larger for ammonia than for nitrogen. Statement II: Hydrogen bonding is present in ammonia. In the light of the above statements, choose the correct answer from the options given below:",
+    "options": {
+      "Option 1": "Both Statement I and Statement II are true",
+      "Option 2": "Statement I is true but Statement II is false",
+      "Option 3": "Statement I is false but Statement II is true",
+      "Option 4": "Both Statement I and Statement II are false"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 40,
+    "question_text": "The correct order of bond dissociation enthalpy of halogens is:",
+    "options": {
+      "Option 1": "Cl2 > Br2 > F2 > I2",
+      "Option 2": "F2 > Cl2 > Br2 > I2",
+      "Option 3": "Cl2 > F2 > Br2 > I2",
+      "Option 4": "I2 > Br2 > Cl2 > F2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 41,
+    "question_text": "The hybridization of Xe in XeF2 is:",
+    "options": {
+      "Option 1": "sp3d",
+      "Option 2": "sp3",
+      "Option 3": "sp3d2",
+      "Option 4": "sp2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 42,
+    "question_text": "Which of the following is a condensation polymer?",
+    "options": {
+      "Option 1": "Nylon 6,6",
+      "Option 2": "Teflon",
+      "Option 3": "PVC",
+      "Option 4": "Polystyrene"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 43,
+    "question_text": "Deficiency of which vitamin causes scurvy?",
+    "options": {
+      "Option 1": "Vitamin C",
+      "Option 2": "Vitamin A",
+      "Option 3": "Vitamin D",
+      "Option 4": "Vitamin K"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 44,
+    "question_text": "The secondary structure of protein is stabilised by:",
+    "options": {
+      "Option 1": "Hydrogen bonding",
+      "Option 2": "Peptide bond",
+      "Option 3": "glycosidic bond",
+      "Option 4": "van der Waals forces"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 45,
+    "question_text": "In Carius method of estimation of halogens, 250 mg of an organic compound gave 141 mg of AgBr. The percentage of bromine in the compound is: (Atomic mass Ag = 108, Br = 80)",
+    "options": {
+      "Option 1": "24",
+      "Option 2": "36",
+      "Option 3": "48",
+      "Option 4": "60"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 46,
+    "question_text": "A certain orbital has n=4 and m_l = -3. The number of radial nodes in this orbital is:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "1",
+      "Option 3": "2",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 47,
+    "question_text": "For the reaction 2A + B -> C, the rate equation is found to be Rate = k[A][B]. If the concentration of A is doubled and that of B is halved, the rate of reaction will:",
+    "options": {
+      "Option 1": "Remain the same",
+      "Option 2": "Increase by 4 times",
+      "Option 3": "Double",
+      "Option 4": "Halve"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 48,
+    "question_text": "Which of the following compounds is not aromatic?",
+    "options": {
+      "Option 1": "Cyclooctatetraene",
+      "Option 2": "Benzene",
+      "Option 3": "Pyridine",
+      "Option 4": "Anthracene"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 49,
+    "question_text": "The main constituent of dettol is:",
+    "options": {
+      "Option 1": "Chloroxylenol and Terpineol",
+      "Option 2": "Phenol",
+      "Option 3": "Iodine",
+      "Option 4": "Bithionol"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 50,
+    "question_text": "Identify the major product in the reaction of Propene with B2H6 followed by H2O2/OH-.",
+    "options": {
+      "Option 1": "Propan-1-ol",
+      "Option 2": "Propan-2-ol",
+      "Option 3": "Propane",
+      "Option 4": "Propanal"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 51,
+    "question_text": "The number of atoms in a unit cell of a face-centred cubic lattice is:",
+    "options": {
+      "Option 1": "4",
+      "Option 2": "2",
+      "Option 3": "1",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 52,
+    "question_text": "What is the pH of a 0.001 M NaOH solution?",
+    "options": {
+      "Option 1": "11",
+      "Option 2": "3",
+      "Option 3": "10",
+      "Option 4": "13"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 53,
+    "question_text": "The oxidation number of Cr in CrO5 is:",
+    "options": {
+      "Option 1": "+6",
+      "Option 2": "+10",
+      "Option 3": "+3",
+      "Option 4": "+4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 54,
+    "question_text": "In the presence of peroxide, HCl and HI do not give anti-Markovnikov's addition to alkenes because:",
+    "options": {
+      "Option 1": "One of the steps is endothermic in both cases",
+      "Option 2": "Both are highly ionic",
+      "Option 3": "Both are oxidizing agents",
+      "Option 4": "All steps are exothermic"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 55,
+    "question_text": "Which of the following is an example of an emulsion?",
+    "options": {
+      "Option 1": "Milk",
+      "Option 2": "Fog",
+      "Option 3": "Smoke",
+      "Option 4": "Cheese"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 56,
+    "question_text": "The number of bridging CO ligands in Mn2(CO)10 is:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "2",
+      "Option 3": "1",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 57,
+    "question_text": "Among the following, the most basic compound is:",
+    "options": {
+      "Option 1": "Benzylamine",
+      "Option 2": "Aniline",
+      "Option 3": "Acetanilide",
+      "Option 4": "p-Nitroaniline"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 58,
+    "question_text": "Using the standard electrode potentials, predict if the reaction between Fe3+(aq) and I-(aq) is feasible. E0(Fe3+/Fe2+) = 0.77 V, E0(I2/I-) = 0.54 V.",
+    "options": {
+      "Option 1": "Yes, E0_cell = 0.23 V",
+      "Option 2": "No, E0_cell = -0.23 V",
+      "Option 3": "Yes, E0_cell = 1.31 V",
+      "Option 4": "No, E0_cell = -1.31 V"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 59,
+    "question_text": "Identify the incorrect statement from the following:",
+    "options": {
+      "Option 1": "Ozone absorbs the intense ultraviolet radiation of the sun.",
+      "Option 2": "Depletion of ozone layer is because of CFCs.",
+      "Option 3": "Ozone in the stratosphere is a product of UV radiations acting on dioxygen molecules.",
+      "Option 4": "Ozone layer is harmful to life on earth."
+    },
+    "correct_option": "Option 4",
+    "marks": 4
+  },
+  {
+    "question_id": 60,
+    "question_text": "The gas evolved on heating CH3MgBr in methanol is:",
+    "options": {
+      "Option 1": "Methane",
+      "Option 2": "Ethane",
+      "Option 3": "Propane",
+      "Option 4": "H2 gas"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 61,
+    "question_text": "Let f(x) be a polynomial of degree 6 in x, in which the coefficient of x^6 is unity and it has extrema at x = -1 and x = 1. If lim x->0 f(x)/x^3 = 1, then 5f(2) is equal to:",
+    "options": {
+      "Option 1": "144",
+      "Option 2": "120",
+      "Option 3": "100",
+      "Option 4": "150"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 62,
+    "question_text": "The number of points, at which the function f(x) = |2x+1| - 3|x+2| + |x^2+x-2|, x in R is not differentiable, is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "3",
+      "Option 3": "4",
+      "Option 4": "0"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 63,
+    "question_text": "If the system of linear equations x + y + z = 5, x + 2y + 3z = 9, x + 3y + az = b has infinitely many solutions, then b - a is equal to:",
+    "options": {
+      "Option 1": "5",
+      "Option 2": "21",
+      "Option 3": "8",
+      "Option 4": "18"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 64,
+    "question_text": "Let A be a 3x3 matrix with det(A) = 4. Let R_i denote the ith row of A. If a matrix B is obtained by performing the operation R2 -> 2R2 + 5R3 on 2A, then det(B) is equal to:",
+    "options": {
+      "Option 1": "64",
+      "Option 2": "16",
+      "Option 3": "80",
+      "Option 4": "128"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 65,
+    "question_text": "If the fourth term in the expansion of (x + x^(log_2 x))^7 is 4480, then the value of x where x is in (2, 3) is:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "3",
+      "Option 3": "4",
+      "Option 4": "5"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 66,
+    "question_text": "The value of sum of the series 1 + (1+x)/2 + (1+x+x^2)/3 + ... to infinity (where |x|<1) is:",
+    "options": {
+      "Option 1": "1 / (1-x)",
+      "Option 2": "- ln(1-x) / (1-x)",
+      "Option 3": "1 / (1-x)^2",
+      "Option 4": "x / (1-x)"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 67,
+    "question_text": "Let y = y(x) be the solution of the differential equation dy/dx = 2(x+1). If the numerical value of area bounded by the curve y = y(x) and x-axis is 4sqrt(8)/3, then the value of y(1) is equal to:",
+    "options": {
+      "Option 1": "2",
+      "Option 2": "1",
+      "Option 3": "3",
+      "Option 4": "4"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 68,
+    "question_text": "The vector equation of the plane passing through the intersection of the planes r.(i+j+k)=1 and r.(i-2j)=-2, and the point (1,0,2) is:",
+    "options": {
+      "Option 1": "r.(i - 7j + 3k) = 7",
+      "Option 2": "r.(i + 7j + 3k) = 7",
+      "Option 3": "r.(3i + 7j + 3k) = 7",
+      "Option 4": "r.(i + 7j + 3k) = 7/3"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 69,
+    "question_text": "If the Boolean expression (p and q) or (p and r) is false and (p and q) and (p and r) is false, then which of the following is true?",
+    "options": {
+      "Option 1": "p is T",
+      "Option 2": "p is F",
+      "Option 3": "q is T",
+      "Option 4": "r is T"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 70,
+    "question_text": "Let A = {1, 2, 3, ... 10} and f: A -> A be defined as f(k) = k+1 if k is odd, k if k is even. The number of possible functions g: A -> A such that gof = f is:",
+    "options": {
+      "Option 1": "10^5",
+      "Option 2": "5^5",
+      "Option 3": "10C5",
+      "Option 4": "5!"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 71,
+    "question_text": "If y = y(x) is the solution of the differential equation dy/dx + (tan x)y = sin x, 0 <= x <= pi/3, with y(0) = 0, then y(pi/4) equal to:",
+    "options": {
+      "Option 1": "(1/4) log 2",
+      "Option 2": "(1/2sqrt(2)) log 2",
+      "Option 3": "log 2",
+      "Option 4": "(1/2) log 2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 72,
+    "question_text": "The locus of the mid-point of the chord of the circle x^2 + y^2 = 25 which is tangent to the hyperbola x^2/9 - y^2/16 = 1 is:",
+    "options": {
+      "Option 1": "(x^2 + y^2)^2 = 16x^2 - 9y^2",
+      "Option 2": "(x^2 + y^2)^2 = 9x^2 - 16y^2",
+      "Option 3": "(x^2 + y^2)^2 = 16x^2 + 9y^2",
+      "Option 4": "(x^2 + y^2)^2 = 9x^2 + 16y^2"
+    },
+    "correct_option": "Option 2",
+    "marks": 4
+  },
+  {
+    "question_id": 73,
+    "question_text": "The value of limit x tends to 0 of (tan(2x) - 2tan(x)) / (3x)^2 is:",
+    "options": {
+      "Option 1": "0",
+      "Option 2": "1",
+      "Option 3": "2",
+      "Option 4": "1/2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 74,
+    "question_text": "If a, b, c are in A.P. and centroid of the triangle with vertices (a, c), (2, b) and (a, b) is (10/3, 7/3), then alpha, beta are roots of equation ax^2 + bx + c = 0. The value of alpha^2 + beta^2 - alpha*beta is:",
+    "options": {
+      "Option 1": "-71/256",
+      "Option 2": "71/256",
+      "Option 3": "69/256",
+      "Option 4": "-69/256"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 75,
+    "question_text": "The probability that two randomly selected subsets of the set {1, 2, 3, 4, 5} have exactly two elements in their intersection is:",
+    "options": {
+      "Option 1": "135/2^9",
+      "Option 2": "65/2^9",
+      "Option 3": "35/2^9",
+      "Option 4": "120/2^9"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 76,
+    "question_text": "Let z and w be two complex numbers such that w = z z_bar - 2z + 2, |(z+i)/(z-3i)| = 1 and Re(w) has minimum value. Then, the minimum value of n in N for which w^n is real, is equal to:",
+    "options": {
+      "Option 1": "4",
+      "Option 2": "3",
+      "Option 3": "5",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 77,
+    "question_text": "Consider the integral I = integral 0 to 10 [x]e^[x] / e^(x-1) dx. Value of I is:",
+    "options": {
+      "Option 1": "9(e-1)",
+      "Option 2": "45(e+1)",
+      "Option 3": "45(e-1)",
+      "Option 4": "9(e+1)"
+    },
+    "correct_option": "Option 3",
+    "marks": 4
+  },
+  {
+    "question_id": 78,
+    "question_text": "The total number of 4-digit numbers whose greatest common divisor with 18 is 3, is:",
+    "options": {
+      "Option 1": "1000",
+      "Option 2": "900",
+      "Option 3": "1200",
+      "Option 4": "800"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 79,
+    "question_text": "Let f(x) be a differentiable function such that f(x) = integral 0 to x e^t f(t) dt + e^x. f(x) equals:",
+    "options": {
+      "Option 1": "2e^(e^x - 1) - 1",
+      "Option 2": "e^(e^x - 1)",
+      "Option 3": "2e^(e^x) - 1",
+      "Option 4": "e^(e^x) - 1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 80,
+    "question_text": "Let f:R->R be defined as f(x) = 2sin(-pi x / 2) if x < -1; ax^2+x+b if -1 <= x <= 1; sin(x) if x > 1. If f(x) is continuous on R, then a+b equals:",
+    "options": {
+      "Option 1": "-1",
+      "Option 2": "3",
+      "Option 3": "-3",
+      "Option 4": "1"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 81,
+    "question_text": "The sum of the series Sum(n=1 to inf) (n^2+6n+10)/(2n+1)! is equal to:",
+    "options": {
+      "Option 1": "41/8 e - 19/8 e^-1 - 10",
+      "Option 2": "41/8 e + 19/8 e^-1 - 10",
+      "Option 3": "-41/8 e + 19/8 e^-1 - 10",
+      "Option 4": "41/8 e + 19/8 e^-1 + 10"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 82,
+    "question_text": "Let A = {2, 3, 4, 5, ..., 30} and relation (a,b)=(c,d) iff ad=bc. Number of pairs related to (4,3) is:",
+    "options": {
+      "Option 1": "7",
+      "Option 2": "5",
+      "Option 3": "6",
+      "Option 4": "8"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 83,
+    "question_text": "If the mirror image of the point (1,3,5) with respect to the plane 4x - 5y + 2z = 8 is (alpha, beta, gamma), then 5(alpha+beta+gamma) equals:",
+    "options": {
+      "Option 1": "47",
+      "Option 2": "39",
+      "Option 3": "43",
+      "Option 4": "41"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 84,
+    "question_text": "Let f(x) = sin^-1 x and g(x) = (x^2-x-2)/(2x^2-x-6). If g(2) = lim x->2 g(x), then domain of fog is:",
+    "options": {
+      "Option 1": "(-inf, -2] U [-4/3, inf)",
+      "Option 2": "(-inf, -1] U [2, inf)",
+      "Option 3": "(-inf, -2] U [-1, inf)",
+      "Option 4": "(-inf, -2] U [-3/2, inf)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 85,
+    "question_text": "Integral 1 to 3 [x^2-2x-2] dx is:",
+    "options": {
+      "Option 1": "-1 - sqrt(2) - sqrt(3)",
+      "Option 2": "-4",
+      "Option 3": "-5",
+      "Option 4": "-1 + sqrt(2) + sqrt(3)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 86,
+    "question_text": "If 1-2i is a root of z^2 + alpha z + beta = 0, then alpha - beta is:",
+    "options": {
+      "Option 1": "-7",
+      "Option 2": "7",
+      "Option 3": "-3",
+      "Option 4": "3"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 87,
+    "question_text": "Let A1 be the area bounded by curves y=sin x, y=cos x and y-axis in first quadrant. Let A2 be the area bounded by curves y=sin x, y=cos x, x-axis and x=pi/2 in first quadrant. Then:",
+    "options": {
+      "Option 1": "A1 : A2 = 1 : sqrt(2)",
+      "Option 2": "A1 = A2",
+      "Option 3": "A1 : A2 = 1 : 2",
+      "Option 4": "2 A1 = A2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 88,
+    "question_text": "Let f:R->R be a continuous function such that f(x) + f(x+1) = 2, for all x in R. If I1 = integral 0 to 8 f(x) dx and I2 = integral -1 to 3 f(x) dx, then the value of I1 + 2I2 is equal to",
+    "options": {
+      "Option 1": "16",
+      "Option 2": "12",
+      "Option 3": "20",
+      "Option 4": "18"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 89,
+    "question_text": "The number of roots of the equation, (81)^(sin^2 x) + (81)^(cos^2 x) = 30 in the interval [0, pi] is equal to:",
+    "options": {
+      "Option 1": "4",
+      "Option 2": "3",
+      "Option 3": "8",
+      "Option 4": "2"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  },
+  {
+    "question_id": 90,
+    "question_text": "Let Sk = sum(r=1 to k) tan^-1(6^r / (2^(2r+1) + 3^(2r+1))). Then lim(k->infinity) Sk is equal to:",
+    "options": {
+      "Option 1": "cot^-1(3/2)",
+      "Option 2": "tan^-1(3/2)",
+      "Option 3": "pi/2",
+      "Option 4": "tan^-1(3)"
+    },
+    "correct_option": "Option 1",
+    "marks": 4
+  }
+]
