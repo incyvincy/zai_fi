@@ -27,17 +27,87 @@ class Command(BaseCommand):
         )
 
     def _detect_exam_type(self, exam_name: str) -> str:
-        """Auto-detect exam type from name (flexible, not hardcoded)."""
-        name_lower = exam_name.lower()
-        type_keywords = {
-            'jee': ['jee', 'iit'], 'neet': ['neet', 'medical'], 'cuet': ['cuet'],
-            'board': ['board', 'cbse', 'icse', 'state'], 'olympiad': ['olympiad', 'imo'],
-            'sat': ['sat'], 'gre': ['gre'], 'cat': ['cat'], 'gate': ['gate'],
-        }
-        for exam_type, keywords in type_keywords.items():
-            if any(kw in name_lower for kw in keywords):
-                return exam_type
-        return 'general'
+        """
+        AI-powered exam type detection - works for ANY exam worldwide.
+        Supports: Science (JEE, NEET, AP), Commerce (CA, CPA), Arts (Literature),
+        Language (TOEFL, IELTS), Aptitude (SAT, CAT, GMAT), and more.
+        """
+        try:
+            from google import genai
+            from google.genai import types
+            import json
+            
+            client = genai.Client(api_key=settings.GOOGLE_API_KEY)
+            
+            prompt = f"""
+        You are an EXPERT in global educational systems. Classify the exam type from its name.
+
+        Exam Name: "{exam_name}"
+
+        CLASSIFICATION CATEGORIES (select the MOST SPECIFIC match):
+        - Science (Engineering): JEE, NEET, SAT Physics/Chem, AP Science, A-Levels Science
+        - Science (Medical): NEET, USMLE, PLAB, MCAT
+        - Science (General): General science exams, Olympiads (IMO, IPhO, IChO)
+        - Commerce: CA, CPA, ACCA, CMA, MBA entrance (CAT, GMAT), Business/Economics exams
+        - Language: TOEFL, IELTS, GRE Verbal, SAT English, PTE, language proficiency tests
+        - Aptitude: SAT (general), ACT, GRE, GMAT, CAT (quantitative), CLAT, Bank PO, SSC
+        - Humanities: History, Literature, Political Science, Psychology, Sociology exams
+        - Arts: Fine Arts, Design, Music theory exams
+        - Law: CLAT, LSAT, ILSAT, Bar exams
+        - Board: CBSE, ICSE, State Boards, A-Levels, GCSE, IB
+        - Computer Science: Coding tests, CS Olympiads
+        - General: If unclear or multiple domains
+
+        CRITICAL RULES:
+        - If name contains specific exam codes (JEE, NEET, SAT, etc.), prioritize those
+        - For mock tests, identify the target exam (e.g., "JEE Mock Test" → Science (Engineering))
+        - For board exams, use "Board" category
+        - If multiple matches, choose the MOST PROMINENT subject area
+        - Be flexible - worldwide exam systems vary greatly
+
+        Return ONLY this JSON (no explanation):
+        {{
+            "exam_type": "One of the categories above",
+            "domain": "Broader field (Science/Commerce/Arts/Language/Aptitude/Humanities/etc)",
+            "confidence": 0.0-1.0
+        }}
+        """
+            
+            response = client.models.generate_content(
+                model='gemini-2.5-flash',
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.2
+                )
+            )
+            
+            data = json.loads(response.text)
+            exam_type = data.get('exam_type', 'General').lower().replace(' ', '_').replace('(', '').replace(')', '')
+            
+            # Clean up the exam_type for database storage (max 50 chars, alphanumeric + underscore)
+            exam_type = ''.join(c if c.isalnum() or c == '_' else '_' for c in exam_type)[:50]
+            
+            return exam_type
+            
+        except Exception as e:
+            # Fallback: simple keyword matching if AI fails
+            self.stdout.write(self.style.WARNING(f"  [WARN] AI exam detection failed ({e}), using fallback"))
+            name_lower = exam_name.lower()
+            
+            # Minimal fallback logic
+            if any(kw in name_lower for kw in ['jee', 'iit', 'engineering']):
+                return 'science_engineering'
+            elif any(kw in name_lower for kw in ['neet', 'medical', 'aiims']):
+                return 'science_medical'
+            elif any(kw in name_lower for kw in ['ca', 'cpa', 'accountancy', 'commerce']):
+                return 'commerce'
+            elif any(kw in name_lower for kw in ['toefl', 'ielts', 'language', 'english']):
+                return 'language'
+            elif any(kw in name_lower for kw in ['sat', 'gre', 'cat', 'gmat', 'aptitude']):
+                return 'aptitude'
+            else:
+                return 'general'
 
     def handle(self, *args, **options):
         base_path = os.path.join(settings.BASE_DIR, 'mock_data')
