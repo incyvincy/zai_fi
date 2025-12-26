@@ -1,7 +1,28 @@
 from neomodel import (
-    StructuredNode, StringProperty, IntegerProperty, FloatProperty, 
-    RelationshipTo, RelationshipFrom, StructuredRel, JSONProperty
+    StructuredNode, StringProperty, IntegerProperty, 
+    BooleanProperty, FloatProperty, DateTimeProperty,
+    RelationshipTo, StructuredRel
 )
+from datetime import datetime, timezone
+
+
+# ==========================================
+# RELATIONSHIP MODELS: TAG METADATA (Day 1 Schema)
+# ==========================================
+class TagRel(StructuredRel):
+    """
+    Rich relationship for linking Questions to Tags (Concept/Skill/Difficulty).
+    Enables:
+    1. Source tracking (client vs ai_generated)
+    2. Confidence scores (0-1 for AI, 1.0 for client)
+    3. Versioning for AI re-runs without deleting history
+    4. Timestamp for audit trail
+    """
+    tag_source = StringProperty(default='ai_generated')  # 'client' or 'ai_generated'
+    confidence = FloatProperty(default=1.0)  # Client tags = 1.0, AI = 0.0-1.0
+    version = IntegerProperty(default=1)     # Increment on AI re-runs
+    created_at = DateTimeProperty(default_now=True)
+
 
 # ==========================================
 # PLANE A: THE KNOWLEDGE LAYER (The "Map")
@@ -9,45 +30,64 @@ from neomodel import (
 class Concept(StructuredNode):
     """
     Represents a concept/topic in the syllabus hierarchy.
-    Examples: Physics, Mechanics, Rotational Motion
+    Examples: Physics > Mechanics > Rotational Motion
+    Can be tagged by client OR AI (tracked via TagRel).
     """
     name = StringProperty(unique_index=True)
-    # Recursive Relationship: "Rotational Motion" IS_PART_OF "Mechanics" IS_PART_OF "Physics"
-    part_of = RelationshipTo('Concept', 'PART_OF')
+    parent_concept = StringProperty()  # e.g., "Physics"
+
+
+class Skill(StructuredNode):
+    """
+    Cognitive skill required to solve a question.
+    Examples: Recall, Application, Analysis, Evaluation, Problem-Solving
+    """
+    name = StringProperty(unique_index=True)
+
+
+class Difficulty(StructuredNode):
+    """
+    Difficulty level of a question.
+    Examples: Easy, Medium, Hard
+    """
+    name = StringProperty(unique_index=True)
 
 
 # ==========================================
 # PLANE B: THE ASSESSMENT LAYER (The "Territory")
 # ==========================================
-class QuestionRel(StructuredRel):
-    """Relationship properties between Question and Concept"""
-    weight = FloatProperty(default=1.0)  # Difficulty or importance
-
-
 class Question(StructuredNode):
     """
     Represents a single question in an exam.
-    Links to Concept (Plane A) to show what knowledge it tests.
-    """
-    # Global unique ID: exam_id * 1000 + question_id (e.g., exam 1 q 5 = 1005)
-    global_question_id = IntegerProperty(unique_index=True)
-    exam_id = IntegerProperty()  # Which exam this question belongs to
-    question_id = IntegerProperty()  # Original question number (1-90)
-    text = StringProperty()
-    options = JSONProperty()
-    correct_option = StringProperty()
+    Day 1 Schema: Robust handling of missing metadata.
     
-    # LINK B -> A: This is how we know what a question "means"
-    tests_concept = RelationshipTo(Concept, 'TESTS', model=QuestionRel)
+    Key Fields:
+    - text: Required for AI tagging
+    - needs_ai_tagging: Flag for questions missing tags
+    - tagging_status: Track tagging workflow state
+    """
+    global_question_id = IntegerProperty(unique_index=True)
+    text = StringProperty(required=True)  # Essential for AI tagging
+    
+    # AI Tagging Control Flags
+    needs_ai_tagging = BooleanProperty(default=False)
+    tagging_status = StringProperty(default='untagged')  # untagged, pending, tagged, failed
+    
+    # Relationships to Tag Nodes (using rich TagRel for metadata)
+    topics = RelationshipTo(Concept, 'HAS_TOPIC', model=TagRel)
+    skills = RelationshipTo(Skill, 'HAS_SKILL', model=TagRel)
+    difficulties = RelationshipTo(Difficulty, 'HAS_DIFFICULTY', model=TagRel)
 
 
 class Exam(StructuredNode):
     """
     Represents an exam/test containing multiple questions.
+    Now flexible: supports any exam type (JEE, NEET, CUET, Board exams, etc.)
     """
     exam_id = IntegerProperty(unique_index=True)
     name = StringProperty()
-    duration = StringProperty()
+    exam_type = StringProperty(default='general')  # 'jee', 'neet', 'cuet', 'board', 'custom', etc.
+    duration = IntegerProperty()  # Duration in minutes (optional)
     
     # Exam contains Questions
     includes = RelationshipTo(Question, 'INCLUDES')
@@ -58,12 +98,14 @@ class Exam(StructuredNode):
 # ==========================================
 class AttemptRel(StructuredRel):
     """
-    Detailed edge storing exactly what happened during the attempt.
-    This is the rich relationship between Student and Question.
+    Stores attempt outcome and optionally time spent.
+    
+    IMPORTANT: Time spent is OPTIONAL.
+    - If missing, time-based metrics are skipped (no fake values).
+    - Use time_spent_seconds = None (not 0) when missing.
     """
-    selected_option = StringProperty()
-    time_spent = StringProperty()
     outcome = StringProperty()  # 'correct', 'incorrect', 'skipped'
+    time_spent_seconds = IntegerProperty()  # Optional: None if missing (NOT 0)
 
 
 class Cohort(StructuredNode):
@@ -81,11 +123,10 @@ class Student(StructuredNode):
     """
     student_id = IntegerProperty(unique_index=True)
     name = StringProperty()
-    enrollment_id = StringProperty()
 
     # LINK C -> C: Student belongs to Cohort
     member_of = RelationshipTo(Cohort, 'MEMBER_OF')
 
-    # LINK C -> B: The most important edge.
-    # The student didn't just 'take an exam', they 'attempted specific questions'.
+    # LINK C -> B: Student attempted specific questions
     attempted = RelationshipTo(Question, 'ATTEMPTED', model=AttemptRel)
+

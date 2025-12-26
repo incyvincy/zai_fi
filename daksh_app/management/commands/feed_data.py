@@ -1,222 +1,218 @@
-﻿import json
+﻿"""
+Purpose: Load exam/student data into Neo4j with safe handling of missing metadata.
+
+HARD RULES:
+1. Never fake/guess missing concept/skill/difficulty
+2. If tags missing -> flag needs_ai_tagging=True
+3. Store time_spent only if present (None, not 0, if missing)
+4. Client-provided tags stored with source='client'
+5. NO HARDCODING for specific exams (works with JEE, NEET, CUET, etc.)
+"""
+
+import json
 import os
 from django.core.management.base import BaseCommand
 from django.conf import settings
-from daksh_app.models import Student, Exam, Question, Concept, Cohort
-
-# --- PLANE A: SYLLABUS DEFINITION ---
-# Keywords map to topics for auto-tagging questions
-SYLLABUS_MAP = {
-    "Physics": {
-        "Mechanics": ["acceleration", "velocity", "friction", "collision", "momentum", "projectile", "kinematics", "force", "motion", "newton"],
-        "Rotational Motion": ["inertia", "torque", "angular", "rolling", "cylinder", "disc", "sphere", "rotation", "moment"],
-        "Gravitation": ["satellite", "orbit", "planet", "escape velocity", "kepler", "gravitational", "gravity"],
-        "Thermodynamics": ["heat", "temperature", "carnot", "adiabatic", "isothermal", "gas", "efficiency", "entropy", "thermal"],
-        "Electromagnetism": ["current", "voltage", "resistor", "capacitor", "magnetic", "flux", "induction", "charge", "dipole", "electric", "circuit"],
-        "Optics": ["lens", "mirror", "refraction", "interference", "diffraction", "slit", "polaroid", "light", "ray"],
-        "Modern Physics": ["nucleus", "atom", "photoelectric", "bohr", "decay", "proton", "alpha", "quantum", "photon"]
-    },
-    "Chemistry": {
-        "Physical Chemistry": ["mole", "equilibrium", "kinetics", "activation", "solution", "electrochemistry", "enthalpy", "entropy", "rate", "concentration"],
-        "Organic Chemistry": ["alcohol", "phenol", "aldehyde", "ketone", "amine", "carbocation", "nucleophile", "reaction", "isomer", "carbon", "organic", "hydrocarbon"],
-        "Inorganic Chemistry": ["coordination", "complex", "ligand", "periodic", "boron", "oxide", "metal", "ionic", "covalent", "element"]
-    },
-    "Mathematics": {
-        "Calculus": ["limit", "derivative", "integral", "continuity", "differential equation", "area bounded", "differentiation", "integration"],
-        "Algebra": ["matrix", "determinant", "probability", "permutation", "combination", "complex number", "series", "root", "equation", "polynomial"],
-        "Coordinate Geometry": ["circle", "parabola", "ellipse", "hyperbola", "line", "locus", "conic", "tangent", "normal"],
-        "Trigonometry": ["sin", "cos", "tan", "theta", "angle", "triangle", "trigonometric"],
-        "Vectors & 3D": ["vector", "plane", "direction", "cross product", "dot product", "3d", "dimension"]
-    }
-}
+from daksh_app.models import Student, Exam, Question, Concept, Cohort, Skill, Difficulty
 
 
 class Command(BaseCommand):
-    help = 'Feed data into 3-Fold Architecture (Cohort ABC)'
+    help = 'Feed data with safe missing-data handling (Day 1 Schema)'
 
-    def handle(self, *args, **kwargs):
+    def add_arguments(self, parser):
+        parser.add_argument(
+            '--tag-with-ai',
+            action='store_true',
+            help='Run AI tagging after ingestion for questions missing tags'
+        )
+
+    def _detect_exam_type(self, exam_name: str) -> str:
+        """Auto-detect exam type from name (flexible, not hardcoded)."""
+        name_lower = exam_name.lower()
+        type_keywords = {
+            'jee': ['jee', 'iit'], 'neet': ['neet', 'medical'], 'cuet': ['cuet'],
+            'board': ['board', 'cbse', 'icse', 'state'], 'olympiad': ['olympiad', 'imo'],
+            'sat': ['sat'], 'gre': ['gre'], 'cat': ['cat'], 'gate': ['gate'],
+        }
+        for exam_type, keywords in type_keywords.items():
+            if any(kw in name_lower for kw in keywords):
+                return exam_type
+        return 'general'
+
+    def handle(self, *args, **options):
         base_path = os.path.join(settings.BASE_DIR, 'mock_data')
         
-        self.stdout.write(self.style.WARNING("\n" + "="*60))
-        self.stdout.write(self.style.WARNING("   3-FOLD HiRAG ARCHITECTURE DATA FEEDER"))
-        self.stdout.write(self.style.WARNING("="*60 + "\n"))
+        self.stdout.write(self.style.WARNING("\n" + "="*90))
+        self.stdout.write(self.style.WARNING("   SAFE DATA INGESTION (Day 1 - Missing Data Handling)"))
+        self.stdout.write(self.style.WARNING("="*90 + "\n"))
         
-        # Build concept cache for auto-tagging
-        concept_cache = {}
-        
-        # ==========================================
-        # PLANE A: KNOWLEDGE LAYER
-        # ==========================================
-        self.stdout.write(self.style.HTTP_INFO("--- 1. INITIALIZING PLANE A (KNOWLEDGE LAYER) ---"))
-        
-        for subject, topics in SYLLABUS_MAP.items():
-            # Create Subject node (top-level concept)
-            existing_subj = Concept.nodes.first_or_none(name=subject)
-            if existing_subj:
-                subj_node = existing_subj
-            else:
-                subj_node = Concept(name=subject).save()
-            concept_cache[subject] = subj_node
-            self.stdout.write(f"  [OK] Created: {subject}")
-            
-            for topic, keywords in topics.items():
-                # Create Topic node (child of subject)
-                existing_topic = Concept.nodes.first_or_none(name=topic)
-                if existing_topic:
-                    topic_node = existing_topic
-                else:
-                    topic_node = Concept(name=topic).save()
-                
-                # Link topic -> subject (PART_OF relationship)
-                if not topic_node.part_of.is_connected(subj_node):
-                    topic_node.part_of.connect(subj_node)
-                
-                concept_cache[topic] = topic_node
-                
-                # Map all keywords to this topic for auto-tagging
-                for kw in keywords:
-                    concept_cache[kw.lower()] = topic_node
-                
-                self.stdout.write(f"    +-- {topic} ({len(keywords)} keywords)")
-        
-        self.stdout.write(self.style.SUCCESS(f"  [OK] Plane A Complete: {len([k for k in concept_cache.keys() if k in SYLLABUS_MAP or k in sum([list(t.keys()) for t in SYLLABUS_MAP.values()], [])])} concepts created\n"))
+        stats = {
+            'exams': 0, 'questions': 0, 'questions_with_client_tags': 0,
+            'questions_needing_ai': 0, 'students': 0, 'attempts': 0, 'attempts_with_time': 0,
+        }
         
         # ==========================================
-        # PLANE B: ASSESSMENT LAYER
+        # PHASE 1: LOAD EXAMS & QUESTIONS (Plane B)
         # ==========================================
-        self.stdout.write(self.style.HTTP_INFO("--- 2. INITIALIZING PLANE B (ASSESSMENT LAYER) ---"))
+        self.stdout.write(self.style.HTTP_INFO("--- PHASE 1: INGESTING EXAMS & QUESTIONS ---"))
         
         exams_file = os.path.join(base_path, 'exams', 'exams.json')
+        if not os.path.exists(exams_file):
+            self.stdout.write(self.style.ERROR(f"  [ERROR] Exams file not found: {exams_file}"))
+            return
+        
         with open(exams_file, 'r', encoding='utf-8') as f:
             exams_data = json.load(f)
         
-        total_questions = 0
-        tagged_questions = 0
-        
-        for item in exams_data:
-            # Create Exam node
-            existing_exam = Exam.nodes.first_or_none(exam_id=item['exam_id'])
-            if existing_exam:
-                exam = existing_exam
-            else:
-                exam = Exam(
-                    exam_id=item['exam_id'],
-                    name=item['exam_name'],
-                    duration=str(item['duration'])
-                ).save()
-            self.stdout.write(f"  [OK] Exam {item['exam_id']} - {item['exam_name']}")
+        for exam_item in exams_data:
+            exam_id = exam_item['exam_id']
+            exam_name = exam_item.get('exam_name', f'Exam {exam_id}')
+            exam_type = self._detect_exam_type(exam_name)
             
-            # Load questions for this exam
-            q_file = os.path.join(base_path, 'exams', f'questions_exam_{item["exam_id"]}.json')
-            if os.path.exists(q_file):
-                with open(q_file, 'r', encoding='utf-8') as qf:
-                    q_data = json.load(qf)
-                    
-                    for q_item in q_data:
-                        total_questions += 1
-                        
-                        # Create global unique ID: exam_id * 1000 + question_id
-                        global_q_id = item['exam_id'] * 1000 + q_item['question_id']
-                        
-                        # Create Question node
-                        existing_q = Question.nodes.first_or_none(global_question_id=global_q_id)
-                        if existing_q:
-                            question = existing_q
-                        else:
-                            question = Question(
-                                global_question_id=global_q_id,
-                                exam_id=item['exam_id'],
-                                question_id=q_item['question_id'],
-                                text=q_item['question_text'],
-                                options=q_item['options'],
-                                correct_option=q_item['correct_option']
-                            ).save()
-                        
-                        # Link Exam -> Question (INCLUDES relationship)
-                        if not exam.includes.is_connected(question):
-                            exam.includes.connect(question)
-                        
-                        # AUTO-TAGGING: Link Question -> Concept (TESTS relationship)
-                        text_lower = q_item['question_text'].lower()
-                        classified = False
-                        
-                        # Try keyword matching first
-                        for kw, node in concept_cache.items():
-                            # Skip subject-level matches, prefer topic-level
-                            if kw not in ["physics", "chemistry", "mathematics"] and kw in text_lower:
-                                if not question.tests_concept.is_connected(node):
-                                    question.tests_concept.connect(node)
-                                classified = True
-                                tagged_questions += 1
-                                break
-                        
-                        # Fallback: Tag by question ID range (JEE structure)
-                        if not classified:
-                            q_id = q_item['question_id']
-                            if q_id <= 30:
-                                fallback = concept_cache.get('Physics')
-                            elif q_id <= 60:
-                                fallback = concept_cache.get('Chemistry')
-                            else:
-                                fallback = concept_cache.get('Mathematics')
-                            
-                            if fallback and not question.tests_concept.is_connected(fallback):
-                                question.tests_concept.connect(fallback)
-                            tagged_questions += 1
+            # Create/Get Exam node
+            exam = Exam.nodes.first_or_none(exam_id=exam_id)
+            if not exam:
+                exam = Exam(
+                    exam_id=exam_id, name=exam_name, exam_type=exam_type,
+                    duration=int(exam_item.get('duration', 0)) or None
+                ).save()
+            stats['exams'] += 1
+            
+            self.stdout.write(f"  [EXAM] {exam_id}: {exam_name} (type: {exam_type})")
+            
+            # Load Questions for this Exam
+            q_file = os.path.join(base_path, 'exams', f'questions_exam_{exam_id}.json')
+            if not os.path.exists(q_file):
+                self.stdout.write(self.style.WARNING(f"    [WARN] No questions file for exam {exam_id}"))
+                continue
+            
+            with open(q_file, 'r', encoding='utf-8') as qf:
+                questions_data = json.load(qf)
+            
+            for q_item in questions_data:
+                question_id = q_item['question_id']
+                global_q_id = exam_id * 1000 + question_id
+                q_text = q_item.get('question_text', '')
                 
-                self.stdout.write(f"    +-- {len(q_data)} questions loaded")
+                if not q_text:
+                    self.stdout.write(self.style.WARNING(f"    [WARN] Q{question_id} has no text, skipping"))
+                    continue
+                
+                # Create/Update Question node with TEXT (required for AI tagging)
+                question = Question.nodes.first_or_none(global_question_id=global_q_id)
+                if not question:
+                    question = Question(global_question_id=global_q_id, text=q_text).save()
+                elif question.text != q_text:
+                    question.text = q_text
+                    question.save()
+                
+                stats['questions'] += 1
+                
+                # Link Exam -> Question
+                if not exam.includes.is_connected(question):
+                    exam.includes.connect(question)
+                
+                # --- HANDLE TAGS (Safe Logic - NO GUESSING) ---
+                client_concept = q_item.get('concept') or q_item.get('topic')
+                client_skill = q_item.get('skill') or q_item.get('skill_required')
+                client_difficulty = q_item.get('difficulty')
+                
+                has_any_client_tag = any([client_concept, client_skill, client_difficulty])
+                has_all_client_tags = all([client_concept, client_skill, client_difficulty])
+                
+                if has_any_client_tag:
+                    stats['questions_with_client_tags'] += 1
+                    
+                    if client_concept:
+                        parent = q_item.get('parent_concept') or q_item.get('subject', 'General')
+                        c_node = Concept.nodes.first_or_none(name=client_concept)
+                        if not c_node:
+                            c_node = Concept(name=client_concept, parent_concept=parent).save()
+                        if not question.topics.is_connected(c_node):
+                            question.topics.connect(c_node, {'tag_source': 'client', 'confidence': 1.0, 'version': 1})
+                    
+                    if client_skill:
+                        s_node = Skill.nodes.first_or_none(name=client_skill)
+                        if not s_node:
+                            s_node = Skill(name=client_skill).save()
+                        if not question.skills.is_connected(s_node):
+                            question.skills.connect(s_node, {'tag_source': 'client', 'confidence': 1.0, 'version': 1})
+                    
+                    if client_difficulty:
+                        d_node = Difficulty.nodes.first_or_none(name=client_difficulty)
+                        if not d_node:
+                            d_node = Difficulty(name=client_difficulty).save()
+                        if not question.difficulties.is_connected(d_node):
+                            question.difficulties.connect(d_node, {'tag_source': 'client', 'confidence': 1.0, 'version': 1})
+                
+                # Flag for AI if ANY tag is missing (don't guess!)
+                if not has_all_client_tags:
+                    question.needs_ai_tagging = True
+                    question.tagging_status = 'untagged'
+                    stats['questions_needing_ai'] += 1
+                else:
+                    question.needs_ai_tagging = False
+                    question.tagging_status = 'tagged'
+                
+                question.save()
+            
+            self.stdout.write(f"    +-- {len(questions_data)} questions loaded")
         
-        self.stdout.write(self.style.SUCCESS(f"  [OK] Plane B Complete: {len(exams_data)} exams, {total_questions} questions ({tagged_questions} tagged)\n"))
+        self.stdout.write(self.style.SUCCESS(f"\n  [OK] Phase 1 Complete: {stats['exams']} exams, {stats['questions']} questions"))
+        self.stdout.write(f"       -> {stats['questions_with_client_tags']} with client tags")
+        self.stdout.write(f"       -> {stats['questions_needing_ai']} flagged for AI tagging\n")
         
         # ==========================================
-        # PLANE C: LEARNER LAYER
+        # PHASE 2: LOAD STUDENTS & ATTEMPTS (Plane C)
         # ==========================================
-        self.stdout.write(self.style.HTTP_INFO("--- 3. INITIALIZING PLANE C (LEARNER LAYER) ---"))
+        self.stdout.write(self.style.HTTP_INFO("--- PHASE 2: INGESTING STUDENTS & ATTEMPTS ---"))
         
-        # Create the Cohort node
-        existing_cohort = Cohort.nodes.first_or_none(name='ABC')
-        if existing_cohort:
-            cohort_abc = existing_cohort
-        else:
-            cohort_abc = Cohort(name='ABC').save()
-        self.stdout.write(f"  [OK] Created: Cohort ABC")
+        # Create default cohort
+        cohort = Cohort.nodes.first_or_none(name='Default')
+        if not cohort:
+            cohort = Cohort(name='Default').save()
         
         students_dir = os.path.join(base_path, 'students')
-        student_count = 0
-        attempt_count = 0
-        
-        for filename in sorted(os.listdir(students_dir)):
-            if filename.startswith('student_') and filename.endswith('.json'):
+        if not os.path.exists(students_dir):
+            self.stdout.write(self.style.WARNING("  [WARN] No students directory found"))
+        else:
+            for filename in sorted(os.listdir(students_dir)):
+                if not filename.startswith('student_') or not filename.endswith('.json'):
+                    continue
+                
                 with open(os.path.join(students_dir, filename), 'r', encoding='utf-8') as f:
                     data = json.load(f)
                 
-                s_info = data['student_info']
+                s_info = data.get('student_info', {})
+                if not s_info.get('student_id'):
+                    continue
                 
-                # Create Student node
-                existing_student = Student.nodes.first_or_none(student_id=s_info['student_id'])
-                if existing_student:
-                    student = existing_student
-                else:
+                # Create/Get Student node
+                student = Student.nodes.first_or_none(student_id=s_info['student_id'])
+                if not student:
                     student = Student(
                         student_id=s_info['student_id'],
-                        name=s_info['student_name'],
-                        enrollment_id=s_info['enrollment_id']
+                        name=s_info.get('student_name', f"Student {s_info['student_id']}")
                     ).save()
-                student_count += 1
+                stats['students'] += 1
                 
-                # Link Student -> Cohort (MEMBER_OF relationship)
-                if not student.member_of.is_connected(cohort_abc):
-                    student.member_of.connect(cohort_abc)
+                # Link to Cohort
+                cohort_name = s_info.get('cohort', 'Default')
+                student_cohort = Cohort.nodes.first_or_none(name=cohort_name)
+                if not student_cohort:
+                    student_cohort = Cohort(name=cohort_name).save()
+                if not student.member_of.is_connected(student_cohort):
+                    student.member_of.connect(student_cohort)
                 
-                self.stdout.write(f"  [OK] Student: {s_info['student_name']} (ID: {s_info['student_id']})")
+                self.stdout.write(f"  [STUDENT] {s_info['student_id']}: {s_info.get('student_name', 'Unknown')}")
                 
-                # Link Student -> Question (ATTEMPTED relationship with details)
+                # Process Exam Reports (Attempts)
                 student_attempts = 0
                 for report in data.get('exams_report', []):
                     exam_id = report.get('exam_info', {}).get('exam_id', 0)
+                    
                     for q_attempt in report.get('questions', []):
                         try:
-                            # Use global question ID
                             global_q_id = exam_id * 1000 + q_attempt['question_id']
                             q_node = Question.nodes.get(global_question_id=global_q_id)
                             
@@ -227,46 +223,66 @@ class Command(BaseCommand):
                                 correct = str(q_attempt.get('correct_options', ''))
                                 outcome = 'correct' if selected == correct else 'incorrect'
                             
-                            # Create the rich ATTEMPTED relationship
+                            # Handle time_spent: store None if missing (NOT 0)
+                            time_spent = q_attempt.get('time_spent')
+                            time_spent_seconds = None
+                            if time_spent is not None and time_spent != '':
+                                try:
+                                    time_spent_seconds = int(time_spent)
+                                    stats['attempts_with_time'] += 1
+                                except (ValueError, TypeError):
+                                    time_spent_seconds = None
+                            
+                            # Create attempt relationship
                             if not student.attempted.is_connected(q_node):
                                 student.attempted.connect(q_node, {
-                                    'selected_option': str(q_attempt.get('selected_option', '')),
-                                    'time_spent': str(q_attempt.get('time_spent', '0')),
-                                    'outcome': outcome
+                                    'outcome': outcome,
+                                    'time_spent_seconds': time_spent_seconds
                                 })
                                 student_attempts += 1
-                                attempt_count += 1
-                                
+                                stats['attempts'] += 1
+                        
                         except Question.DoesNotExist:
                             continue
                 
-                self.stdout.write(f"    +-- {student_attempts} question attempts recorded")
+                self.stdout.write(f"    +-- {student_attempts} attempts recorded")
         
-        self.stdout.write(self.style.SUCCESS(f"  [OK] Plane C Complete: {student_count} students, {attempt_count} attempts\n"))
+        self.stdout.write(self.style.SUCCESS(f"\n  [OK] Phase 2 Complete: {stats['students']} students, {stats['attempts']} attempts"))
+        self.stdout.write(f"       -> {stats['attempts_with_time']} attempts have time data\n")
+        
+        # ==========================================
+        # PHASE 3: OPTIONAL AI TAGGING
+        # ==========================================
+        if options.get('tag_with_ai') and stats['questions_needing_ai'] > 0:
+            self.stdout.write(self.style.HTTP_INFO("--- PHASE 3: AI TAGGING ---"))
+            try:
+                from daksh_app.ai_tagging import batch_tag_questions
+                result = batch_tag_questions(limit=stats['questions_needing_ai'])
+                self.stdout.write(self.style.SUCCESS(
+                    f"  [OK] AI Tagging: {result['success']}/{result['processed']} successful"
+                ))
+                if result['errors']:
+                    for err in result['errors'][:5]:
+                        self.stdout.write(self.style.WARNING(f"    [FAIL] Q{err['question_id']}: {err['error']}"))
+            except Exception as e:
+                self.stdout.write(self.style.ERROR(f"  [ERROR] AI Tagging failed: {e}"))
         
         # ==========================================
         # SUMMARY
         # ==========================================
-        self.stdout.write(self.style.WARNING("="*60))
-        self.stdout.write(self.style.SUCCESS("   [SUCCESS] 3-FOLD HiRAG ARCHITECTURE SUCCESSFULLY LOADED!"))
-        self.stdout.write(self.style.WARNING("="*60))
+        self.stdout.write(self.style.WARNING("\n" + "="*90))
+        self.stdout.write(self.style.SUCCESS("   INGESTION COMPLETE"))
+        self.stdout.write(self.style.WARNING("="*90))
         self.stdout.write(f"""
-  [STATS] Graph Statistics:
-     * Plane A (Knowledge): {len(SYLLABUS_MAP)} subjects, {sum(len(t) for t in SYLLABUS_MAP.values())} topics
-     * Plane B (Assessment): {len(exams_data)} exams, {total_questions} questions
-     * Plane C (Learner): 1 cohort, {student_count} students, {attempt_count} attempts
+  STATISTICS:
+    Exams:     {stats['exams']}
+    Questions: {stats['questions']} ({stats['questions_with_client_tags']} tagged, {stats['questions_needing_ai']} need AI)
+    Students:  {stats['students']}
+    Attempts:  {stats['attempts']} ({stats['attempts_with_time']} with time data)
   
-  [LINKS] Key Relationships:
-     * Concept -[PART_OF]-> Concept (hierarchy)
-     * Question -[TESTS]-> Concept (what it measures)
-     * Exam -[INCLUDES]-> Question (exam structure)
-     * Student -[MEMBER_OF]-> Cohort (grouping)
-     * Student -[ATTEMPTED]-> Question (with outcome data)
-  
-  [TIP] Sample Query in Neo4j Browser:
-     MATCH (s:Student)-[a:ATTEMPTED]->(q:Question)-[:TESTS]->(c:Concept)
-     WHERE a.outcome = 'incorrect'
-     RETURN s.name, c.name, count(*) as weak_areas
-     ORDER BY weak_areas DESC
-        """)
+  NEXT STEPS:
+    - Run AI tagging: python manage.py feed_data --tag-with-ai
+    - Repair existing data: python manage.py repair_data
+""")
+
 
