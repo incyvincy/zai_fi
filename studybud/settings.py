@@ -83,11 +83,11 @@ WSGI_APPLICATION = 'studybud.wsgi.application'
 # Database - Using Neo4j Graph Database instead of SQL
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-# Neo4j Graph Database Configuration
-NEO4J_USERNAME = "neo4j"
-NEO4J_PASSWORD = "studybud_daksh"
-NEO4J_HOST = "127.0.0.1"
-NEO4J_PORT = "7687"
+# Neo4j Graph Database Configuration (load from environment)
+NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
+NEO4J_HOST = os.getenv("NEO4J_HOST")
+NEO4J_PORT = os.getenv("NEO4J_PORT")
 
 # THIS IS THE KEY LINE django_neomodel NEEDS:
 NEOMODEL_NEO4J_BOLT_URL = f"bolt://{NEO4J_USERNAME}:{NEO4J_PASSWORD}@{NEO4J_HOST}:{NEO4J_PORT}"
