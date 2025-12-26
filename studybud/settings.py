@@ -143,5 +143,5 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # Google Gemini Configuration
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "your-key-here-if-not-in-env")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 

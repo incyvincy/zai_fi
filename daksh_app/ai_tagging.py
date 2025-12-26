@@ -91,25 +91,43 @@ def tag_question(question_id: int, force_retag: bool = False) -> dict:
     client = genai.Client(api_key=settings.GOOGLE_API_KEY)
     
     prompt = f"""
-Analyze this academic question and classify it. Return ONLY raw JSON, no markdown.
+You are a UNIVERSAL academic content classifier. Analyze this question and classify it.
 
 Question: "{question.text}"
 
-IMPORTANT - Topic Grouping Guidelines:
-- Use BROADER, generalized topic names that group related concepts together
-- Avoid overly specific sub-topics (e.g., use "Electric Circuits" instead of "RC Circuits", "Resistance Calculation", etc.)
-- Group similar concepts under one umbrella (e.g., "Electricity" covers resistance, heating appliances, circuits, etc.)
-- Examples of good topic granularity:
-  * "Mechanics" (not "Pulley Systems", "Inclined Planes")
-  * "Organic Chemistry" (not "Aldehyde Reactions", "Ester Formation")
-  * "Algebra" (not "Quadratic Equations", "Linear Equations")
-  * "Thermodynamics" (not "First Law", "Adiabatic Processes")
+YOUR CAPABILITIES - Classify questions from ANY domain worldwide:
+• SCIENCE: Physics, Chemistry, Biology, Mathematics (JEE, NEET, AP, A-Levels)
+• COMMERCE: Accountancy, Economics, Business Studies, Finance (CA, CPA, MBA)
+• LANGUAGE: Reading Comprehension, Vocabulary, Grammar (TOEFL, IELTS, GRE, SAT)
+• APTITUDE: Logical Reasoning, Data Interpretation, Quantitative (CAT, GMAT, Bank PO)
+• HUMANITIES: History, Geography, Political Science, Psychology, Literature
+• COMPUTER SCIENCE: Programming, Algorithms, Data Structures
+• LAW: Legal Reasoning, Constitution, Legal Awareness (CLAT, LSAT)
+• MEDICAL: Anatomy, Physiology, Biochemistry (USMLE, PLAB)
 
-Return a JSON object with these exact keys:
+CRITICAL - SYLLABUS AWARENESS:
+⚠️ Before classifying, mentally recall the ACTUAL SYLLABUS of the exam type based on the question content.
+⚠️ Only assign topics that are ACTUALLY part of that exam's official curriculum.
+⚠️ Examples:
+  - JEE Chemistry: Include Organic/Inorganic/Physical, but check if Nuclear Chemistry is in scope
+  - NEET Biology: Include Cell Biology, Genetics, but check depth of topics
+  - TOEFL: Only language proficiency topics, not subject knowledge
+  - CA: Accounting standards, taxation, audit - not general business
+  - CLAT: Legal aptitude, reasoning - stay within law entrance scope
+⚠️ If unsure whether a topic is in syllabus, use the broader parent category.
+
+TOPIC GROUPING (CRITICAL - Use broader concepts):
+✓ "Mechanics" NOT "Pulley on Inclined Plane"
+✓ "Organic Chemistry" NOT "Aldol Condensation Mechanism"
+✓ "Reading Comprehension" NOT "Inference in Academic Passages"
+✓ "Financial Accounting" NOT "Journal Entry for Bad Debts"
+✓ "Algebra" NOT "Solving Quadratic Inequalities"
+
+Return ONLY this JSON:
 {{
-    "topic": "Broader topic name grouping related concepts (e.g., Electric Circuits, Mechanics, Organic Chemistry)",
-    "parent_topic": "The subject area (e.g., Physics, Chemistry, Mathematics, Biology)",
-    "skill": "The cognitive skill required: one of [Recall, Understanding, Application, Analysis, Evaluation, Problem-Solving]",
+    "topic": "Broader topic (e.g., Mechanics, Organic Chemistry, Reading Comprehension, Logical Reasoning)",
+    "parent_topic": "Subject/Domain (e.g., Physics, Chemistry, English Language, Aptitude, Accountancy)",
+    "skill": "One of [Recall, Understanding, Application, Analysis, Evaluation, Problem-Solving]",
     "difficulty": "One of [Easy, Medium, Hard]",
     "topic_confidence": 0.0-1.0,
     "skill_confidence": 0.0-1.0,

@@ -1,6 +1,4 @@
 """
-Gemini AI Service (Day 1 - Updated)
-
 Purpose: AI-powered analysis for structured summaries and explanations.
 
 BOUNDARIES (Gemini is allowed ONLY for):
@@ -30,7 +28,7 @@ def get_concept_analysis(question_text: str, exam_context: str = "Academic Exam"
     
     Args:
         question_text: The full question text
-        exam_context: Optional context (e.g., "JEE Main", "NEET", "CBSE Board")
+        exam_context: Optional context (e.g., "JEE Main", "NEET", "TOEFL", "SAT")
                       Used only for better classification, NOT hardcoded logic
     
     Returns:
@@ -39,19 +37,47 @@ def get_concept_analysis(question_text: str, exam_context: str = "Academic Exam"
     client = genai.Client(api_key=settings.GOOGLE_API_KEY)
     
     prompt = f"""
-    You are an expert academic content classifier.
-    Analyze the following question and classify it into a hierarchical syllabus.
-    
-    Context: {exam_context}
-    Question: "{question_text}"
-    
-    Return a JSON object with these keys:
-    - "concept": The high-level unit (e.g., Mechanics, Calculus, Organic Chemistry, Biology)
-    - "sub_concept": The specific topic (e.g., Rotational Motion, Integration, Alcohols, Cell Division)
-    - "skill_required": One of [Recall, Understanding, Application, Analysis, Evaluation, Problem-Solving]
-    - "difficulty": One of [Easy, Medium, Hard]
-    - "confidence": Float between 0.0 and 1.0
-    """
+You are a UNIVERSAL academic content classifier. You can classify questions from ANY domain:
+- Science exams (JEE, NEET, AP Physics, A-Levels)
+- Commerce/Business exams (CA, CPA, MBA entrance)
+- Arts/Humanities (Literature, History, Psychology)
+- Language proficiency (TOEFL, IELTS, GRE Verbal)
+- Aptitude tests (SAT, CAT, GMAT, Civil Services)
+- Competitive exams worldwide
+
+Context: {exam_context}
+Question: "{question_text}"
+
+CRITICAL - SYLLABUS AWARENESS:
+⚠️ Mentally recall the ACTUAL SYLLABUS of "{exam_context}" before classifying.
+⚠️ Only assign topics that are part of that exam's official curriculum.
+⚠️ If the question seems outside standard scope, use broader categories or mark as "Uncategorized".
+
+DOMAIN DETECTION RULES:
+- If about forces, energy, circuits → Science (Physics)
+- If about reactions, compounds, bonds → Science (Chemistry)  
+- If about cells, organisms, genetics → Science (Biology)
+- If about accounting, finance, business → Commerce
+- If about literature, art, philosophy → Humanities
+- If about comprehension, grammar, vocabulary → Language
+- If about logic, reasoning, data interpretation → Aptitude
+- If about history, geography, civics → Social Sciences
+- If about coding, algorithms → Computer Science
+
+TOPIC GROUPING (use broader concepts, NOT ultra-specific):
+- Use "Mechanics" not "Pulley Systems on Inclined Planes"
+- Use "Grammar & Syntax" not "Subject-Verb Agreement in Complex Sentences"
+- Use "Financial Accounting" not "Journal Entry for Depreciation"
+
+Return a JSON object:
+{{
+    "concept": "Broad domain (e.g., Physics, Accountancy, English Language, Logical Reasoning)",
+    "sub_concept": "Broader topic within domain (e.g., Mechanics, Cost Accounting, Reading Comprehension, Syllogisms)",
+    "skill_required": "One of [Recall, Understanding, Application, Analysis, Evaluation, Problem-Solving]",
+    "difficulty": "One of [Easy, Medium, Hard]",
+    "confidence": 0.0-1.0
+}}
+"""
     
     try:
         response = client.models.generate_content(
@@ -77,6 +103,7 @@ def get_concept_analysis(question_text: str, exam_context: str = "Academic Exam"
 def batch_analyze_questions(questions_list: list, exam_context: str = "Academic Exam") -> dict:
     """
     BATCH PROCESSING: Analyze multiple questions in ONE API call.
+    Universal prompt handles ANY exam type worldwide.
     
     Args:
         questions_list: List of dicts with 'question_id' and 'question_text'
@@ -89,20 +116,85 @@ def batch_analyze_questions(questions_list: list, exam_context: str = "Academic 
     
     # Build compact representation (truncate long questions)
     questions_block = "\n".join([
-        f"Q{q['question_id']}: {q['question_text'][:250]}..."
-        for q in questions_list[:100]  # Process max 50 at once for reliability
+        f"Q{q['question_id']}: {q['question_text'][:300]}" 
+        for q in questions_list[:50]  # Process max 50 at once for reliability
     ])
     
     prompt = f"""
-You are an expert academic content classifier for "{exam_context}".
-Analyze ALL questions below and classify each into a hierarchical syllabus.
+You are a UNIVERSAL academic content classifier. Analyze questions from the exam: "{exam_context}"
 
+YOUR CAPABILITIES - You can classify ANY type of question:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SCIENCE EXAMS (JEE, NEET, AP, A-Levels, Olympiads):
+  → Physics, Chemistry, Biology, Mathematics
+
+COMMERCE/BUSINESS (CA, CPA, CFA, MBA, ACCA):
+  → Accountancy, Economics, Business Studies, Finance
+
+LANGUAGE PROFICIENCY (TOEFL, IELTS, GRE, GMAT Verbal):
+  → Reading Comprehension, Vocabulary, Grammar, Writing
+
+APTITUDE/REASONING (SAT, CAT, GRE Quant, Civil Services, Bank PO):
+  → Quantitative Aptitude, Logical Reasoning, Data Interpretation, Verbal Ability
+
+HUMANITIES/ARTS (UPSC, SAT Subject, AP):
+  → History, Geography, Political Science, Psychology, Philosophy, Literature
+
+COMPUTER SCIENCE (Coding tests, Tech interviews):
+  → Programming, Data Structures, Algorithms, Databases
+
+LAW EXAMS (CLAT, LSAT, Bar):
+  → Legal Reasoning, Legal Awareness, Constitution
+
+MEDICAL ENTRANCE (NEET, USMLE, PLAB):
+  → Anatomy, Physiology, Biochemistry, Pathology, Pharmacology
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CRITICAL - SYLLABUS AWARENESS:
+⚠️ Before classifying, mentally recall the ACTUAL OFFICIAL SYLLABUS of "{exam_context}".
+⚠️ Only assign topics that are ACTUALLY part of that exam's curriculum.
+⚠️ Examples:
+  - JEE Chemistry: Check if Nuclear Chemistry, Quantum Chemistry are in scope
+  - NEET Biology: Verify depth (e.g., molecular details vs conceptual)
+  - TOEFL: ONLY language skills, NO subject knowledge
+  - CA Foundation: Accounting, Law, Economics - stay within CA Institute syllabus
+  - CLAT: Legal aptitude + reasoning, not deep law subjects
+⚠️ If a topic seems outside scope, use the broader parent category instead.
+
+EXAMPLES OF CORRECT CLASSIFICATION:
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ "A block slides down a frictionless incline..."                             │
+│ → {{"concept": "Physics", "sub_concept": "Mechanics", "skill": "Application"}} │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ "Which accounting standard governs revenue recognition?"                     │
+│ → {{"concept": "Accountancy", "sub_concept": "Accounting Standards", "skill": "Recall"}} │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ "Point A is 10km North of B. C is 5km East of A..."                        │
+│ → {{"concept": "Logical Reasoning", "sub_concept": "Direction Sense", "skill": "Analysis"}} │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ "The passage suggests that the author's attitude..."                        │
+│ → {{"concept": "English Language", "sub_concept": "Reading Comprehension", "skill": "Analysis"}} │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ "What is the time complexity of merge sort?"                                │
+│ → {{"concept": "Computer Science", "sub_concept": "Algorithms", "skill": "Recall"}} │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ "The Treaty of Westphalia (1648) established..."                            │
+│ → {{"concept": "History", "sub_concept": "World History", "skill": "Recall"}} │
+└─────────────────────────────────────────────────────────────────────────────┘
+
+TOPIC GROUPING RULES (IMPORTANT!):
+- Use BROADER topic names, NOT ultra-specific sub-sub-topics
+- ✓ "Mechanics" (NOT "Pulley on Inclined Plane with Friction")
+- ✓ "Organic Chemistry" (NOT "SN2 Reaction Mechanism of Primary Alkyl Halides")  
+- ✓ "Financial Accounting" (NOT "Journal Entry for Prepaid Expenses")
+- ✓ "Reading Comprehension" (NOT "Inference Questions in Academic Passages")
+
+QUESTIONS TO ANALYZE:
 {questions_block}
 
-Return a JSON object mapping question_id to tags:
+RESPONSE FORMAT - Return ONLY this JSON structure:
 {{
-  "1": {{"concept": "Mechanics", "sub_concept": "Rotational Motion", "skill": "Application", "difficulty": "Medium", "confidence": 0.85}},
-  "2": {{"concept": "Thermodynamics", "sub_concept": "Heat Transfer", "skill": "Understanding", "difficulty": "Easy", "confidence": 0.9}},
+  "question_id": {{"concept": "...", "sub_concept": "...", "skill": "Recall|Understanding|Application|Analysis|Evaluation|Problem-Solving", "difficulty": "Easy|Medium|Hard", "confidence": 0.0-1.0}},
   ...
 }}
 """
