@@ -4,7 +4,12 @@ from django.conf import settings
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.views import View
-from studybud.neo4j_driver import run_cypher
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
+
+# Import Neo4j service layer (Day 3 - API Connector)
+from . import neo4j_service
+
 
 # --- HELPER FUNCTION ---
 def get_mock_data(subpath):
@@ -24,7 +29,128 @@ def get_mock_data(subpath):
         print(f"❌ Invalid JSON in file: {file_path}")
         return None
 
-# --- VIEWS ---
+
+# ==========================================
+# DAY 3: INGEST API (POST /ingest/attempt/)
+# ==========================================
+@method_decorator(csrf_exempt, name='dispatch')
+class IngestAttemptView(View):
+    """
+    Minimal API endpoint to ingest attempt data into Neo4j.
+    
+    POST /ingest/attempt/
+    
+    JSON Body:
+    {
+        "student_id": 1,
+        "student_name": "Alice",      // optional
+        "cohort": "Batch-A",          // optional
+        "exam_id": 1,
+        "exam_name": "JEE Mock 1",    // optional
+        "question_id": 1,
+        "question_text": "A block...",
+        "selected_option": "A",
+        "correct_option": "B",
+        "marks": 4,
+        "time_spent": 45,             // nullable (offline exams)
+        "concept": "Mechanics",       // optional (flags AI tagging if missing)
+        "skill": "Application",       // optional
+        "difficulty": "Medium"        // optional
+    }
+    
+    Response:
+    {
+        "success": true,
+        "needs_ai_tagging": true,     // true if metadata missing
+        "question_text": "..."        // included if needs_ai_tagging
+    }
+    """
+    
+    def post(self, request):
+        try:
+            data = json.loads(request.body.decode('utf-8'))
+        except json.JSONDecodeError:
+            return JsonResponse({'success': False, 'error': 'Invalid JSON'}, status=400)
+        
+        # Validate required fields
+        required = ['student_id', 'exam_id', 'question_id', 'question_text', 'selected_option', 'correct_option']
+        missing = [f for f in required if f not in data]
+        if missing:
+            return JsonResponse({
+                'success': False, 
+                'error': f'Missing required fields: {missing}'
+            }, status=400)
+        
+        # Extract data
+        student_id = data['student_id']
+        exam_id = data['exam_id']
+        question_id = data['question_id']
+        question_text = data['question_text']
+        
+        # Global question ID: exam_id * 1000 + question_id
+        global_question_id = exam_id * 1000 + question_id
+        
+        # Determine outcome
+        if data.get('selected_option') == data.get('correct_option'):
+            outcome = 'correct'
+        elif data.get('selected_option') is None or data.get('selected_option') == '':
+            outcome = 'skipped'
+        else:
+            outcome = 'incorrect'
+        
+        # Time is nullable (offline exams)
+        time_spent = data.get('time_spent')  # None if not provided
+        
+        # Optional metadata
+        concept = data.get('concept') or data.get('topic')
+        skill = data.get('skill') or data.get('skill_required')
+        difficulty = data.get('difficulty')
+        
+        # --- CREATE NODES ---
+        
+        # 1. Student
+        neo4j_service.create_student_if_not_exists(
+            student_id=student_id,
+            name=data.get('student_name'),
+            cohort_name=data.get('cohort')
+        )
+        
+        # 2. Exam
+        neo4j_service.create_exam_if_not_exists(
+            exam_id=exam_id,
+            name=data.get('exam_name')
+        )
+        
+        # 3. Question (with optional tags)
+        question_result = neo4j_service.create_question_if_not_exists(
+            global_question_id=global_question_id,
+            text=question_text,
+            concept_name=concept,
+            skill_name=skill,
+            difficulty_name=difficulty
+        )
+        
+        # 4. Link Question to Exam
+        neo4j_service.link_question_to_exam(exam_id, global_question_id)
+        
+        # 5. Create Attempt
+        neo4j_service.create_attempt(
+            student_id=student_id,
+            question_id=global_question_id,
+            outcome=outcome,
+            time_spent_seconds=time_spent
+        )
+        
+        # Response
+        return JsonResponse({
+            'success': True,
+            'outcome': outcome,
+            'needs_ai_tagging': question_result['needs_ai_tagging'],
+            'question_text': question_result['question_text']  # For AI tagging queue
+        })
+
+
+# --- EXISTING VIEWS ---
 
 
 class StudentListView(View):
@@ -113,28 +239,6 @@ class StudentSummaryView(View):
             
         except Exception as e:
             return JsonResponse({'success': False, 'error': str(e)}, status=500)
-
-
-# Neo4j Connection Test View
-def neo4j_test(request):
-    """
-    Test Neo4j database connection.
-    Expected output: [{"ok": 1}]
-    """
-    try:
-        data = run_cypher("RETURN 1 AS ok")
-        return JsonResponse({
-            'success': True,
-            'message': '✅ Neo4j connection successful!',
-            'data': data
-        }, safe=False)
-    except Exception as e:
-        return JsonResponse({
-            'success': False,
-            'error': str(e),
-            'message': '❌ Neo4j connection failed!'
-        }, status=500)
-
 
 def home(request):
     return render(request, 'daksh_app/home.html')

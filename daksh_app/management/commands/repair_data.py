@@ -1,6 +1,4 @@
 """
-Repair Data Command (Day 1 - Backfill/Repair Script)
-
 Purpose: One-time script to fix existing data without guessing.
 
 What it does:

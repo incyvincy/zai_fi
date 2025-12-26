@@ -1,6 +1,4 @@
 """
-AI Tagging Service (Day 1 - Inference Support Module)
-
 Purpose: Generate structured tags for questions missing metadata.
 
 BOUNDARIES (Non-negotiable):

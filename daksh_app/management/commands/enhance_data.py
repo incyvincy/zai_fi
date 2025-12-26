@@ -21,6 +21,7 @@ import shutil
 from datetime import datetime
 from django.core.management.base import BaseCommand
 from django.conf import settings
+from daksh_app.gemini_ai_service import batch_analyze_questions
 
 
 class Command(BaseCommand):
@@ -50,12 +51,6 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        from google import genai
-        from google.genai import types
-        
-        client = genai.Client(api_key=settings.GOOGLE_API_KEY)
-        model_name = 'gemini-2.5-flash'  # Better free tier quota
-        
         base_path = os.path.join(settings.BASE_DIR, 'mock_data')
         exams_dir = os.path.join(base_path, 'exams')
         
@@ -122,46 +117,25 @@ class Command(BaseCommand):
             
             self.stdout.write(f"  [ENHANCE] {len(questions_to_enhance)} questions need metadata")
             
-            # Process in batches
+            # Process in batches using gemini_ai_service (single source of truth)
             enhanced_map = {}
             for i in range(0, len(questions_to_enhance), batch_size):
                 batch = questions_to_enhance[i:i + batch_size]
                 
                 self.stdout.write(f"    Processing batch {i//batch_size + 1} ({len(batch)} questions)...", ending='')
                 
-                # Build prompt (exam-agnostic)
-                questions_block = "\n".join([
-                    f"Q{q['question_id']}: {q.get('question_text', '')[:300]}"
+                # Format for batch_analyze_questions service
+                batch_input = [
+                    {
+                        'question_id': q['question_id'],
+                        'question_text': q.get('question_text', '')
+                    }
                     for q in batch
-                ])
-                
-                prompt = f"""
-Analyze these academic questions from "{exam_name}" and classify each one.
-
-{questions_block}
-
-For EACH question, provide a JSON object mapping question_id to metadata:
-{{
-  "<question_id>": {{
-    "concept": "Specific topic (e.g., Rotational Motion, Organic Reactions, Quadratic Equations)",
-    "parent_concept": "Broader subject (e.g., Physics, Chemistry, Mathematics)",
-    "skill": "One of: Recall, Understanding, Application, Analysis, Evaluation, Problem-Solving",
-    "difficulty": "One of: Easy, Medium, Hard"
-  }},
-  ...
-}}
-"""
+                ]
                 
                 try:
-                    response = client.models.generate_content(
-                        model=model_name,
-                        contents=prompt,
-                        config=types.GenerateContentConfig(
-                            response_mime_type="application/json",
-                            temperature=0.3
-                        )
-                    )
-                    batch_result = json.loads(response.text)
+                    # Use centralized AI service (no duplicate Gemini code!)
+                    batch_result = batch_analyze_questions(batch_input, exam_context=exam_name)
                     enhanced_map.update(batch_result)
                     stats['ai_calls'] += 1
                     self.stdout.write(self.style.SUCCESS(" Done"))
@@ -178,8 +152,8 @@ For EACH question, provide a JSON object mapping question_id to metadata:
                     
                     # Only add if missing (don't overwrite existing client data)
                     if not (q.get('concept') or q.get('topic')):
-                        q['concept'] = metadata.get('concept', 'General')
-                        q['parent_concept'] = metadata.get('parent_concept', 'General')
+                        q['concept'] = metadata.get('sub_concept', metadata.get('concept', 'General'))
+                        q['parent_concept'] = metadata.get('concept', 'General')
                     
                     if not (q.get('skill') or q.get('skill_required')):
                         q['skill'] = metadata.get('skill', 'Application')
