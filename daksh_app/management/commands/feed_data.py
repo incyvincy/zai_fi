@@ -13,11 +13,13 @@ import json
 import os
 from django.core.management.base import BaseCommand
 from django.conf import settings
+from google import genai
+from google.genai import types
 from daksh_app.models import Student, Exam, Question, Concept, Cohort, Skill, Difficulty
-
+from daksh_app.ai_tagging import batch_tag_questions
 
 class Command(BaseCommand):
-    help = 'Feed data with safe missing-data handling (Day 1 Schema)'
+    help = 'Feed data with safe missing-data handling'
 
     def add_arguments(self, parser):
         parser.add_argument(
@@ -33,10 +35,6 @@ class Command(BaseCommand):
         Language (TOEFL, IELTS), Aptitude (SAT, CAT, GMAT), and more.
         """
         try:
-            from google import genai
-            from google.genai import types
-            import json
-            
             client = genai.Client(api_key=settings.GOOGLE_API_KEY)
             
             prompt = f"""
@@ -326,7 +324,6 @@ class Command(BaseCommand):
         if options.get('tag_with_ai') and stats['questions_needing_ai'] > 0:
             self.stdout.write(self.style.HTTP_INFO("--- PHASE 3: AI TAGGING ---"))
             try:
-                from daksh_app.ai_tagging import batch_tag_questions
                 result = batch_tag_questions(limit=stats['questions_needing_ai'])
                 self.stdout.write(self.style.SUCCESS(
                     f"  [OK] AI Tagging: {result['success']}/{result['processed']} successful"

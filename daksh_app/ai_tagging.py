@@ -17,16 +17,12 @@ Usage:
     batch_tag_questions()
 """
 
-import json
 import time
 from collections import deque
-from google import genai
-from google.genai import types
-from django.conf import settings
-from datetime import datetime, timezone
+from .models import Question, Concept, Skill, Difficulty
+from .gemini_ai_service import classify_question
 
-# Configure Gemini with new SDK
-MODEL_NAME = 'gemini-2.5-flash'  # Better free tier quota
+# Rate limiting configuration
 
 # Rate limiting: 5 requests per minute
 RATE_LIMIT = 5  # Max requests per minute
@@ -66,8 +62,6 @@ def tag_question(question_id: int, force_retag: bool = False) -> dict:
     Returns:
         dict with status and tag details, or error info
     """
-    from .models import Question, Concept, Skill, Difficulty
-    
     # 1. Fetch Question Node
     try:
         question = Question.nodes.get(global_question_id=question_id)
@@ -85,64 +79,9 @@ def tag_question(question_id: int, force_retag: bool = False) -> dict:
     # 4. Check rate limit before calling API
     check_rate_limit()
     
-    # 5. Call Gemini with ONLY the question text (NEW SDK)
-    client = genai.Client(api_key=settings.GOOGLE_API_KEY)
-    
-    prompt = f"""
-You are a UNIVERSAL academic content classifier. Analyze this question and classify it.
-
-Question: "{question.text}"
-
-YOUR CAPABILITIES - Classify questions from ANY domain worldwide:
-• SCIENCE: Physics, Chemistry, Biology, Mathematics (JEE, NEET, AP, A-Levels)
-• COMMERCE: Accountancy, Economics, Business Studies, Finance (CA, CPA, MBA)
-• LANGUAGE: Reading Comprehension, Vocabulary, Grammar (TOEFL, IELTS, GRE, SAT)
-• APTITUDE: Logical Reasoning, Data Interpretation, Quantitative (CAT, GMAT, Bank PO)
-• HUMANITIES: History, Geography, Political Science, Psychology, Literature
-• COMPUTER SCIENCE: Programming, Algorithms, Data Structures
-• LAW: Legal Reasoning, Constitution, Legal Awareness (CLAT, LSAT)
-• MEDICAL: Anatomy, Physiology, Biochemistry (USMLE, PLAB)
-
-CRITICAL - SYLLABUS AWARENESS:
-⚠️ Before classifying, mentally recall the ACTUAL SYLLABUS of the exam type based on the question content.
-⚠️ Only assign topics that are ACTUALLY part of that exam's official curriculum.
-⚠️ Examples:
-  - JEE Chemistry: Include Organic/Inorganic/Physical, but check if Nuclear Chemistry is in scope
-  - NEET Biology: Include Cell Biology, Genetics, but check depth of topics
-  - TOEFL: Only language proficiency topics, not subject knowledge
-  - CA: Accounting standards, taxation, audit - not general business
-  - CLAT: Legal aptitude, reasoning - stay within law entrance scope
-⚠️ If unsure whether a topic is in syllabus, use the broader parent category.
-
-TOPIC GROUPING (CRITICAL - Use broader concepts):
-✓ "Mechanics" NOT "Pulley on Inclined Plane"
-✓ "Organic Chemistry" NOT "Aldol Condensation Mechanism"
-✓ "Reading Comprehension" NOT "Inference in Academic Passages"
-✓ "Financial Accounting" NOT "Journal Entry for Bad Debts"
-✓ "Algebra" NOT "Solving Quadratic Inequalities"
-
-Return ONLY this JSON:
-{{
-    "topic": "Broader topic (e.g., Mechanics, Organic Chemistry, Reading Comprehension, Logical Reasoning)",
-    "parent_topic": "Subject/Domain (e.g., Physics, Chemistry, English Language, Aptitude, Accountancy)",
-    "skill": "One of [Recall, Understanding, Application, Analysis, Evaluation, Problem-Solving]",
-    "difficulty": "One of [Easy, Medium, Hard]",
-    "topic_confidence": 0.0-1.0,
-    "skill_confidence": 0.0-1.0,
-    "difficulty_confidence": 0.0-1.0
-}}
-"""
-    
+    # 5. Call centralized AI classification service
     try:
-        response = client.models.generate_content(
-            model=MODEL_NAME,
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                temperature=0.3
-            )
-        )
-        data = json.loads(response.text)
+        data = classify_question(question.text)
     except Exception as e:
         question.tagging_status = 'failed'
         question.save()
@@ -237,7 +176,6 @@ def batch_tag_questions(limit: int = 100) -> dict:
     Returns:
         Summary dict with success/failure counts
     """
-    from .models import Question
     print("Starting batch AI tagging...")
     # Find questions needing tagging
     questions = Question.nodes.filter(needs_ai_tagging=True)[:limit]
@@ -279,8 +217,6 @@ def get_effective_tags(question_id: int) -> dict:
     Returns:
         dict with topic, skill, difficulty (each with name, source, confidence)
     """
-    from .models import Question
-    
     try:
         question = Question.nodes.get(global_question_id=question_id)
     except Question.DoesNotExist:

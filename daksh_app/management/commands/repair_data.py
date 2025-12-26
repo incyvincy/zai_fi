@@ -15,6 +15,7 @@ Usage:
 
 from django.core.management.base import BaseCommand
 from daksh_app.models import Question
+from daksh_app.ai_tagging import batch_tag_questions
 
 
 class Command(BaseCommand):
@@ -147,7 +148,6 @@ class Command(BaseCommand):
         if run_ai and not dry_run and (stats['flagged'] + stats['already_flagged']) > 0:
             self.stdout.write(self.style.HTTP_INFO("\n--- RUNNING AI TAGGING ---"))
             try:
-                from daksh_app.ai_tagging import batch_tag_questions
                 total_to_tag = stats['flagged'] + stats['already_flagged']
                 result = batch_tag_questions(limit=total_to_tag)
                 self.stdout.write(self.style.SUCCESS(
