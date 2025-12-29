@@ -116,40 +116,62 @@ def create_question_if_not_exists(
     }
 
 
-def _link_question_tags(question: Question, concept_name: str, skill_name: str, difficulty_name: str, tag_source: str = 'client'):
-    """Internal helper to link question to tag nodes."""
+def _link_question_tags(
+    question: Question,
+    concept_name: str,
+    skill_name: str,
+    difficulty_name: str,
+    tag_source: str = 'client',
+    model_id: str = None
+):
+    """
+    Internal helper to link question to tag nodes.
     
-    # Concept
+    Uses production-ready relationships:
+    - TESTS_CONCEPT: Question → Concept
+    - REQUIRES_SKILL: Question → Skill  
+    - HAS_DIFFICULTY: Question → Difficulty
+    
+    Edge metadata includes:
+    - confidence_score: 0.0-1.0 (1.0 for client, varies for AI)
+    - tag_source: 'client', 'llm', 'rule', 'hybrid'
+    - model_id: AI model identifier (for audit/reproducibility)
+    """
+    
+    # Concept - uses TESTS_CONCEPT relationship
     if concept_name:
         concept = Concept.nodes.first_or_none(name=concept_name)
         if not concept:
-            concept = Concept(name=concept_name).save()
-        question.topics.connect(concept, {
+            concept = Concept(name=concept_name, level='specific_topic').save()
+        question.tests_concepts.connect(concept, {
             'tag_source': tag_source,
-            'confidence': 1.0 if tag_source == 'client' else 0.8,
-            'version': 1
+            'confidence_score': 1.0 if tag_source == 'client' else 0.8,
+            'version': 1,
+            'model_id': model_id
         })
     
-    # Skill
+    # Skill - uses REQUIRES_SKILL relationship
     if skill_name:
         skill = Skill.nodes.first_or_none(name=skill_name)
         if not skill:
             skill = Skill(name=skill_name).save()
-        question.skills.connect(skill, {
+        question.requires_skills.connect(skill, {
             'tag_source': tag_source,
-            'confidence': 1.0 if tag_source == 'client' else 0.8,
-            'version': 1
+            'confidence_score': 1.0 if tag_source == 'client' else 0.8,
+            'version': 1,
+            'model_id': model_id
         })
     
-    # Difficulty
+    # Difficulty - uses HAS_DIFFICULTY relationship
     if difficulty_name:
         difficulty = Difficulty.nodes.first_or_none(name=difficulty_name)
         if not difficulty:
             difficulty = Difficulty(name=difficulty_name).save()
-        question.difficulties.connect(difficulty, {
+        question.has_difficulty.connect(difficulty, {
             'tag_source': tag_source,
-            'confidence': 1.0 if tag_source == 'client' else 0.8,
-            'version': 1
+            'confidence_score': 1.0 if tag_source == 'client' else 0.8,
+            'version': 1,
+            'model_id': model_id
         })
 
 
@@ -288,17 +310,40 @@ def get_questions_needing_ai_tagging() -> list:
 
 
 def get_exam_questions(exam_id: int) -> list:
-    """Get all questions in an exam."""
+    """Get all questions in an exam with tag metadata."""
     exam = Exam.nodes.first_or_none(exam_id=exam_id)
     if not exam:
         return []
     
     questions = []
     for q in exam.includes.all():
-        # Get tags
-        topics = [t.name for t in q.topics.all()]
-        skills = [s.name for s in q.skills.all()]
-        difficulties = [d.name for d in q.difficulties.all()]
+        # Get tags with audit metadata
+        topics = []
+        for t in q.tests_concepts.all():
+            rel = q.tests_concepts.relationship(t)
+            topics.append({
+                'name': t.name,
+                'confidence_score': rel.confidence_score,
+                'tag_source': rel.tag_source
+            })
+        
+        skills = []
+        for s in q.requires_skills.all():
+            rel = q.requires_skills.relationship(s)
+            skills.append({
+                'name': s.name,
+                'confidence_score': rel.confidence_score,
+                'tag_source': rel.tag_source
+            })
+        
+        difficulties = []
+        for d in q.has_difficulty.all():
+            rel = q.has_difficulty.relationship(d)
+            difficulties.append({
+                'name': d.name,
+                'confidence_score': rel.confidence_score,
+                'tag_source': rel.tag_source
+            })
         
         questions.append({
             'question_id': q.global_question_id,

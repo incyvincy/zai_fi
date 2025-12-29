@@ -195,23 +195,48 @@ class Command(BaseCommand):
                         parent = q_item.get('parent_concept') or q_item.get('subject', 'General')
                         c_node = Concept.nodes.first_or_none(name=client_concept)
                         if not c_node:
-                            c_node = Concept(name=client_concept, parent_concept=parent).save()
-                        if not question.topics.is_connected(c_node):
-                            question.topics.connect(c_node, {'tag_source': 'client', 'confidence': 1.0, 'version': 1})
+                            c_node = Concept(name=client_concept, level='specific_topic').save()
+                        
+                        # Create parent concept if provided and link via HAS_TOPIC
+                        if parent and parent != client_concept:
+                            parent_node = Concept.nodes.first_or_none(name=parent)
+                            if not parent_node:
+                                parent_node = Concept(name=parent, level='parent_topic').save()
+                            # HAS_TOPIC: Parent -[HAS_TOPIC]-> Child (Concept hierarchy ONLY)
+                            if not parent_node.sub_topics.is_connected(c_node):
+                                parent_node.sub_topics.connect(c_node)
+                        
+                        # TESTS_CONCEPT: Question assesses Concept (with audit metadata)
+                        if not question.tests_concepts.is_connected(c_node):
+                            question.tests_concepts.connect(c_node, {
+                                'tag_source': 'client',
+                                'confidence_score': 1.0,
+                                'version': 1
+                            })
                     
                     if client_skill:
                         s_node = Skill.nodes.first_or_none(name=client_skill)
                         if not s_node:
                             s_node = Skill(name=client_skill).save()
-                        if not question.skills.is_connected(s_node):
-                            question.skills.connect(s_node, {'tag_source': 'client', 'confidence': 1.0, 'version': 1})
+                        # REQUIRES_SKILL: Question requires Skill (with audit metadata)
+                        if not question.requires_skills.is_connected(s_node):
+                            question.requires_skills.connect(s_node, {
+                                'tag_source': 'client',
+                                'confidence_score': 1.0,
+                                'version': 1
+                            })
                     
                     if client_difficulty:
                         d_node = Difficulty.nodes.first_or_none(name=client_difficulty)
                         if not d_node:
                             d_node = Difficulty(name=client_difficulty).save()
-                        if not question.difficulties.is_connected(d_node):
-                            question.difficulties.connect(d_node, {'tag_source': 'client', 'confidence': 1.0, 'version': 1})
+                        # HAS_DIFFICULTY: Question has Difficulty (with audit metadata)
+                        if not question.has_difficulty.is_connected(d_node):
+                            question.has_difficulty.connect(d_node, {
+                                'tag_source': 'client',
+                                'confidence_score': 1.0,
+                                'version': 1
+                            })
                 
                 # Flag for AI if ANY tag is missing (don't guess!)
                 if not has_all_client_tags:

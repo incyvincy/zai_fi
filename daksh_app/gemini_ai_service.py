@@ -65,16 +65,22 @@ TOPIC GROUPING (CRITICAL - Use broader concepts):
 ✓ "Financial Accounting" NOT "Journal Entry for Bad Debts"
 ✓ "Algebra" NOT "Solving Quadratic Inequalities"
 
-Return ONLY this JSON:
+Return ONLY this JSON (3-LEVEL HIERARCHY):
 {{
-    "topic": "Broader topic (e.g., Mechanics, Organic Chemistry, Reading Comprehension, Logical Reasoning)",
-    "parent_topic": "Subject/Domain (e.g., Physics, Chemistry, English Language, Aptitude, Accountancy)",
+    "domain": "Broadest category (e.g., Physics, Chemistry, English Language, Aptitude, Accountancy)",
+    "parent_topic": "Broader topic area (e.g., Thermodynamics, Organic Chemistry, Reading Comprehension, Logical Reasoning)",
+    "specific_topic": "Most granular sub-topic (e.g., Carnot Engine, Aldol Condensation, Inference Questions, Syllogisms)",
     "skill": "One of [Recall, Understanding, Application, Analysis, Evaluation, Problem-Solving]",
     "difficulty": "One of [Easy, Medium, Hard]",
     "topic_confidence": 0.0-1.0,
     "skill_confidence": 0.0-1.0,
     "difficulty_confidence": 0.0-1.0
 }}
+
+EXAMPLES:
+- JEE Thermodynamics Q: {{"domain": "Physics", "parent_topic": "Thermodynamics", "specific_topic": "Carnot Engine"}}
+- Organic Chem Q: {{"domain": "Chemistry", "parent_topic": "Organic Chemistry", "specific_topic": "Aldol Condensation"}}
+- TOEFL Reading Q: {{"domain": "English Language", "parent_topic": "Reading Comprehension", "specific_topic": "Inference Questions"}}
 """
     
     try:
@@ -90,8 +96,9 @@ Return ONLY this JSON:
     except Exception as e:
         print(f"AI classification failed: {e}")
         return {
-            "topic": "Uncategorized",
-            "parent_topic": "General",
+            "domain": "General",
+            "parent_topic": "Uncategorized",
+            "specific_topic": "General",
             "skill": "Application",
             "difficulty": "Medium",
             "topic_confidence": 0.0,

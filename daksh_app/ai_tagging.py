@@ -82,48 +82,90 @@ def tag_question(question_id: int, force_retag: bool = False) -> dict:
     # 5. Call centralized AI classification service
     try:
         data = classify_question(question.text)
+        
+        # Validate: Reject fallback values (means API failed silently)
+        if data.get('domain') == 'General' and data.get('parent_topic') == 'Uncategorized':
+            raise ValueError("API returned fallback values - likely quota exhausted or API error")
+        
+        # Validate: Check confidence scores exist
+        if data.get('topic_confidence', 0.0) < 0.1:
+            raise ValueError("Low or zero confidence - classification failed")
+            
     except Exception as e:
         question.tagging_status = 'failed'
         question.save()
         return {'success': False, 'error': f'AI analysis failed: {str(e)}', 'question_id': question_id}
     
-    # 5. Determine version (find highest existing AI version, increment)
+    # 6. Determine version (find highest existing AI version, increment)
     current_max_version = 0
-    for topic in question.topics.all():
-        rel = question.topics.relationship(topic)
-        if rel.tag_source == 'ai_generated' and rel.version > current_max_version:
+    for topic in question.tests_concepts.all():
+        rel = question.tests_concepts.relationship(topic)
+        if rel.tag_source == 'llm' and rel.version > current_max_version:
             current_max_version = rel.version
-    for skill in question.skills.all():
-        rel = question.skills.relationship(skill)
-        if rel.tag_source == 'ai_generated' and rel.version > current_max_version:
+    for skill in question.requires_skills.all():
+        rel = question.requires_skills.relationship(skill)
+        if rel.tag_source == 'llm' and rel.version > current_max_version:
             current_max_version = rel.version
-    for diff in question.difficulties.all():
-        rel = question.difficulties.relationship(diff)
-        if rel.tag_source == 'ai_generated' and rel.version > current_max_version:
+    for diff in question.has_difficulty.all():
+        rel = question.has_difficulty.relationship(diff)
+        if rel.tag_source == 'llm' and rel.version > current_max_version:
             current_max_version = rel.version
     
     new_version = current_max_version + 1
     
-    # 6. Write Tags to Graph (DO NOT delete old tags - keeps history)
+    # Model identifier for audit trail
+    model_id = 'gemini-2.5-flash'
+    
+    # 7. Write Tags to Graph (DO NOT delete old tags - keeps history)
     tags_created = {}
     
-    # -- Topic/Concept --
-    topic_name = data.get('topic', 'Uncategorized')
-    parent_topic = data.get('parent_topic', 'General')
+    # -- Topic/Concept (3-level hierarchy via HAS_TOPIC) --
+    domain_name = data.get('domain', 'General')
+    parent_topic_name = data.get('parent_topic', 'Uncategorized')
+    specific_topic_name = data.get('specific_topic', 'General')
     topic_conf = data.get('topic_confidence', 0.5)
     
-    concept = Concept.nodes.first_or_none(name=topic_name)
-    if not concept:
-        concept = Concept(name=topic_name, parent_concept=parent_topic).save()
+    # Create or get Domain node (level 1)
+    domain_node = Concept.nodes.get_or_none(name=domain_name, level='domain')
+    if not domain_node:
+        domain_node = Concept(name=domain_name, level='domain').save()
     
-    question.topics.connect(concept, {
-        'tag_source': 'ai_generated',
-        'confidence': float(topic_conf),
-        'version': new_version
+    # Create or get Parent Topic node (level 2)
+    parent_node = Concept.nodes.get_or_none(name=parent_topic_name, level='parent_topic')
+    if not parent_node:
+        parent_node = Concept(name=parent_topic_name, level='parent_topic').save()
+    
+    # HAS_TOPIC: Domain -[HAS_TOPIC]-> Parent Topic (Concept hierarchy ONLY)
+    if not domain_node.sub_topics.is_connected(parent_node):
+        domain_node.sub_topics.connect(parent_node)
+    
+    # Create or get Specific Topic node (level 3 - leaf node)
+    specific_node = Concept.nodes.get_or_none(name=specific_topic_name, level='specific_topic')
+    if not specific_node:
+        specific_node = Concept(name=specific_topic_name, level='specific_topic').save()
+    
+    # HAS_TOPIC: Parent Topic -[HAS_TOPIC]-> Specific Topic (Concept hierarchy ONLY)
+    if not parent_node.sub_topics.is_connected(specific_node):
+        parent_node.sub_topics.connect(specific_node)
+    
+    # TESTS_CONCEPT: Question assesses the MOST SPECIFIC (leaf) concept
+    # Edge stores: confidence_score, tag_source='llm', version, model_id (for audit)
+    question.tests_concepts.connect(specific_node, {
+        'tag_source': 'llm',
+        'confidence_score': float(topic_conf),
+        'version': new_version,
+        'model_id': model_id
     })
-    tags_created['topic'] = {'name': topic_name, 'confidence': topic_conf}
     
-    # -- Skill --
+    tags_created['topic'] = {
+        'domain': domain_name,
+        'parent_topic': parent_topic_name,
+        'specific_topic': specific_topic_name,
+        'confidence_score': topic_conf,
+        'tag_source': 'llm'
+    }
+    
+    # -- Skill (REQUIRES_SKILL with audit metadata) --
     skill_name = data.get('skill', 'Application')
     skill_conf = data.get('skill_confidence', 0.5)
     
@@ -131,14 +173,19 @@ def tag_question(question_id: int, force_retag: bool = False) -> dict:
     if not skill:
         skill = Skill(name=skill_name).save()
     
-    question.skills.connect(skill, {
-        'tag_source': 'ai_generated',
-        'confidence': float(skill_conf),
-        'version': new_version
+    question.requires_skills.connect(skill, {
+        'tag_source': 'llm',
+        'confidence_score': float(skill_conf),
+        'version': new_version,
+        'model_id': model_id
     })
-    tags_created['skill'] = {'name': skill_name, 'confidence': skill_conf}
+    tags_created['skill'] = {
+        'name': skill_name,
+        'confidence_score': skill_conf,
+        'tag_source': 'llm'
+    }
     
-    # -- Difficulty --
+    # -- Difficulty (HAS_DIFFICULTY with audit metadata) --
     diff_name = data.get('difficulty', 'Medium')
     diff_conf = data.get('difficulty_confidence', 0.5)
     
@@ -146,14 +193,19 @@ def tag_question(question_id: int, force_retag: bool = False) -> dict:
     if not diff:
         diff = Difficulty(name=diff_name).save()
     
-    question.difficulties.connect(diff, {
-        'tag_source': 'ai_generated',
-        'confidence': float(diff_conf),
-        'version': new_version
+    question.has_difficulty.connect(diff, {
+        'tag_source': 'llm',
+        'confidence_score': float(diff_conf),
+        'version': new_version,
+        'model_id': model_id
     })
-    tags_created['difficulty'] = {'name': diff_name, 'confidence': diff_conf}
+    tags_created['difficulty'] = {
+        'name': diff_name,
+        'confidence_score': diff_conf,
+        'tag_source': 'llm'
+    }
     
-    # 7. Update Question Status
+    # 8. Update Question Status
     question.needs_ai_tagging = False
     question.tagging_status = 'tagged'
     question.save()
@@ -193,8 +245,10 @@ def batch_tag_questions(limit: int = 100) -> dict:
         
         if result.get('success'):
             tags = result.get('tags', {})
-            topic = tags.get('topic', {}).get('name', 'N/A')
-            print(f"  [✓] Q{q.global_question_id}: {topic}")
+            topic_data = tags.get('topic', {})
+            topic = topic_data.get('specific_topic', 'N/A')
+            parent = topic_data.get('parent_topic', '')
+            print(f"  [✓] Q{q.global_question_id}: {parent} → {topic}")
             results['success'] += 1
         else:
             error_msg = result.get('error', 'Unknown error')
@@ -212,10 +266,10 @@ def get_effective_tags(question_id: int) -> dict:
     """
     Get the "effective" tags for a question, applying priority:
     1. Client tags (source='client') take precedence
-    2. Latest AI tags (highest version) used as fallback
+    2. Latest AI tags (highest version, source='llm') used as fallback
     
     Returns:
-        dict with topic, skill, difficulty (each with name, source, confidence)
+        dict with topic, skill, difficulty (each with name, tag_source, confidence_score)
     """
     try:
         question = Question.nodes.get(global_question_id=question_id)
@@ -241,22 +295,23 @@ def get_effective_tags(question_id: int) -> dict:
                 client_tag = {
                     'name': node.name,
                     'tag_source': 'client',
-                    'confidence': rel.confidence
+                    'confidence_score': rel.confidence_score
                 }
-            elif rel.tag_source == 'ai_generated' and rel.version > best_ai_version:
+            elif rel.tag_source == 'llm' and rel.version > best_ai_version:
                 best_ai_version = rel.version
                 best_ai_tag = {
                     'name': node.name,
-                    'tag_source': 'ai_generated',
-                    'confidence': rel.confidence,
-                    'version': rel.version
+                    'tag_source': 'llm',
+                    'confidence_score': rel.confidence_score,
+                    'version': rel.version,
+                    'model_id': rel.model_id
                 }
         
         return client_tag if client_tag else best_ai_tag
     
-    # Get effective tags for each type
-    result['topic'] = get_best_tag(question.topics)
-    result['skill'] = get_best_tag(question.skills)
-    result['difficulty'] = get_best_tag(question.difficulties)
+    # Get effective tags for each type (using new relationship names)
+    result['topic'] = get_best_tag(question.tests_concepts)
+    result['skill'] = get_best_tag(question.requires_skills)
+    result['difficulty'] = get_best_tag(question.has_difficulty)
     
     return result
